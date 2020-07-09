@@ -1,0 +1,24 @@
+[
+  {
+    "title": "业务向组件",
+    "list": [
+      {
+        "path": "/comment",
+        "name": "Comment",
+        "icon": "comment",
+        "desc": "评论区"
+      }
+    ]
+  },
+  {
+    "title": "基础组件",
+    "list": [
+      {
+        "path": "/load-more",
+        "name": "Load More",
+        "icon": "load-more",
+        "desc": "加载更多"
+      }
+    ]
+  }
+]

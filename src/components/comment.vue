@@ -1,6 +1,7 @@
 <template>
   <div class="comment">
-    <div class="title">我是评论列表</div>
+    <div class="title">我是评论区</div>
+    <slot></slot>
   </div>
 </template>
 

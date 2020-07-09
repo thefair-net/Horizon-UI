@@ -1,33 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-      |
-      <router-link to="/comment">Comment</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <NavBar v-if="visible" :title="title"/>
+  <router-view></router-view>
 </template>
-
-<style lang="scss">
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
-
-  #nav {
-    padding: 30px;
-
-    a {
-      font-weight: bold;
-      color: #2c3e50;
-
-      &.router-link-exact-active {
-        color: #42b983;
+<script>
+  import NavBar from './components/nav-bar'
+  import {getCurrentInstance, computed, onMounted, onUpdated} from 'vue'
+  export default {
+    components: {
+      NavBar
+    },
+    setup() {
+      const {ctx} = getCurrentInstance()
+      const visible = computed(() => ctx.$router.currentRoute.value.path !== '/')
+      const title = computed(() => ctx.$router.currentRoute.value.name)
+      return {
+        visible,
+        title
       }
     }
   }
+</script>
+<style>
+
 </style>
