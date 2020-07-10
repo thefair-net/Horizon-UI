@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
   export default {
     name: "vs-comment"
   }
@@ -20,4 +20,3 @@
     }
   }
 </style>
-<style src="../../static/index.css"></style>

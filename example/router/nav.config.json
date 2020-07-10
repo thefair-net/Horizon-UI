@@ -1,23 +1,49 @@
 [
   {
     "title": "业务向组件",
+    "type": "business",
     "list": [
       {
         "path": "/comment",
         "name": "Comment",
         "icon": "comment",
         "desc": "评论区"
+      },
+      {
+        "path": "/comment-card",
+        "name": "Comment Card",
+        "icon": "comment-card",
+        "desc": "单个评论卡片"
+      },
+      {
+        "path": "/reply-bar",
+        "name": "Reply Bar",
+        "icon": "reply-bar",
+        "desc": "底部评论输入栏"
+      },
+      {
+        "path": "/reply-box",
+        "name": "Reply Box",
+        "icon": "reply-box",
+        "desc": "评论回复框"
       }
     ]
   },
   {
     "title": "基础组件",
+    "type": "basic",
     "list": [
       {
         "path": "/load-more",
         "name": "Load More",
         "icon": "load-more",
         "desc": "加载更多"
+      },
+      {
+        "path": "/image-viewer",
+        "name": "Image Viewer",
+        "icon": "image-viewer",
+        "desc": "点击查看大图"
       }
     ]
   }

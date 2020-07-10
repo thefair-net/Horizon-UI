@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import {getCurrentInstance, computed, onMounted, onUpdated} from 'vue'
+  import {computed, onMounted, onUpdated} from '@vue/composition-api'
   export default {
     name: "nav-bar",
     props: {
@@ -15,11 +15,9 @@
         default: ''
       }
     },
-    setup(props) {
-      const {ctx} = getCurrentInstance()
-      // console.log(props)
+    setup(props, context) {
       const handleNavClick = () => {
-        ctx.$router.push('/')
+        context.root.$router.push('/')
       }
       return {
         handleNavClick

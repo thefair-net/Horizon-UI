@@ -17,13 +17,11 @@
 </template>
 
 <script>
-  import {getCurrentInstance} from 'vue'
   import {NavConfig} from '../router'
   export default {
     setup(props, context) {
-      const {ctx} = getCurrentInstance()
       const handleItemClick = (item) => {
-        ctx.$router.push(item.path)
+        context.root.$router.push(item.path)
       }
       return {
         handleItemClick,
