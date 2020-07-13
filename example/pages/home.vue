@@ -31,7 +31,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .home-title {
     font-size: 20rem;
     padding: 20rem 0;

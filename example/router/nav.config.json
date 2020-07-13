@@ -10,10 +10,22 @@
         "desc": "评论区"
       },
       {
+        "path": "/comment",
+        "name": "Comment Dark",
+        "icon": "comment",
+        "desc": "评论区暗黑"
+      },
+      {
         "path": "/comment-card",
         "name": "Comment Card",
         "icon": "comment-card",
         "desc": "单个评论卡片"
+      },
+      {
+        "path": "/comment-card",
+        "name": "Comment Card Dark",
+        "icon": "comment-card",
+        "desc": "单个评论卡片暗黑"
       },
       {
         "path": "/reply-bar",
@@ -34,10 +46,28 @@
     "type": "basic",
     "list": [
       {
+        "path": "/icon",
+        "name": "Icon",
+        "icon": "icon",
+        "desc": "图标汇总"
+      },
+      {
+        "path": "/drawer",
+        "name": "Drawer",
+        "icon": "drawer",
+        "desc": "抽屉"
+      },
+      {
         "path": "/load-more",
         "name": "Load More",
         "icon": "load-more",
         "desc": "加载更多"
+      },
+      {
+        "path": "/toast",
+        "name": "Toast",
+        "icon": "toast",
+        "desc": "提示框"
       },
       {
         "path": "/image-viewer",

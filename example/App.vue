@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <NavBar v-if="visible" :title="title"/>
     <!--    <transition name="fade" mode="out-in">-->
     <router-view></router-view>
@@ -18,7 +18,7 @@
       const visible = ref(false)
       const title = ref('')
       onUpdated(() => {
-        console.log(context.root.$router.currentRoute)
+        // console.log(context.root.$router.currentRoute)
         visible.value = context.root.$router.currentRoute.path !== '/'
         title.value = context.root.$router.currentRoute.name
       })
@@ -29,6 +29,8 @@
     }
   }
 </script>
-<style>
-
+<style scoped>
+  #app {
+    padding-bottom: 80rem;
+  }
 </style>
