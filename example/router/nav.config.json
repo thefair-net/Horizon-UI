@@ -10,7 +10,7 @@
         "desc": "评论区"
       },
       {
-        "path": "/comment",
+        "path": "/comment-dark-mode",
         "name": "Comment Dark",
         "icon": "comment",
         "desc": "评论区暗黑"
@@ -22,7 +22,7 @@
         "desc": "单个评论卡片"
       },
       {
-        "path": "/comment-card",
+        "path": "/comment-card-dark-mode",
         "name": "Comment Card Dark",
         "icon": "comment-card",
         "desc": "单个评论卡片暗黑"

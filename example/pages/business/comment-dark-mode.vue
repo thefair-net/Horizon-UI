@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <vs-comment :title="'热门评论'" :to="'/all-hot-comments'">
+    <vs-comment :dark-mode="true">
       <template v-slot:comment-card>
         <vs-comment-card
           :key="key"
@@ -13,7 +13,6 @@
           :image-url="item.data.imageUrl"
           :create-time="item.data.createTime"
           :parent-reply="item.data.parentReply"
-          @view-conversation="viewConversation"
         />
       </template>
     </vs-comment>
@@ -21,13 +20,12 @@
 </template>
 <script>
   import {Comment, CommentCard} from '../../../lib'
-
   export default {
     components: {
       'vs-comment': Comment,
       'vs-comment-card': CommentCard,
     },
-    setup(props, context) {
+    setup() {
       const comments = [
         {
           "type": "reply",
@@ -1010,12 +1008,8 @@
           "adIndex": -1
         }
       ]
-      const viewConversation = (args) => {
-        context.root.$router.push('/view-conversation')
-      }
       return {
-        comments,
-        viewConversation
+        comments
       }
     }
   }

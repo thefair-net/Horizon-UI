@@ -1,5 +1,5 @@
 <template>
-  <div class="comment-card">
+  <div :class="dark ? 'comment-card-dark' : 'comment-card-light'">
     <div class="left">
       <img class="avatar" :src="avatar" alt="">
     </div>
@@ -11,7 +11,8 @@
         </div>
         <div class="like">
           <span>{{likeCount}}</span>
-          <img :src="require('../../static/img/thumb_unselect.svg')" alt="">
+          <img v-if="!dark" :src="require('../../static/img/thumb_unselect.svg')" alt="">
+          <img v-if="dark" :src="require('../../static/img/thumb_unselect_dark_mode.svg')" alt="">
         </div>
       </div>
       <div class="right-middle">
@@ -40,7 +41,7 @@
       </div>
       <div class="right-bottom">
         <div class="right-bottom-left">
-          <div class="view-conversation" v-if="parentReply">查看对话</div>
+          <div @click="viewConversation" class="view-conversation" v-if="parentReply">查看对话</div>
           <div class="reply">回复</div>
           <div class="create-time">{{moment(createTime).format('YYYY/MM/DD')}}</div>
         </div>
@@ -59,6 +60,10 @@
   export default {
     name: "vs-comment-card",
     props: {
+      darkMode: {
+        type: Boolean,
+        default: false
+      },
       avatar: {
         type: String,
         default: ''
@@ -91,187 +96,30 @@
         type: Object
       }
     },
-    setup() {
+    setup(props, context) {
+      let dark = false
+      /**parent是通过comment slot传参**/
+      /**props是通过comment-card单独使用时props传参**/
+      /**其一成立即为暗黑模式**/
+      if (context.parent.darkMode || props.darkMode) {
+        dark = true
+      }
       const handleImgClick = (e) => {
         ImageViewer({
           imgSrc: e.target.src
         })
       }
+      const viewConversation = () => {
+        context.emit('view-conversation', {})
+      }
       return {
         handleImgClick,
-        moment
+        moment,
+        dark,
+        viewConversation
       }
     }
   }
 </script>
-
-<style scoped lang="scss">
-  @import "../../static/config";
-
-  .comment-card {
-    display: flex;
-    align-items: flex-start;
-    padding: 15rem 0 0 17rem;
-
-    .left {
-      .avatar {
-        width: 40rem;
-        height: 40rem;
-        object-fit: cover;
-        object-position: center center;
-        border-radius: 50%;
-        margin-right: 12rem;
-      }
-    }
-
-    .right {
-      width: 100%;
-      padding-right: 18rem;
-      padding-bottom: 11rem;
-      border-bottom: 1rem $gray-ed solid;
-      display: flex;
-      flex-direction: column;
-
-      .right-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .name-container {
-          display: flex;
-          flex-direction: column;
-
-          .name {
-            font-family: $FONT-FZLTZCHJW;
-            color: $black-44;
-            line-height: 1;
-          }
-
-          .reply-to {
-            font-family: $FONT-FZLTXIHJW;
-            font-size: 10rem;
-            color: $gray-88;
-            margin-top: 7rem;
-          }
-        }
-
-        .like {
-          font-family: $FONT-FZLTZCHJW;
-          display: flex;
-          align-items: center;
-
-          span {
-            margin-right: 3rem;
-            font-size: 12rem;
-          }
-        }
-      }
-
-      .right-middle {
-        margin-top: 10rem;
-
-        .comment-text {
-          font-family: $FONT-FZLTXIHJW;
-          line-height: 1.5;
-        }
-
-        .comment-img {
-          margin-top: 8rem;
-
-          img {
-            max-width: 170rem;
-            max-height: 192rem;
-            object-fit: cover;
-            object-position: center center;
-            border-radius: 4rem;
-          }
-        }
-
-        .parent-reply {
-          width: 100%;
-          display: flex;
-          align-items: flex-start;
-          padding: 10rem 10rem 10rem 8rem;
-          margin-top: 10rem;
-          border-radius: 4rem;
-          background-color: rgba(0, 0, 0, 0.1);
-
-          .parent-reply-left {
-            .avatar {
-              width: 30rem;
-              height: 30rem;
-              object-fit: cover;
-              object-position: center center;
-              border-radius: 50%;
-              margin-right: 12rem;
-            }
-          }
-
-          .parent-reply-right {
-            .name {
-              font-family: $FONT-FZLTZCHJW;
-              color: $gray-a5;
-            }
-
-            .parent-reply-text {
-              margin-top: 4rem;
-              font-family: $FONT-FZLTXIHJW;
-              color: $gray-a5;
-            }
-
-            .parent-reply-img {
-              margin-top: 8rem;
-
-              img {
-                max-width: 170rem;
-                max-height: 192rem;
-                object-fit: cover;
-                object-position: center center;
-                border-radius: 4rem;
-              }
-            }
-          }
-        }
-      }
-
-      .right-bottom {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 22rem;
-        font-family: $FONT-FZLTZCHJW;
-        font-size: 12rem;
-        color: $gray-88;
-
-        .right-bottom-left {
-          display: flex;
-
-          .view-conversation {
-            margin-right: 15rem;
-          }
-
-          .reply {
-            margin-right: 15rem;
-          }
-
-          .create-time {
-            font-family: $FONT-FZLTXIHJW;
-          }
-        }
-
-        .dots {
-          width: 28rem;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          padding: 0 5rem;
-
-          .dot {
-            width: 3rem;
-            height: 3rem;
-            background-color: $gray-b3;
-          }
-        }
-      }
-    }
-  }
-</style>
+<style scoped lang="scss" src="../../static/comment-card-light.scss"></style>
+<style scoped lang="scss" src="../../static/comment-card-dark.scss"></style>

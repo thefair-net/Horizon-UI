@@ -1,0 +1,19 @@
+@import "../../../static/config";
+
+.Icon {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-right {
+  width: 8rem;
+  height: 8rem;
+  transform: rotate(45deg);
+  border-top: solid 1.5rem $gray-97;
+  border-right: solid 1.5rem $gray-97;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}

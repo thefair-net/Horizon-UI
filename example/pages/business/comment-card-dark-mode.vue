@@ -1,6 +1,7 @@
 <template>
   <div class="page">
     <vs-comment-card
+      :dark-mode="true"
       :key="key"
       v-for="(item, key) in comments"
       :detail="item"
