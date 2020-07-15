@@ -17,17 +17,22 @@
         />
       </template>
     </vs-comment>
+    <vs-reply-bar @click="handleClick" v-if="isShowBar"/>
   </div>
 </template>
 <script>
-  import {Comment, CommentCard} from '../../../lib'
+  import {ref, onBeforeUnmount} from '@vue/composition-api'
+  import {Comment, CommentCard, ReplyBar, ReplyBox} from '../../../lib'
 
   export default {
     components: {
       'vs-comment': Comment,
       'vs-comment-card': CommentCard,
+      'vs-reply-bar': ReplyBar,
     },
     setup(props, context) {
+      const isShowBar = ref(true)
+      ReplyBox.mount()
       const comments = [
         {
           "type": "reply",
@@ -1010,12 +1015,21 @@
           "adIndex": -1
         }
       ]
+      const handleClick = () => {
+        ReplyBox.open()
+        isShowBar.value = false
+      }
+      onBeforeUnmount(() => {
+        ReplyBox.unmount()
+      })
       const viewConversation = (args) => {
         context.root.$router.push('/view-conversation')
       }
       return {
+        isShowBar,
         comments,
-        viewConversation
+        viewConversation,
+        handleClick
       }
     }
   }

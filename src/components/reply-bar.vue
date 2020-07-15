@@ -1,0 +1,70 @@
+<template>
+  <div class="reply-bar-container">
+    <div class="reply-bar" @click="handleClick">
+      <div class="avatar">
+
+      </div>
+      <div class="reply-bar-input">
+        点击发表你的评论...
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: "vs-reply-bar",
+    setup(props, context) {
+      const handleClick = () => {
+        context.emit('click')
+      }
+      return {
+        handleClick
+      }
+    }
+  }
+</script>
+
+<style scoped lang="scss">
+  @import "../../static/config";
+
+  .reply-bar-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+
+    .reply-bar {
+      max-width: $iPadWidth;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      padding: 14rem 15rem;
+      -webkit-backdrop-filter: blur(20rem);
+      backdrop-filter: blur(20rem);
+      background-color: rgba(0, 0, 0, 0.3);
+
+      .avatar {
+        width: 40rem;
+        height: 40rem;
+        border-radius: 50%;
+        border: 1rem white solid;
+        margin-right: 7rem;
+      }
+
+      .reply-bar-input {
+        flex: 1;
+        height: 38rem;
+        border-radius: 3rem;
+        border: solid 1rem rgba(255, 255, 255, 0.1);
+        background-color: rgba(0, 0, 0, 0.11);
+        font-family: $FONT-FZLTZCHJW;
+        font-size: 12rem;
+        letter-spacing: 1rem;
+        color: #bebebc;
+        padding: 12rem 8rem;
+      }
+    }
+  }
+</style>

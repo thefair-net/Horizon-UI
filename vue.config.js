@@ -21,7 +21,8 @@ module.exports = {
       entry: 'example/main.js',
       template: 'example/index.html',
       filename: 'index.html',
-      title: '眼界vision - web前端组件库'
+      title: '眼界vision - web前端组件库',
+      favicon: 'example/favicon.ico'
     }
   }
 }

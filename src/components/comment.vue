@@ -51,6 +51,8 @@
       display: flex;
       align-items: center;
       .icon {
+        width: 10rem;
+        height: 10rem;
         margin-left: 5rem;
       }
     }
@@ -67,6 +69,8 @@
       display: flex;
       align-items: center;
       .icon {
+        width: 10rem;
+        height: 10rem;
         margin-left: 5rem;
       }
     }

@@ -51,10 +51,10 @@ html {
 
 body {
   margin: 0;
-  font-family: 'FZLTXIHJW',PingFang SC,Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'FZLTXIHJW', PingFang SC, Avenir, Helvetica, Arial, sans-serif;
   font-size: 14rem;
   color: #444;
-  background-color: white;
+  background-color: #f5f5f5;
 }
 
 /**
@@ -377,6 +377,19 @@ progress {
 
 textarea {
   overflow: auto;
+  border: none;
+  outline: none;
+  background: transparent;
+  resize: none;
+  caret-color: white;
+  color: white;
+}
+
+textarea::placeholder {
+  font-family: 'FZLTXIHJW', PingFang SC, Avenir, Helvetica, Arial, sans-serif;
+  opacity: 0.2;
+  font-size: 14rem;
+  color: white;
 }
 
 /**

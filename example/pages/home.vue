@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="page">
     <div class="home-title">
       眼界vision - web前端组件库
     </div>

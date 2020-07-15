@@ -29,8 +29,17 @@
     }
   }
 </script>
-<style scoped>
+<style scoped lang="scss">
+  @import '../static/config.scss';
+
   #app {
+    max-width: $iPadWidth;
+    min-height: 100vh;
+    margin: 0 auto;
     padding-bottom: 80rem;
+  }
+
+  .page {
+    background-color: $white;
   }
 </style>

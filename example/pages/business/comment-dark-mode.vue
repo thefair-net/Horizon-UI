@@ -16,14 +16,16 @@
         />
       </template>
     </vs-comment>
+    <vs-reply-bar/>
   </div>
 </template>
 <script>
-  import {Comment, CommentCard} from '../../../lib'
+  import {Comment, CommentCard, ReplyBar} from '../../../lib'
   export default {
     components: {
       'vs-comment': Comment,
       'vs-comment-card': CommentCard,
+      'vs-reply-bar': ReplyBar,
     },
     setup() {
       const comments = [

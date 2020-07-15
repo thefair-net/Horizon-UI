@@ -1,8 +1,8 @@
 @import "../../../static/config";
 
 .Icon {
-  width: 10rem;
-  height: 10rem;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,4 +16,25 @@
   border-right: solid 1.5rem $gray-97;
   margin-bottom: 2rem;
   margin-right: 2rem;
+}
+
+.icon-close {
+  width: 28rem;
+  height: 28rem;
+  background-size: contain;
+  background: url("../../../static/img/icon-close.svg") center center no-repeat;
+}
+
+.icon-check {
+  width: 28rem;
+  height: 28rem;
+  background-size: contain;
+  background: url("../../../static/img/icon-check.svg") center center no-repeat;
+}
+
+.icon-upload-img {
+  width: 28rem;
+  height: 28rem;
+  background-size: contain;
+  background: url("../../../static/img/icon-upload-img.svg") center center no-repeat;
 }
