@@ -38,12 +38,23 @@
     },
     data() {
       return {
-        fadeout: false
+        fadeout: false,
+        docOverflow:'visible'
       }
     },
     model: {
       prop: "value",
       event: 'change'
+    },
+    watch:{
+      value(val){
+        if(val){
+          this.docOverflow = document.body.style.overflow;
+          document.body.style.overflow = 'hidden'
+        }else {
+          document.body.style.overflow = this.docOverflow;
+        }
+      }
     },
     methods: {
       closePopup() {
@@ -54,6 +65,9 @@
         }, 300)
 
       }
+    },
+    beforeDestroy() {
+      document.body.style.overflow = this.docOverflow;
     }
   }
 </script>
@@ -131,7 +145,6 @@
       top: 0;
       bottom: 0;
       background-color: rgba(0, 0, 0, .4);
-
     }
 
     .vs-popup-content {
@@ -145,7 +158,7 @@
       color: #383838;
 
       &.bottom {
-        bottom: 0%;
+        bottom: 0;
         padding-bottom: constant(safe-area-inset-bottom);
         padding-bottom: env(safe-area-inset-bottom);
 

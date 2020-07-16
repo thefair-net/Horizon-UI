@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div >
     <div  class="button" @click="showPop">弹出</div>
-    <vs-popup v-model="show" position="bottom" :overlay="true" :showCancel="true" title="选择举报原因">
+    <vs-popup v-model="show" position="bottom" :overlay="false" :showCancel="true" title="选择举报原因">
       <div class="pop-item">
         举报1
       </div>
@@ -23,7 +23,7 @@
     data() {
       return {
         show: false,
-        num:1000
+        num:100
       }
     },
     methods: {
@@ -36,6 +36,7 @@
 </script>
 
 <style lang="scss" scoped>
+
   .pop-item {
     padding: 22rem 0 21rem;
     border-bottom: solid 1rem #eeeeee;
@@ -50,5 +51,9 @@
     padding: 10rem;
     color: #fafafa;
     background-color: #30302f;
+  }
+  .item{
+    max-height: 300rem;
+    overflow: auto;
   }
 </style>
