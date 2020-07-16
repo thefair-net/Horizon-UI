@@ -38,6 +38,18 @@
         "name": "Reply Box",
         "icon": "reply-box",
         "desc": "评论回复框"
+      },
+      {
+        "path": "/page-banner",
+        "name": "Page Banner",
+        "icon": "page-banner",
+        "desc": "页面头部"
+      },
+      {
+        "path": "/page-description",
+        "name": "Page Description",
+        "icon": "page-description",
+        "desc": "页面描述"
       }
     ]
   },
@@ -52,10 +64,10 @@
         "desc": "图标汇总"
       },
       {
-        "path": "/drawer",
-        "name": "Drawer",
-        "icon": "drawer",
-        "desc": "抽屉"
+        "path": "/popup",
+        "name": "Popup",
+        "icon": "popup",
+        "desc": "底部弹层"
       },
       {
         "path": "/load-more",
