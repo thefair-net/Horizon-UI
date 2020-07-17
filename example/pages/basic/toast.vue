@@ -14,8 +14,9 @@
     methods: {
       clickBtn() {
         Toast({
-          message: '我是toast',
-          duration: 40000
+          // message: '我是toast',
+          duration: 40000,
+          icon:'icon-check'
         })
       },
       clean() {

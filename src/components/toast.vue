@@ -1,16 +1,20 @@
 <template>
-  <div class="vs-toast" :class="showContent ? 'fade-in':'fade-out'">
-    <div class="toast-icon"></div>
-    <span class="toast-text">{{message}}</span>
+  <div class="vs-toast" :class="showContent ? 'fade-in':'fade-out'" >
+    <vs-icon :type="icon" class="toast-icon" v-if="icon" :style="{marginBottom:message?'5rem':'0'}"></vs-icon>
+    <span class="toast-text" v-if="message">{{message}}</span>
   </div>
 </template>
 
 <script>
+  import Icon from '../../lib/icon'
   export default {
     name: "vs-toast",
+    components: {
+      'vs-icon': Icon
+    },
     data() {
       return {
-        message: this.$options.message || '我是弹窗',
+        message: this.$options.message,
         icon: this.$options.icon,
         duration: this.$options.duration,
         showContent: this.showContent,
@@ -22,13 +26,13 @@
         setTimeout(() => {
           this.$destroy()
           document.getElementById('app').removeChild(this.$el)
-        }, this.duration - 1500)
+        }, 160)
       },
     }
   }
 </script>
 
-<style scoped>
+<style  lang="scss" scoped>
   .fade-in {
     animation: fade-in 150ms ease-in;
   }
@@ -66,7 +70,11 @@
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     text-align: center;
-    z-index: 1000;
-    padding: 10rem;
+    z-index: 10000;
+    padding:10rem;
+    .toast-icon{
+      margin:0 auto;
+    }
   }
+
 </style>
