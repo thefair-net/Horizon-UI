@@ -2,7 +2,7 @@
   <div :class="darkMode ? 'comment-dark' : 'comment-light'">
     <div v-if="title" class="title" @click="handleTitleClick">
       {{title}}
-      <vs-icon class="icon" type="icon-right" v-if="to"/>
+      <div class="icon icon-right"></div>
     </div>
     <slot name="comment-card" :dark-mode="darkMode"></slot>
   </div>
@@ -72,6 +72,16 @@
         width: 10rem;
         height: 10rem;
         margin-left: 5rem;
+      }
+
+      .icon-right {
+        width: 8rem;
+        height: 8rem;
+        transform: rotate(45deg);
+        border-top: solid 1.5rem $gray-97;
+        border-right: solid 1.5rem $gray-97;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
       }
     }
   }

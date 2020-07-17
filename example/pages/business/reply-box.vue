@@ -16,8 +16,10 @@
   export default {
     name: "reply-box",
     setup() {
-      ReplyBox.mount((msg) => {
-        console.log(msg)
+      ReplyBox.mount({
+        onClose: () => {
+          console.log('ReplyBox onClose')
+        }
       })
       const handleOpenClick = () => {
         ReplyBox.open((msg) => {

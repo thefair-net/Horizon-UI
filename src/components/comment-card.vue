@@ -41,8 +41,8 @@
       </div>
       <div class="right-bottom">
         <div class="right-bottom-left">
-          <div @click="viewConversation" class="view-conversation" v-if="parentReply">查看对话</div>
-          <div class="reply">回复</div>
+<!--          <div @click="viewConversation" class="view-conversation" v-if="parentReply">查看对话</div>-->
+          <div class="reply" @click="reply">回复</div>
           <div class="create-time">{{moment(createTime).format('YYYY/MM/DD')}}</div>
         </div>
         <div class="dots">
@@ -109,14 +109,18 @@
           imgSrc: e.target.src
         })
       }
-      const viewConversation = () => {
-        context.emit('view-conversation', {})
+      // const viewConversation = () => {
+      //   context.emit('view-conversation', {})
+      // }
+      const reply = () => {
+        context.emit('reply', {})
       }
       return {
         handleImgClick,
         moment,
         dark,
-        viewConversation
+        // viewConversation,
+        reply
       }
     }
   }

@@ -21,20 +21,43 @@
 .icon-close {
   width: 28rem;
   height: 28rem;
-  background-size: contain;
   background: url("../../../static/img/icon-close.svg") center center no-repeat;
+  background-size: contain;
 }
 
 .icon-check {
   width: 28rem;
   height: 28rem;
-  background-size: contain;
   background: url("../../../static/img/icon-check.svg") center center no-repeat;
+  background-size: contain;
 }
 
 .icon-upload-img {
   width: 28rem;
   height: 28rem;
-  background-size: contain;
   background: url("../../../static/img/icon-upload-img.svg") center center no-repeat;
+  background-size: contain;
+}
+
+.icon-the-end {
+  width: 46rem;
+  height: 12rem;
+  background: url("../../../static/img/icon-the-end.png") center center no-repeat;
+  background-size: contain;
+}
+
+.icon-spinner {
+  width: 16rem;
+  height: 16rem;
+  background: url("../../../static/img/icon-spinner.svg") center center no-repeat;
+  background-size: contain;
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

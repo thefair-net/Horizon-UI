@@ -40,7 +40,9 @@
       display: flex;
       align-items: center;
       margin: 0 auto;
-      padding: 14rem 15rem;
+      /**因为无限滚动页面为定高page，所以写死safe-area了**/
+      /*padding: 14rem 15rem calc(14rem + env(safe-area-inset-bottom) + 34rem) 15rem;*/
+      padding: 13rem 15rem calc(13rem + #{$safe-area}) 15rem;
       -webkit-backdrop-filter: blur(20rem);
       backdrop-filter: blur(20rem);
       background-color: rgba(0, 0, 0, 0.3);

@@ -36,10 +36,10 @@
     max-width: $iPadWidth;
     min-height: 100vh;
     margin: 0 auto;
-    padding-bottom: 80rem;
   }
 
   .page {
     background-color: $white;
+    height: calc(100vh - #{$nav-height});
   }
 </style>

@@ -70,10 +70,10 @@
         "desc": "底部弹层"
       },
       {
-        "path": "/load-more",
-        "name": "Load More",
-        "icon": "load-more",
-        "desc": "加载更多"
+        "path": "/infinity-scroll",
+        "name": "Infinity Scroll",
+        "icon": "infinity-scroll",
+        "desc": "无限滚动"
       },
       {
         "path": "/toast",
