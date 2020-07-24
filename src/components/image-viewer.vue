@@ -53,8 +53,8 @@
         }
         this.lastClientY = clientY
         /**计算滑动距离**/
-        const clientXDiff = clientX - this.originClientX
-        const clientYDiff = clientY - this.originClientY
+        const clientXDiff = (clientX - this.originClientX)/100
+        const clientYDiff = (clientY - this.originClientY )/100
         /**根据移动距离计算缩放、透明度比例**/
         let rate = 1
         rate -= clientYDiff / 1000

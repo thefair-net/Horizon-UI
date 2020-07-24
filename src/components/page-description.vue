@@ -12,10 +12,10 @@
 
 <style scoped>
   .vs-page-description {
-    padding: 15rem 17rem;
+    padding: .15rem .17rem;
     opacity: 0.8;
     font-family: "FZLTXIHJW";
-    font-size: 14rem;
+    font-size: .14rem;
     line-height: 1.5;
     text-align: justify;
     color: #444444;

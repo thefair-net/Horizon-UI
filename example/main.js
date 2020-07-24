@@ -11,7 +11,7 @@ import VConsole from 'vconsole'
 
 Vue.config.productionTip = false
 Vue.prototype.$imgViewer = ImageViewer
-// process.env.NODE_ENV === 'development' && new VConsole()
+process.env.NODE_ENV === 'development' && new VConsole()
 
 Vue.use(VueCompositionAPI)
 new Vue({

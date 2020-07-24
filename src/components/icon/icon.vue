@@ -1,7 +1,5 @@
 <template>
-  <div class="Icon">
-    <div :class="type"></div>
-  </div>
+    <i class="Icon" :class="type"> </i>
 </template>
 
 <script>
@@ -12,7 +10,7 @@
         type: String,
         default: '',
         required: true
-      },
+      }
     }
   }
 </script>

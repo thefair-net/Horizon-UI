@@ -29,8 +29,8 @@
   .vs-page-banner {
     .banner-box {
       width: 100%;
-      height: 223rem;
-      padding: 17rem;
+      height: 2.23rem;
+      padding: 0.17rem;
       background-color: #fff;
       background-size: cover;
       background-position: center center;
@@ -59,16 +59,16 @@
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          height: 150rem;
+          height: 1.50rem;
           text-align: left;
           font-family: "FZLTZCHJW";
-          font-size: 20rem;
+          font-size: .20rem;
           line-height: 1.3;
-          letter-spacing: 0.4rem;
+          letter-spacing: .004rem;
         }
 
         .subtitle-box {
-          margin-top: 20rem;
+          margin-top: .20rem;
           font-family: "FZLTZCHJW";
         }
       }

@@ -2,7 +2,7 @@
   <div :class="darkMode ? 'comment-dark' : 'comment-light'">
     <div v-if="title" class="title" @click="handleTitleClick">
       {{title}}
-      <div class="icon icon-right"></div>
+      <div class="icon icon-right" v-if="iconShow"></div>
     </div>
     <slot name="comment-card" :dark-mode="darkMode"></slot>
   </div>
@@ -21,9 +21,9 @@
         type: Boolean,
         default: false
       },
-      to: {
-        type: String,
-        default: ''
+      iconShow:{
+        type: Boolean,
+        default: false
       }
     },
     components: {
@@ -31,9 +31,7 @@
     },
     methods: {
       handleTitleClick() {
-        if (this.to) {
-          this.$router.push(this.to)
-        }
+        this.$emit('handleTitleClick')
       }
     }
   }
@@ -46,14 +44,23 @@
     width: 100%;
 
     .title {
-      padding: 25rem 0 12rem 17rem;
+      padding: 0.25rem 0 0.12rem 0.17rem;
       font-family: $FONT-FZLTZCHJW;
       display: flex;
       align-items: center;
       .icon {
-        width: 10rem;
-        height: 10rem;
-        margin-left: 5rem;
+        width: 0.10rem;
+        height: 0.10rem;
+        margin-left: 0.05rem;
+      }
+      .icon-right {
+        width: 0.08rem;
+        height: 0.08rem;
+        transform: rotate(45deg);
+        border-top: solid 0.015rem $gray-97;
+        border-right: solid 0.015rem $gray-97;
+        margin-bottom: 0.02rem;
+        margin-right: 0.02rem;
       }
     }
   }
@@ -63,25 +70,24 @@
     background-color: $black-30;
 
     .title {
-      padding: 25rem 0 12rem 17rem;
+      padding: 0.25rem 0 0.12rem 0.17rem;
       font-family: $FONT-FZLTZCHJW;
       color: $white;
       display: flex;
       align-items: center;
       .icon {
-        width: 10rem;
-        height: 10rem;
-        margin-left: 5rem;
+        width: 0.10rem;
+        height: 0.10rem;
+        margin-left: 0.05rem;
       }
-
       .icon-right {
-        width: 8rem;
-        height: 8rem;
+        width: 0.08rem;
+        height: 0.08rem;
         transform: rotate(45deg);
-        border-top: solid 1.5rem $gray-97;
-        border-right: solid 1.5rem $gray-97;
-        margin-bottom: 2rem;
-        margin-right: 2rem;
+        border-top: solid 0.015rem $gray-97;
+        border-right: solid 0.015rem $gray-97;
+        margin-bottom: 0.2rem;
+        margin-right: 0.2rem;
       }
     }
   }

@@ -32,14 +32,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15rem;
-    padding: 15rem;
+    font-size: 0.15rem;
+    padding: 0.15rem;
     line-height: 1;
-    border: 1rem #eee solid;
+    border: 0.01rem #eee solid;
     background-color: #fafafa;
     .left {
       position: absolute;
-      left: 15rem;
+      left: 0.15rem;
     }
   }
 </style>

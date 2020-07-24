@@ -1,29 +1,40 @@
 @import "./config";
+.thumbsUp-enter{
+  opacity: 0;
+  transform: scale(2,2)
+}
+.thumbsUp-enter-active{
+  transition: all 1s ease;
+}
+.thumbsUp-enter-to{
+  opacity: 1;
+  transform: translateY(0);
+}
+.thumbsUp-leave{
+  display: none;
+}
 .comment-card-light {
   display: flex;
   align-items: flex-start;
-  padding: 15rem 0 0 17rem;
+  padding: 0.15rem 0 0 0.17rem;
 
   .left {
-    min-width: 40rem;
-    min-height: 40rem;
-    margin-right: 12rem;
+    min-width: .40rem;
+    min-height: .40rem;
+    margin-right: .12rem;
 
     .avatar {
-      border: 1rem white solid;
-      width: 40rem;
-      height: 40rem;
-      object-fit: cover;
-      object-position: center center;
-      border-radius: 50%;
+      border: .01rem white solid;
+      width: .40rem;
+      height: .40rem;
     }
   }
 
   .right {
     width: 100%;
-    padding-right: 18rem;
-    padding-bottom: 11rem;
-    border-bottom: 1rem $gray-ed solid;
+    padding-right: .18rem;
+    padding-bottom: .11rem;
+    border-bottom: .01rem $gray-ed solid;
     display: flex;
     flex-direction: column;
 
@@ -31,7 +42,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       .name-container {
         display: flex;
         flex-direction: column;
@@ -44,9 +54,9 @@
 
         .reply-to {
           font-family: $FONT-FZLTXIHJW;
-          font-size: 10rem;
+          font-size: .10rem;
           color: $gray-88;
-          margin-top: 7rem;
+          margin-top: .07rem;
         }
       }
 
@@ -56,14 +66,26 @@
         align-items: center;
 
         span {
-          margin-right: 3rem;
-          font-size: 12rem;
+          margin-right: .03rem;
+          font-size: .12rem;
+        }
+        .icon-thumbs-unlike{
+          width: 0.22rem;
+          height: 0.22rem;
+          background: url("../static/img/thumb_unselect.svg") center center no-repeat;
+          background-size: contain;
+        }
+        .icon-thumbs-like{
+          width: .22rem;
+          height: .22rem;
+          background: url("../static/img/thumb_selected.svg") center center no-repeat;
+          background-size: contain;
         }
       }
     }
 
     .right-middle {
-      margin-top: 10rem;
+      margin-top: .10rem;
 
       .comment-text {
         font-family: $FONT-FZLTXIHJW;
@@ -71,14 +93,14 @@
       }
 
       .comment-img {
-        margin-top: 8rem;
+        margin-top: 0.08rem;
 
         img {
-          max-width: 170rem;
-          max-height: 192rem;
+          max-width: 1.70rem;
+          max-height: 1.92rem;
           object-fit: cover;
           object-position: center center;
-          border-radius: 4rem;
+          border-radius: .04rem;
         }
       }
 
@@ -86,19 +108,19 @@
         width: 100%;
         display: flex;
         align-items: flex-start;
-        padding: 10rem 10rem 10rem 8rem;
-        margin-top: 10rem;
-        border-radius: 4rem;
+        padding: .10rem .10rem .10rem .08rem;
+        margin-top: .10rem;
+        border-radius: .04rem;
         background-color: rgba(0, 0, 0, 0.1);
 
         .parent-reply-left {
-          min-width: 30rem;
-          min-height: 30rem;
-          margin-right: 12rem;
+          min-width: .30rem;
+          min-height: .30rem;
+          margin-right: .12rem;
 
           .avatar {
-            width: 30rem;
-            height: 30rem;
+            width: .30rem;
+            height: .30rem;
             object-fit: cover;
             object-position: center center;
             border-radius: 50%;
@@ -112,20 +134,20 @@
           }
 
           .parent-reply-text {
-            margin-top: 4rem;
+            margin-top: .04rem;
             font-family: $FONT-FZLTXIHJW;
             color: $gray-a5;
           }
 
           .parent-reply-img {
-            margin-top: 8rem;
+            margin-top: .08rem;
 
             img {
-              max-width: 170rem;
-              max-height: 192rem;
+              max-width: 1.70rem;
+              max-height: 1.92rem;
               object-fit: cover;
               object-position: center center;
-              border-radius: 4rem;
+              border-radius: .04rem;
             }
           }
         }
@@ -135,39 +157,32 @@
     .right-bottom {
       display: flex;
       justify-content: space-between;
-      margin-top: 22rem;
+      align-items: center;
+      margin-top: .05rem;
       font-family: $FONT-FZLTZCHJW;
-      font-size: 12rem;
+      font-size: .12rem;
       color: $gray-88;
 
       .right-bottom-left {
         display: flex;
 
         .view-conversation {
-          margin-right: 15rem;
+          margin-right: .15rem;
         }
 
         .reply {
-          margin-right: 15rem;
+          margin-right: .15rem;
         }
 
         .create-time {
           font-family: $FONT-FZLTXIHJW;
         }
       }
-
-      .dots {
-        width: 28rem;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 0 5rem;
-
-        .dot {
-          width: 3rem;
-          height: 3rem;
-          background-color: $gray-b3;
-        }
+      .icon-dot{
+        width: .28rem;
+        height: .28rem;
+        background: url("../static/img/icon-dot.svg") center center no-repeat;
+        background-size: contain;
       }
     }
   }

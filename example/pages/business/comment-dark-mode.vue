@@ -9,10 +9,12 @@
           :avatar="item.data.user.avatar"
           :nickname="item.data.user.nickname"
           :like-count="item.data.likeCount"
+          :like="item.data.liked"
           :message="item.data.message"
           :image-url="item.data.imageUrl"
           :create-time="item.data.createTime"
           :parent-reply="item.data.parentReply"
+          @like="likeEvent"
         />
       </template>
     </vs-comment>
@@ -29,8 +31,12 @@
       'vs-reply-bar': ReplyBar,
     },
     setup() {
+      const likeEvent = (item) => {
+        item.data =  Object.assign( item.data,{liked:!item.data.liked})
+      }
       return {
-        comments
+        comments,
+        likeEvent
       }
     }
   }

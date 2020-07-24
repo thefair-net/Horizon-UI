@@ -1,19 +1,33 @@
 @import "./config";
+.thumbsUp-enter{
+  opacity: 0;
+  transform: scale(2,2)
+}
+.thumbsUp-enter-active{
+  transition: all 1s ease;
+}
+.thumbsUp-enter-to{
+  opacity: 1;
+  transform: translateY(0);
+}
+.thumbsUp-leave{
+  display: none;
+}
 .comment-card-dark {
   display: flex;
   align-items: flex-start;
-  padding: 15rem 0 0 17rem;
+  padding: .15rem 0 0 .17rem;
   background-color: $black-30;
 
   .left {
-    min-width: 40rem;
-    min-height: 40rem;
-    margin-right: 12rem;
+    min-width: .40rem;
+    min-height: .40rem;
+    margin-right: .12rem;
 
     .avatar {
-      border: 1rem white solid;
-      width: 40rem;
-      height: 40rem;
+      border: .01rem white solid;
+      width: .40rem;
+      height: .40rem;
       object-fit: cover;
       object-position: center center;
       border-radius: 50%;
@@ -22,9 +36,9 @@
 
   .right {
     width: 100%;
-    padding-right: 18rem;
-    padding-bottom: 11rem;
-    border-bottom: 1rem $border-dark-gray solid;
+    padding-right: .18rem;
+    padding-bottom: .11rem;
+    border-bottom: 0.01rem $border-dark-gray solid;
     display: flex;
     flex-direction: column;
 
@@ -45,10 +59,10 @@
 
         .reply-to {
           font-family: $FONT-FZLTXIHJW;
-          font-size: 10rem;
+          font-size: .10rem;
           color: $white;
           opacity: 0.8;
-          margin-top: 7rem;
+          margin-top: .07rem;
         }
       }
 
@@ -59,14 +73,26 @@
         color: $white;
 
         span {
-          margin-right: 3rem;
-          font-size: 12rem;
+          margin-right: .03rem;
+          font-size: .12rem;
+        }
+        .icon-thumbs-unlike{
+          width: 0.22rem;
+          height: 0.22rem;
+          background: url("../static/img/thumb_unselect_dark_mode.svg") center center no-repeat;
+          background-size: contain;
+        }
+        .icon-thumbs-like{
+          width: .22rem;
+          height: .22rem;
+          background: url("../static/img/thumb_selected_dark_mode.svg") center center no-repeat;
+          background-size: contain;
         }
       }
     }
 
     .right-middle {
-      margin-top: 10rem;
+      margin-top: .10rem;
 
       .comment-text {
         font-family: $FONT-FZLTXIHJW;
@@ -75,14 +101,14 @@
       }
 
       .comment-img {
-        margin-top: 8rem;
+        margin-top: .08rem;
 
         img {
-          max-width: 170rem;
-          max-height: 192rem;
+          max-width: 1.70rem;
+          max-height: 1.92rem;
           object-fit: cover;
           object-position: center center;
-          border-radius: 4rem;
+          border-radius: .04rem;
         }
       }
 
@@ -90,23 +116,23 @@
         width: 100%;
         display: flex;
         align-items: flex-start;
-        padding: 10rem 10rem 10rem 8rem;
-        margin-top: 10rem;
-        border-radius: 4rem;
+        padding: .10rem .10rem .10rem .08rem;
+        margin-top: .10rem;
+        border-radius: .04rem;
         background-color: rgba(0, 0, 0, 0.1);
 
         .parent-reply-left {
-          min-width: 30rem;
-          min-height: 30rem;
-          margin-right: 12rem;
+          min-width: .30rem;
+          min-height: .30rem;
+          margin-right: .12rem;
 
           .avatar {
-            width: 30rem;
-            height: 30rem;
+            width: .30rem;
+            height: .30rem;
             object-fit: cover;
             object-position: center center;
             border-radius: 50%;
-            border: 1rem $white solid;
+            border: .01rem $white solid;
           }
         }
 
@@ -118,21 +144,21 @@
           }
 
           .parent-reply-text {
-            margin-top: 4rem;
+            margin-top: .04rem;
             font-family: $FONT-FZLTXIHJW;
             color: $white;
             opacity: 0.8;
           }
 
           .parent-reply-img {
-            margin-top: 8rem;
+            margin-top: .08rem;
 
             img {
-              max-width: 170rem;
-              max-height: 192rem;
+              max-width: 1.70rem;
+              max-height: 1.92rem;
               object-fit: cover;
               object-position: center center;
-              border-radius: 4rem;
+              border-radius: .04rem;
             }
           }
         }
@@ -142,21 +168,22 @@
     .right-bottom {
       display: flex;
       justify-content: space-between;
-      margin-top: 22rem;
+      align-items: center;
+      margin-top: 0.05rem;
       font-family: $FONT-FZLTZCHJW;
-      font-size: 12rem;
+      font-size: 0.12rem;
       color: $white;
 
       .right-bottom-left {
         display: flex;
 
         .view-conversation {
-          margin-right: 15rem;
+          margin-right: 0.15rem;
           opacity: 0.8;
         }
 
         .reply {
-          margin-right: 15rem;
+          margin-right: 0.15rem;
           opacity: 0.8;
         }
 
@@ -166,20 +193,11 @@
         }
       }
 
-      .dots {
-        width: 28rem;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 0 5rem;
-
-        .dot {
-          width: 4rem;
-          height: 4rem;
-          background-color: $white;
-          opacity: 0.8;
-          border-radius: 50%;
-        }
+      .icon-dot{
+        width: .28rem;
+        height: .28rem;
+        background: url("../static/img/icon-dot.svg") center center no-repeat;
+        background-size: contain;
       }
     }
   }

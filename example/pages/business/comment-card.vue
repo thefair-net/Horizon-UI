@@ -4,13 +4,13 @@
       :key="key"
       v-for="(item, key) in comment"
       :detail="item"
-      :avatar="item.data.user.avatar"
-      :nickname="item.data.user.nickname"
-      :like-count="item.data.likeCount"
-      :message="item.data.message"
-      :image-url="item.data.imageUrl"
-      :create-time="item.data.createTime"
-      :parent-reply="item.data.parentReply"
+      :like-count="item.feed_content.count_summary.favorite.count"
+      :message="item.feed_content.content"
+      :image-url="item.feed_content.cover_img"
+      :create-time="item.feed_time"
+      :nickname="item.feed_content.user.nick"
+      :avatar="item.feed_content.user.avatar"
+      :user ="item.feed_content.user"
     />
   </div>
 </template>

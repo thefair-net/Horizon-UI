@@ -40,6 +40,12 @@
         "desc": "评论回复框"
       },
       {
+        "path": "/page-loading",
+        "name": "Page Loading",
+        "icon": "page-loading",
+        "desc": "页面加载"
+      },
+      {
         "path": "/page-banner",
         "name": "Page Banner",
         "icon": "page-banner",
@@ -74,6 +80,18 @@
         "name": "Infinity Scroll",
         "icon": "infinity-scroll",
         "desc": "无限滚动"
+      },
+      {
+        "path": "/modal",
+        "name": "Modal",
+        "icon": "modal",
+        "desc": "弹窗"
+      },
+      {
+        "path": "/load-more",
+        "name": "Load More",
+        "icon": "load-more",
+        "desc": "加载更多"
       },
       {
         "path": "/toast",
