@@ -1,23 +1,30 @@
 <template>
   <div class="page icon-page">
-    <div v-for="item in types">
+    <template v-for="item in types">
       <div class="icon-container">
         <div class="icon">
           <vs-icon :type="item"/>
         </div>
         <span>{{item}}</span>
       </div>
+    </template>
+    <div class="icon-container">
+      <div class="icon">
+        <vs-avatar type="normal" src="http://thirdwx.qlogo.cn/mmopen/vi_32/EhqC6icT7YE9uk7hemJFporns6n4UyHBbCaXyf6yuxTT9TSoeKico59S4LanOzhInYCHUwOPksciagRnBnbnjyEVA/132"/>
+      </div>
+      <span>Avatar normal</span>
     </div>
   </div>
 </template>
 
 <script>
-  import {Icon} from '../../../lib'
+  import {Avatar, Icon} from '../../../lib'
 
   export default {
     name: "icon",
     components: {
-      'vs-icon': Icon
+      'vs-icon': Icon,
+      'vs-avatar':Avatar
     },
     data() {
       return {
@@ -44,7 +51,7 @@
   .icon-page {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
 
     .icon-container {
@@ -69,9 +76,12 @@
       }
 
     }
-
     p {
       text-align: center;
     }
+  }
+  .icon-page:after{
+    content: "";
+    flex: auto;
   }
 </style>

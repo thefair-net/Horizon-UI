@@ -83,7 +83,6 @@
     methods: {
       destroyVM() {
         this.$destroy()
-        console.log('destory')
         document.getElementById('app').removeChild(this.$el)
       },
       focusReplyArea() {
@@ -118,17 +117,13 @@
           const _this = this;
           this.$nextTick(()=>{
             _this.$refs.previewImage.src = _this.img;
-            console.log('this.img',_this.img)
-            console.log(_this)
           })
         }
       },
       deleteImg(){
-        console.log('delete');
         this.img = '';
       },
       confirm(){
-        console.log(this.text);
         this.onConfirm({
           text:this.text,
           img:this.img,
