@@ -189,7 +189,7 @@
             opacity: 0.8;
             font-family: 'FZLTXIHJW';
             font-size: .12rem;
-            text-align: justify;
+            text-align: center;
             color: #ffffff;
             white-space: nowrap;
             text-overflow: ellipsis;

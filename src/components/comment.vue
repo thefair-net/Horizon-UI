@@ -2,7 +2,7 @@
   <div :class="darkMode ? 'comment-dark' : 'comment-light'">
     <div v-if="title" class="title" @click="handleTitleClick">
       {{title}}
-      <div class="icon icon-right" v-if="iconShow"></div>
+      <div class="icon-right" v-if="iconShow"></div>
     </div>
     <slot name="comment-card" :dark-mode="darkMode"></slot>
   </div>
@@ -48,11 +48,6 @@
       font-family: $FONT-FZLTZCHJW;
       display: flex;
       align-items: center;
-      .icon {
-        width: 0.10rem;
-        height: 0.10rem;
-        margin-left: 0.05rem;
-      }
       .icon-right {
         width: 0.08rem;
         height: 0.08rem;
@@ -61,6 +56,7 @@
         border-right: solid 0.015rem $gray-97;
         margin-bottom: 0.02rem;
         margin-right: 0.02rem;
+        margin-left: 0.05rem;
       }
     }
   }
@@ -75,19 +71,15 @@
       color: $white;
       display: flex;
       align-items: center;
-      .icon {
-        width: 0.10rem;
-        height: 0.10rem;
-        margin-left: 0.05rem;
-      }
       .icon-right {
         width: 0.08rem;
         height: 0.08rem;
         transform: rotate(45deg);
         border-top: solid 0.015rem $gray-97;
         border-right: solid 0.015rem $gray-97;
-        margin-bottom: 0.2rem;
-        margin-right: 0.2rem;
+        margin-bottom: 0.02rem;
+        margin-right: 0.02rem;
+        margin-left: 0.05rem;
       }
     }
   }

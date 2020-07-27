@@ -1,6 +1,6 @@
 <template>
   <div :class="dark ? 'comment-card-dark' : 'comment-card-light'">
-    <div class="left" >
+    <div class="left">
       <vs-avatar class='avatar' :src="avatar" @click.native="avatarClick"></vs-avatar>
     </div>
     <div class="right">
@@ -10,16 +10,12 @@
           <span class="reply-to" v-if="parentReply">回复 @{{parentReply.user.nickname}}</span>
         </div>
         <div class="like">
-          <span @click ="thumbsUp">{{likeCount}}</span>
-          <div v-show="!like" @click ="thumbsUp">
-<!--            <vs-icon v-if="!dark" class="icon"  :type="'icon-thumb-unselect'" />-->
-<!--            <vs-icon v-else class="icon" :type="'icon-thumb-dark-unselect'"/>-->
+          <span @click="thumbsUp">{{likeCount}}</span>
+          <div v-show="!like" @click="thumbsUp">
             <div class="icon-thumbs-unlike"></div>
           </div>
-          <transition name="thumbsUp" >
-            <div v-show="like" @click ="thumbsUp">
-<!--              <vs-icon v-if="!dark" class="icon" :type="'icon-thumb-selected'" />-->
-<!--              <vs-icon v-else class="icon" :type="'icon-thumb-dark-selected'"/>-->
+          <transition name="thumbsUp">
+            <div v-show="like" @click="thumbsUp">
               <div class="icon-thumbs-like"></div>
             </div>
           </transition>
@@ -51,7 +47,7 @@
       </div>
       <div class="right-bottom">
         <div class="right-bottom-left">
-          <div @click="viewConversation" class="view-conversation" v-if="parentReply">查看对话</div>
+<!--          <div @click="viewConversation" class="view-conversation" v-if="parentReply">查看对话</div>-->
           <div class="reply" @click="reply">回复</div>
           <div class="create-time">{{moment(createTime).format('YYYY/MM/DD')}}</div>
         </div>
@@ -64,14 +60,15 @@
 
 <script>
   import moment from '../utils/moment'
-  import { ImageViewer} from '../../lib'
+  import {ImageViewer} from '../../lib'
   import Icon from '../../lib/icon'
   import Avatar from '../../lib/avatar'
+
   export default {
     name: "vs-comment-card",
     components: {
       'vs-icon': Icon,
-      'vs-avatar':Avatar
+      'vs-avatar': Avatar
     },
     props: {
       darkMode: {
@@ -90,7 +87,7 @@
         type: Number,
         default: 0
       },
-      like:{
+      like: {
         type: Boolean,
         default: false
       },
@@ -112,7 +109,7 @@
       detail: {
         type: Object
       },
-      index:{
+      index: {
         type: Number,
         default: 0
       }
@@ -131,28 +128,26 @@
         })
       }
       const viewConversation = () => {
-        context.emit('view-conversation', {
-
-        })
+        context.emit('view-conversation', {})
       }
       const reply = () => {
-       const { message ,nickname } = props;
+        const {message, nickname} = props;
         context.emit('reply', {
           message,
           nickname
         })
       }
-      const thumbsUp = ()=>{
+      const thumbsUp = () => {
         console.log('thumbsup')
-        context.emit('like',props.detail)
+        context.emit('like', props.detail)
       }
-      const operation =()=>{
+      const operation = () => {
         console.log('showPopup')
-        context.emit('operation',props.detail)
+        context.emit('operation', props.detail)
       }
-      const avatarClick = () =>{
+      const avatarClick = () => {
         console.log('avatar')
-        context.emit('avatar',props.detail)
+        context.emit('avatar', props.detail)
       }
       return {
         handleImgClick,

@@ -2,7 +2,7 @@
   <transition name="fade">
     <div class="vs-toast" v-show="show">
       <vs-icon :type="icon" class="toast-icon" v-if="icon" ></vs-icon>
-      <span class="toast-text" v-if="message" :style="{marginTop:icon ?'5rem':'0'}">{{message}}</span>
+      <span class="toast-text" v-if="message" :style="{marginTop:icon ?'0.05rem':'0'}">{{message}}</span>
     </div>
   </transition>
 </template>

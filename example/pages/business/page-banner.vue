@@ -48,10 +48,10 @@
 
 <style lang="scss" scoped>
   .description{
-    padding: 1.5rem 1.7rem;
+    padding: .15rem .17rem;
     opacity: 0.8;
     font-family: "FZLTXIHJW";
-    font-size: 1.4rem;
+    font-size: .14rem;
     line-height: 1.5;
     text-align: justify;
     color: #444444;
@@ -65,29 +65,29 @@
     .user-box {
       display: flex;
       align-items: center;
-      font-size: 1.2rem;
-      letter-spacing: 0.4rem;
+      font-size: .12rem;
+      letter-spacing: 0.04rem;
       color: #ffffff;
 
       .user-avatar {
-        width: 2.0rem;
-        height: 2.0rem;
+        width: .20rem;
+        height: .20rem;
         border-radius: 50%;
-        border: solid 0.5rem #ffffff;
-        margin-right: .5rem;
+        border: solid 0.05rem #ffffff;
+        margin-right: .05rem;
       }
 
       .user-nick {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 16.3rem;
+        max-width: 1.63rem;
       }
     }
 
     .join {
-      font-size: 1.2rem;
-      letter-spacing: 0.34rem;
+      font-size: .12rem;
+      letter-spacing: 0.034rem;
       color: #ffffff;
       font-family: "FZLTXIHJW";
     }

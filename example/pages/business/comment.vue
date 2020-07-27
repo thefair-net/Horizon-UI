@@ -1,22 +1,24 @@
 <template>
   <div class="page">
-    <vs-comment :title="'热门评论'" :to="'/all-hot-comments'">
+    <vs-comment :title="'热门评论'" :icon-show="true" @handleTitleClick="handleTitleClick">
       <template v-slot:comment-card>
         <vs-comment-card
           :key="key"
           v-for="(item, key) in comments"
+          :index="key"
           :detail="item"
-          :liked= "item.feed_content.be_favorite"
-          :like-count="item.feed_content.count_summary.favorite.count"
-          :message="item.feed_content.content"
-          :image-url="item.feed_content.cover_img[0] ? item.feed_content.cover_img[0].url :''"
-          :create-time="item.feed_time"
-          :nickname="item.feed_content.user.nick"
-          :avatar="item.feed_content.user.avatar"
-          :user ="item.feed_content.user"
+          :avatar="item.data.user.avatar"
+          :nickname="item.data.user.nickname"
+          :like-count="item.data.likeCount"
+          :message="item.data.message"
+          :image-url="item.data.imageUrl"
+          :create-time="item.data.createTime"
+          :parent-reply="item.data.parentReply"
+          :like="item.data.liked"
           @reply="showReplyOthersBox"
           @like="likeEvent"
-          @operation = "showMoreOperation"
+          @operation="showMoreOperation"
+          @avatar="handleAvatarClick"
         />
       </template>
     </vs-comment>
@@ -101,7 +103,7 @@
       }
       const showMoreOperation = (item)=>{
         moreOperation.value = true;
-        operationId.value = item.data.id;
+        // operationId.value = item.data.id;
       }
       const complain = (index)=>{
         console.log(operationId,index)
@@ -109,6 +111,11 @@
       const showComplain = ()=>{
         moreOperation.value = false;
         showReasons.value = true;
+      }
+      const handleTitleClick = () => {
+        alert('去热评区')
+      }
+      const handleAvatarClick = (item) => {
       }
       return {
         isShowBar,
@@ -122,7 +129,9 @@
         complain,
         COMPLAIN_REASONS,
         showComplain,
-        handleBarClick
+        handleBarClick,
+        handleTitleClick,
+        handleAvatarClick
       }
     }
   }

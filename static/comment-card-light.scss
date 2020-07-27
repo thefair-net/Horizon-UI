@@ -1,18 +1,23 @@
 @import "./config";
-.thumbsUp-enter{
+
+.thumbsUp-enter {
   opacity: 0;
-  transform: scale(2,2)
+  transform: scale(2, 2)
 }
-.thumbsUp-enter-active{
+
+.thumbsUp-enter-active {
   transition: all 1s ease;
 }
-.thumbsUp-enter-to{
+
+.thumbsUp-enter-to {
   opacity: 1;
   transform: translateY(0);
 }
-.thumbsUp-leave{
+
+.thumbsUp-leave {
   display: none;
 }
+
 .comment-card-light {
   display: flex;
   align-items: flex-start;
@@ -42,6 +47,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       .name-container {
         display: flex;
         flex-direction: column;
@@ -69,13 +75,15 @@
           margin-right: .03rem;
           font-size: .12rem;
         }
-        .icon-thumbs-unlike{
+
+        .icon-thumbs-unlike {
           width: 0.22rem;
           height: 0.22rem;
           background: url("../static/img/thumb_unselect.svg") center center no-repeat;
           background-size: contain;
         }
-        .icon-thumbs-like{
+
+        .icon-thumbs-like {
           width: .22rem;
           height: .22rem;
           background: url("../static/img/thumb_selected.svg") center center no-repeat;
@@ -178,7 +186,8 @@
           font-family: $FONT-FZLTXIHJW;
         }
       }
-      .icon-dot{
+
+      .icon-dot {
         width: .28rem;
         height: .28rem;
         background: url("../static/img/icon-dot.svg") center center no-repeat;

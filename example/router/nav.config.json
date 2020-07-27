@@ -88,12 +88,6 @@
         "desc": "弹窗"
       },
       {
-        "path": "/load-more",
-        "name": "Load More",
-        "icon": "load-more",
-        "desc": "加载更多"
-      },
-      {
         "path": "/toast",
         "name": "Toast",
         "icon": "toast",

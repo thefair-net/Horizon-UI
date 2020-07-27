@@ -65,7 +65,7 @@
         font-size: .12rem;
         letter-spacing: .01rem;
         color: #bebebc;
-        padding: .12rem .8rem;
+        padding: .12rem .08rem;
       }
     }
   }

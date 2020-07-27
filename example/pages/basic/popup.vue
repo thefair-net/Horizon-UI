@@ -50,19 +50,19 @@
 <style lang="scss" scoped>
 
   .pop-item {
-    padding: 22rem 0 21rem;
-    border-bottom: solid 1rem #eeeeee;
+    padding: .22rem 0 .21rem;
+    border-bottom: solid .01rem #eeeeee;
   }
   .button{
-    width: 100rem;
+    width: 1.00rem;
     text-align: center;
-    margin:30rem;
-    padding: 10rem;
+    margin:.30rem;
+    padding: .10rem;
     color: #fafafa;
     background-color: #30302f;
   }
   .item{
-    max-height: 300rem;
+    max-height: 3.00rem;
     overflow: auto;
   }
 </style>

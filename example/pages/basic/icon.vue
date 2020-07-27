@@ -1,18 +1,19 @@
 <template>
   <div class="page icon-page">
     <div v-for="item in types">
-    <div class="icon-container"  >
-      <vs-icon :type="item"/>
+      <div class="icon-container">
+        <div class="icon">
+          <vs-icon :type="item"/>
+        </div>
+        <span>{{item}}</span>
+      </div>
     </div>
-    <p>{{item}}</p>
-    </div>
-
-
   </div>
 </template>
 
 <script>
   import {Icon} from '../../../lib'
+
   export default {
     name: "icon",
     components: {
@@ -31,6 +32,7 @@
           'icon-thumb-dark-unselect',
           'icon-thumb-selected',
           'icon-thumb-dark-selected',
+          'icon-dot',
           'icon-dot'
         ]
       }
@@ -42,15 +44,33 @@
   .icon-page {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: flex-start;
+
     .icon-container {
-      background-color: #bebebc;
+      background-color: #ededed;
       width: 30vw;
       height: 30vw;
       margin: 1vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: .12rem;
+      .icon {
+        margin-top: .10rem;
+        height: 5vw;
+        display: flex;
+        align-items: center;
+      }
+      span {
+        margin-top: .10rem;
+        text-align: center;
+      }
+
     }
-    p{
+
+    p {
       text-align: center;
     }
   }

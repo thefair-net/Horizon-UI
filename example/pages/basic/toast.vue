@@ -47,7 +47,7 @@
 
 <style scoped>
 .button{
-  width: 1rem;
+  width: 1.00rem;
   text-align: center;
   margin:.30rem;
   padding: .10rem;
