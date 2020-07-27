@@ -33,26 +33,26 @@
 
 <style lang="scss" scoped>
   .home-title {
-    font-size: 20rem;
-    padding: 20rem 0;
+    font-size: .20rem;
+    padding: .20rem 0;
     margin: 0 auto;
     text-align: center;
     display: block;
     line-height: 1;
-    border: 1rem #eee solid;
+    border: 0.01rem #eee solid;
     background-color: #fafafa;
   }
   .group-title {
-    font-size: 15rem;
-    padding: 15rem 0 15rem 15rem;
-    border-bottom: 1rem #eee solid;
+    font-size: .15rem;
+    padding: .15rem 0 .15rem .15rem;
+    border-bottom: .01rem #eee solid;
     font-weight: bold;
     display: flex;
     align-items: center;
   }
   .cell {
-    padding: 15rem;
-    border-bottom: 1rem #eee solid;
+    padding: .15rem;
+    border-bottom: .01rem #eee solid;
     display: flex;
     justify-content: space-between;
     align-items: center;

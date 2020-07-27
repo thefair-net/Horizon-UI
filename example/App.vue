@@ -40,6 +40,5 @@
 
   .page {
     background-color: $white;
-    height: calc(100vh - #{$nav-height});
   }
 </style>

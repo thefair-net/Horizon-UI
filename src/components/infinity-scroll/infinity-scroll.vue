@@ -78,14 +78,14 @@
     .loading {
       width: 100%;
       /*padding: 20rem 0 calc(20rem + #{$reply-height} + #{$safe-area}) 0;*/
-      padding: 20rem 0;
+      padding: .20rem 0;
       display: flex;
       justify-content: center;
     }
 
     .the-end {
       width: 100%;
-      padding: 45rem 0 230rem 0;
+      padding: .45rem 0 2.30rem 0;
       display: flex;
       justify-content: center;
     }

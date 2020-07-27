@@ -44,14 +44,14 @@
   @import '../../../static/config.scss';
 
   .box {
-    width: 100rem;
-    height: 100rem;
+    width: 1.00rem;
+    height: 1.00rem;
     background-color: #b3b1b1;
     color: #30302f;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10rem auto;
+    margin: .10rem auto;
   }
   .scroll-page {
     height: calc(100vh - #{$nav-height})

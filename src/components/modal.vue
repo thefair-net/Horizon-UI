@@ -1,14 +1,19 @@
 <template>
-  <div class="vs-popup" v-show="value" @touchmove.self.prevent>
-    <div class="vs-popup-mask" v-if="overlay" @click="closePopup"></div>
-    <div class="vs-popup-content" :class="[position ? ''+ position : '',fadeout ?'fade_out':'fade_in']">
-      <div class="popup-title" v-if="title">{{title}}</div>
-      <slot></slot>
-      <div class="popup-cancel" v-if="showCancel" @click="closePopup">
-        取消
+  <transition name="fade">
+    <div class="vs-modal" v-show="value" @click="closeModal" @touchmove.self.prevent>
+      <div class="modal-content" :class="[position ? ''+ position : '',fadeout ?'fade_out':'fade_in']">
+        <div class="title">
+          <slot name="title"></slot>
+        </div>
+        <div class="content">
+          <slot></slot>
+        </div>
+        <div class="footer">
+          <slot name="footer"></slot>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -57,13 +62,13 @@
       }
     },
     methods: {
-      closePopup() {
-        this.fadeout = true;
-        setTimeout(() => {
-          this.$emit("change", false)
-          this.fadeout = false;
-        }, 300)
-
+      closeModal() {
+        // this.fadeout = true;
+        // setTimeout(() => {
+        //
+        //   this.fadeout = false;
+        // }, 300)
+        this.$emit("change", false)
       }
     },
     beforeDestroy() {
@@ -134,64 +139,35 @@
     }
   }
 
-  .vs-popup {
+  .vs-modal {
     touch-action: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .vs-popup-mask {
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, .4);
-    }
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .4);
 
-    .vs-popup-content {
-      position: fixed;
-      width: 100%;
+    .modal-content {
       background-color: #fff;
       z-index: 1000;
       font-family: 'FZLTXIHJW';
       font-size: .14rem;
       text-align: center;
       color: #383838;
-
-      &.bottom {
-        bottom: 0;
-        padding-bottom: constant(safe-area-inset-bottom);
-        padding-bottom: env(safe-area-inset-bottom);
-
-        &.fade_in {
-          animation: fadeBottom_in 200ms linear forwards;
-        }
-
-        &.fade_out {
-          animation: fadeBottom_out 200ms linear forwards;
-        }
+      border-radius: .10rem;
+      padding: .30rem;
+      min-width: .200rem;
+      .content{
+        display: flex;
+        align-content: center;
+        justify-content: center;
       }
-
-      &.top {
-        top: 0%;
-        padding-top: constant(safe-area-inset-top);
-        padding-top: env(safe-area-inset-top);
-
-        &.fade_in {
-          animation: fadeTop_in 0.3s linear forwards;
-        }
-
-        &.fade_out {
-          animation: fadeTop_out 0.3s linear forwards;
-        }
-      }
-      &.center {
-        max-width: 3.00rem;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        margin: 0 auto;
-      }
-
       .title-box {
         font-family: 'FZLTXIHJW';
         font-size: .12rem;
@@ -199,18 +175,7 @@
         color: #888888;
       }
 
-      .popup-title {
-        font-size: .12rem;
-        text-align: center;
-        color: #888888;
-        padding: .24rem 0 .22rem;
-        border-bottom: solid .01rem #eeeeee;
-      }
 
-      .popup-cancel {
-        padding: .22rem 0 .34rem;
-        /*border-top: solid 1rem #eeeeee;*/
-      }
     }
 
   }

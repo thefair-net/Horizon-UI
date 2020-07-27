@@ -9,49 +9,91 @@
 }
 
 .icon-right {
-  width: 8rem;
-  height: 8rem;
+  width: .08rem;
+  height: .08rem;
   transform: rotate(45deg);
-  border-top: solid 1.5rem $gray-97;
-  border-right: solid 1.5rem $gray-97;
-  margin-bottom: 2rem;
-  margin-right: 2rem;
+  border-top: solid 0.015rem $gray-97;
+  border-right: solid 0.015rem $gray-97;
+  margin-bottom: 0.02rem;
+  margin-right: 0.02rem;
 }
 
 .icon-close {
-  width: 28rem;
-  height: 28rem;
+  width: 0.28rem;
+  height: 0.28rem;
   background: url("../../../static/img/icon-close.svg") center center no-repeat;
   background-size: contain;
 }
 
 .icon-check {
-  width: 28rem;
-  height: 28rem;
+  width: 0.28rem;
+  height: 0.28rem;
   background: url("../../../static/img/icon-check.svg") center center no-repeat;
   background-size: contain;
 }
 
 .icon-upload-img {
-  width: 28rem;
-  height: 28rem;
+  width: 0.28rem;
+  height: 0.28rem;
   background: url("../../../static/img/icon-upload-img.svg") center center no-repeat;
   background-size: contain;
 }
 
 .icon-the-end {
-  width: 46rem;
-  height: 12rem;
+  width: 0.46rem;
+  height: 0.12rem;
   background: url("../../../static/img/icon-the-end.png") center center no-repeat;
   background-size: contain;
 }
 
 .icon-spinner {
-  width: 16rem;
-  height: 16rem;
+  width: 0.16rem;
+  height: 0.16rem;
   background: url("../../../static/img/icon-spinner.svg") center center no-repeat;
   background-size: contain;
   animation: rotate 1s linear infinite;
+}
+.icon-thumb-unselect {
+  width: 0.22rem;
+  height: 0.22rem;
+  background: url("../../../static/img/thumb_unselect.svg") center center no-repeat;
+  background-size: contain;
+}
+.icon-thumb-dark-unselect{
+  width: 0.22rem;
+  height: 0.22rem;
+  background: url("../../../static/img/thumb_unselect_dark_mode.svg") center center no-repeat;
+  background-size: contain;
+}
+.icon-thumb-selected {
+  width: .22rem;
+  height: .22rem;
+  background: url("../../../static/img/thumb_selected.svg") center center no-repeat;
+  background-size: contain;
+}
+.icon-thumb-dark-selected {
+  width: .22rem;
+  height: .22rem;
+  background: url("../../../static/img/thumb_selected_dark_mode.svg") center center no-repeat;
+  background-size: contain;
+}
+.icon-dot {
+  width: .28rem;
+  height: .28rem;
+  background: url("../../../static/img/icon-dot.svg") center center no-repeat;
+  background-size: contain;
+}
+.icon-loading-dark {
+  width: .50rem;
+  height: .50rem;
+  background: url("../../../static/img/icon_loading_dark.svg") center center no-repeat;
+  background-size: contain;
+}
+.icon-loading-light {
+  width: .50rem;
+  height: .50rem;
+  background: url("../../../static/img/icon_loading_light.svg") center center no-repeat;
+  background-size: contain;
 }
 @keyframes rotate {
   from {

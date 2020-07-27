@@ -1,15 +1,16 @@
 <template>
   <!-- prevent用来阻止背后页面内容滚动-->
-  <div @touchmove.prevent.stop="handleTouchmove" ref="replyBoxContainer" class="reply-box-container">
+  <div @touchmove.prevent.stop="handleTouchmove"  ref="replyBoxContainer" class="reply-box-container">
     <div class="reply-box" @touchmove.prevent="handleTouchmove">
       <div class="top">
         <div class="close" @click="hideReplyBox">
           <vs-icon :type="'icon-close'"/>
         </div>
-        <div class="title">
-          评论
+        <div class="title-box">
+          <div class="title">{{title}}</div>
+          <div class="subtitle" v-if="subtitle" :style="{marginTop:'0.05rem'}">{{subtitle}}</div>
         </div>
-        <div class="confirm">
+        <div class="confirm" @click="confirm">
           <vs-icon :type="'icon-check'"/>
         </div>
       </div>
@@ -17,6 +18,7 @@
         <!-- stop用来限制输入框的触摸操作不会穿透到container上，从而避免了输入框内容无法滚动的问题-->
         <textarea
           @input="handleInput"
+          :maxlength="WORDS_LIMIT"
           @touchmove.stop="handleAreaTouchmove"
           ref="replyArea"
           class="reply-area"
@@ -25,13 +27,29 @@
         >
         </textarea>
       </div>
-      <div class="bottom">
-        <div class="upload">
-          <vs-icon :type="'icon-upload-img'"/>
-          <span class="text">图片</span>
+      <div class="bottom" >
+        <div class="img" v-if="img">
+          <img class="" src="" ref="previewImage" alt="" >
+            <vs-icon  class="icon" :type="'icon-close'" @click.native="deleteImg"/>
+        </div>
+        <div class="upload" v-else>
+          <label>
+            <vs-icon :type="'icon-upload-img'" />
+            <span class="text">图片</span>
+            <input
+              class="img-input"
+              ref="fileInput"
+              type="file"
+              id='img'
+              accept="image/*"
+              style="display:none;"
+              @input="handelImg"
+            />
+          </label>
+
         </div>
         <div class="left-count">
-          500
+          {{wordLeft}}
         </div>
       </div>
     </div>
@@ -40,16 +58,27 @@
 
 <script>
   import {Icon} from '../../lib'
-
+  const WORDS_LIMIT = 500;
   export default {
     name: "vs-reply-box",
     data() {
       return {
-        text: ''
+        subtitle: this.$options.subtitle,
+        text: '',
+        WORDS_LIMIT,
+        img:'',
       }
     },
     components: {
       'vs-icon': Icon
+    },
+    computed:{
+      wordLeft:function () {
+        return WORDS_LIMIT - this.text.length > 0 ? WORDS_LIMIT-this.text.length : 0 ;
+      },
+      title: function () {
+        return  this.$options.title ? '@' + this.$options.title : '评论'
+      }
     },
     methods: {
       destroyVM() {
@@ -60,11 +89,15 @@
         this.$refs.replyArea.focus()
       },
       showReplyBox() {
-        this.$refs.replyBoxContainer.style.marginBottom = '0'
+        this.$refs.replyBoxContainer.style.marginBottom = '0';
       },
       hideReplyBox() {
-        this.$refs.replyBoxContainer.style.marginBottom = '-100vh'
-        this.$options.onClose()
+        this.$refs.replyBoxContainer.style.marginBottom = '-200vh';
+        this.onClose();
+      },
+      clearReplyBox() {
+        this.img = '';
+        this.text = '';
       },
       handleTouchmove() {},
       handleAreaTouchmove(e) {
@@ -73,9 +106,29 @@
         }
       },
       handleInput(e) {
-        this.text = e.target.value
+        this.text = e.target.value;
+      },
+      handelImg(e){
+        let reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+        reader.onload = (e) => {
+          let imgCode = e.target.result;
+          this.img=imgCode
+          const _this = this;
+          this.$nextTick(()=>{
+            _this.$refs.previewImage.src = _this.img;
+          })
+        }
+      },
+      deleteImg(){
+        this.img = '';
+      },
+      confirm(){
+        this.onConfirm({
+          text:this.text,
+          img:this.img,
+        });
       }
-
     }
   }
 </script>
@@ -98,30 +151,46 @@
     .reply-box {
       width: 100%;
       max-width: $iPadWidth;
-      height: calc(266rem + env(safe-area-inset-bottom));
+      height: calc(2.66rem + env(safe-area-inset-bottom));
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 0 auto;
-      padding: 0 15rem env(safe-area-inset-bottom) 15rem;
-      -webkit-backdrop-filter: blur(20rem);
-      backdrop-filter: blur(20rem);
+      padding: 0 0.15rem env(safe-area-inset-bottom) 0.15rem;
+      -webkit-backdrop-filter: blur(0.20rem);
+      backdrop-filter: blur(0.20rem);
       background-color: rgba(0, 0, 0, 0.5);
+      font-size: 0.14rem;
 
       .top {
         width: 100%;
-        height: 61rem;
+        height: 0.61rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         color: $white;
         font-family: $FONT-FZLTZCHJW;
-        border-bottom: 1rem rgba(255, 255, 255, 0.2) solid;
+        border-bottom: 0.01rem rgba(255, 255, 255, 0.2) solid;
 
         .close {
         }
 
-        .title {
+        .title-box {
+          text-align: center;
+          font-size: 0.14rem;
+          .subtitle{
+            max-width: 2.75rem;
+            height: .14rem;
+            opacity: 0.8;
+            font-family: 'FZLTXIHJW';
+            font-size: .12rem;
+            text-align: center;
+            color: #ffffff;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+          }
         }
 
         .confirm {
@@ -135,26 +204,43 @@
         .reply-area {
           width: 100%;
           height: 100%;
-          padding: 10rem 0;
+          padding: .10rem 0;
         }
       }
 
       .bottom {
-        width: 100%;
-        height: 40rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
+        height: .40rem;
         color: $white;
-        border-top: 1rem rgba(255, 255, 255, 0.2) solid;
-
+        border-top: .01rem rgba(255, 255, 255, 0.2) solid;
+        .img{
+          position: relative;
+          img{
+            width: .30rem;
+            height: .30rem;
+            object-fit:cover;
+            border-radius: .01rem;
+            border: solid .01rem rgba(255, 255, 255, 0.9);
+          }
+          .icon{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0.12rem;
+            height: 0.12rem;
+          }
+        }
         .upload {
-          display: flex;
-          align-items: center;
-          font-family: $FONT-FZLTZCHJW;
-
+          label{
+            display: flex;
+            align-items: center;
+            font-family: $FONT-FZLTZCHJW;
+          }
           .text {
-            margin-left: 3rem;
+            margin-left: 0.03rem;
           }
         }
 

@@ -1,8 +1,10 @@
 <template>
-  <div class="vs-toast" :class="showContent ? 'fade-in':'fade-out'" >
-    <vs-icon :type="icon" class="toast-icon" v-if="icon" :style="{marginBottom:message?'5rem':'0'}"></vs-icon>
-    <span class="toast-text" v-if="message">{{message}}</span>
-  </div>
+  <transition name="fade">
+    <div class="vs-toast" v-show="show">
+      <vs-icon :type="icon" class="toast-icon" v-if="icon" ></vs-icon>
+      <span class="toast-text" v-if="message" :style="{marginTop:icon ?'0.05rem':'0'}">{{message}}</span>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -16,17 +18,14 @@
       return {
         message: this.$options.message,
         icon: this.$options.icon,
-        duration: this.$options.duration,
-        showContent: this.showContent,
+        duration: this.$options.duration || 2000,
+        show: this.show,
       }
     },
     methods: {
       destroyVM() {
-        this.showContent = false
-        setTimeout(() => {
           this.$destroy()
           document.getElementById('app').removeChild(this.$el)
-        }, 160)
       },
     }
   }
@@ -60,18 +59,25 @@
     }
   }
 
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to  {
+    opacity: 0;
+  }
+
   .vs-toast {
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     max-width: 80%;
-    border-radius: 5rem;
+    border-radius: .05rem;
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     text-align: center;
     z-index: 10000;
-    padding:10rem;
+    padding:.10rem;
     .toast-icon{
       margin:0 auto;
     }
