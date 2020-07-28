@@ -31,6 +31,8 @@
         types: [
           'icon-right',
           'icon-close',
+          'icon-close-round',
+          'icon-close-round-white',
           'icon-check',
           'icon-upload-img',
           'icon-the-end',
@@ -40,7 +42,6 @@
           'icon-thumb-selected',
           'icon-thumb-dark-selected',
           'icon-dot',
-          'icon-dot'
         ]
       }
     }
@@ -76,12 +77,5 @@
       }
 
     }
-    p {
-      text-align: center;
-    }
-  }
-  .icon-page:after{
-    content: "";
-    flex: auto;
   }
 </style>

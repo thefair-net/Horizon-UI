@@ -40,12 +40,6 @@
         "desc": "评论回复框"
       },
       {
-        "path": "/page-loading",
-        "name": "Page Loading",
-        "icon": "page-loading",
-        "desc": "页面加载"
-      },
-      {
         "path": "/page-banner",
         "name": "Page Banner",
         "icon": "page-banner",
@@ -74,6 +68,12 @@
         "name": "Popup",
         "icon": "popup",
         "desc": "底部弹层"
+      },
+      {
+        "path": "/v-loading",
+        "name": "v-loading 指令",
+        "icon": "v-loading",
+        "desc": "页面加载"
       },
       {
         "path": "/infinity-scroll",

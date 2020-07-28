@@ -1,20 +1,32 @@
 <template>
-  <div
-    @click="handleClick"
-    @touchstart="handleTouchStart"
-    @touchmove="handleTouchMove"
-    @touchend="handleTouchEnd"
-    class="image-viewer"
-    :class="{'fade-in': fadeIn, 'fade-out': fadeOut}"
-    ref="imageViewer"
-  >
-    <img class="image" :src="imgSrc" alt="">
+  <div>
+    <div class="close"
+         :class="{'fade-in': fadeIn, 'fade-out': fadeOut}"
+         @click="handleClick">
+      <vs-icon :type="'icon-close-round-white'"/>
+    </div>
+    <div
+      @click="handleClick"
+      @touchstart="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd"
+      class="image-viewer"
+      :class="{'fade-in': fadeIn, 'fade-out': fadeOut}"
+      ref="imageViewer"
+    >
+      <img class="image" :src="imgSrc" alt="">
+    </div>
   </div>
 </template>
 
 <script>
+  import Icon from '../../lib/icon'
+
   export default {
     name: "vs-image-viewer",
+    components: {
+      'vs-icon': Icon
+    },
     data() {
       return {
         originClientX: 0,
@@ -38,8 +50,6 @@
         this.originClientX = e.touches[0].clientX
         this.originClientY = e.touches[0].clientY
         this.lastClientY = this.originClientY
-        this.wrapperStyle = e.target.style
-        this.imgStyle = e.target.firstElementChild.style
         /**还原transition duration为0**/
         this.imgStyle.transitionDuration = `0s`
         this.wrapperStyle.transitionDuration = `0s`
@@ -107,7 +117,15 @@
         }
       },
       handleClick(e) {
-        this.destroyVM()
+        this.wrapperStyle.transition = `all 150ms linear`
+        this.imgStyle.transition = `transform 150ms linear`
+        this.fadeIn = false
+        this.fadeOut = true
+        this.imgStyle.transform = `scale(0, 0)`
+        this.imgStyle.transformOrigin = `center center`
+        setTimeout(() => {
+          this.destroyVM()
+        }, 150)
       }
     },
     mounted() {
@@ -128,6 +146,8 @@
       setTimeout(() => {
         const imageViewer = this.$refs.imageViewer
         const image = this.$refs.imageViewer.firstElementChild
+        this.wrapperStyle = imageViewer.style
+        this.imgStyle = image.style
         if (imageViewer.clientHeight > image.clientHeight) {
           imageViewer.style.alignItems = 'center'
         }
@@ -137,6 +157,33 @@
 </script>
 
 <style scoped lang="scss">
+  .close {
+    position: fixed;
+    top: 0.1rem;
+    left: 0.1rem;
+    z-index: 2001;
+  }
+
+  .image-viewer {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: flex-start;
+    overflow-y: scroll;
+
+    .image {
+      width: 100%;
+      object-position: center center;
+      object-fit: contain;
+      pointer-events: none;
+    }
+  }
+
   .fade-in {
     animation: fade-in 150ms linear;
   }
@@ -160,26 +207,6 @@
     }
     to {
       opacity: 0;
-    }
-  }
-
-  .image-viewer {
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2000;
-    display: flex;
-    align-items: flex-start;
-    overflow-y: scroll;
-
-    .image {
-      width: 100%;
-      object-position: center center;
-      object-fit: contain;
-      pointer-events: none;
     }
   }
 </style>
