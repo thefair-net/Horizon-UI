@@ -159,8 +159,6 @@
 
       &.bottom {
         bottom: 0;
-        padding-bottom: constant(safe-area-inset-bottom);
-        padding-bottom: env(safe-area-inset-bottom);
 
         &.fade_in {
           animation: fadeBottom_in 200ms linear forwards;
@@ -208,10 +206,30 @@
       }
 
       .popup-cancel {
-        padding: .22rem 0 .34rem;
-        /*border-top: solid 1rem #eeeeee;*/
+        padding: .22rem 0 .22rem;
       }
     }
+  }
 
+  /* iphoneX,XS */
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .bottom {
+      padding-bottom: 0.34rem !important;
+    }
+
+  }
+
+  /* iphoneXR*/
+  @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+    .bottom {
+      padding-bottom: 0.34rem !important;
+    }
+  }
+
+  /* iphoneXS Max */
+  @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+    .bottom {
+      padding-bottom: 0.34rem !important;
+    }
   }
 </style>

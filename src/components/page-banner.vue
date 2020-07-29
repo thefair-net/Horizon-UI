@@ -64,7 +64,7 @@
           font-family: "FZLTZCHJW";
           font-size: .20rem;
           line-height: 1.3;
-          letter-spacing: .04rem;
+          letter-spacing: .004rem;
         }
 
         .subtitle-box {
