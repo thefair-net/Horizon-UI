@@ -71,7 +71,8 @@
         file: '',
         imgInfo: {
           width: 0,
-          height: 0
+          height: 0,
+          scale: 1,
         }
       }
     },
@@ -128,6 +129,7 @@
           image.onload = function () {
             _this.imgInfo.width = this.width;
             _this.imgInfo.height = this.height;
+            _this.imgInfo.scale = (this.width/this.height).toFixed(2);
           }
           this.$nextTick(() => {
             _this.$refs.previewImage.src = imgCode;
