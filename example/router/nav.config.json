@@ -50,6 +50,12 @@
         "name": "Page Description",
         "icon": "page-description",
         "desc": "页面描述"
+      },
+      {
+        "path": "/share-header",
+        "name": "Share Header",
+        "icon": "share-header",
+        "desc": "分享页头部"
       }
     ]
   },

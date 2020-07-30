@@ -57,7 +57,8 @@
 </template>
 
 <script>
-  import {Icon} from '../../lib'
+  import {Icon, Toast} from '../../lib'
+
   const WORDS_LIMIT = 500;
   export default {
     name: "vs-reply-box",
@@ -66,18 +67,24 @@
         subtitle: this.$options.subtitle,
         text: '',
         WORDS_LIMIT,
-        img:'',
+        img: '',
+        file: '',
+        imgInfo: {
+          width: 0,
+          height: 0,
+          scale: 1,
+        }
       }
     },
     components: {
       'vs-icon': Icon
     },
-    computed:{
-      wordLeft:function () {
-        return WORDS_LIMIT - this.text.length > 0 ? WORDS_LIMIT-this.text.length : 0 ;
+    computed: {
+      wordLeft: function () {
+        return WORDS_LIMIT - this.text.length > 0 ? WORDS_LIMIT - this.text.length : 0;
       },
       title: function () {
-        return  this.$options.title ? '@' + this.$options.title : '评论'
+        return this.$options.title ? '@' + this.$options.title : '评论'
       }
     },
     methods: {
@@ -99,7 +106,8 @@
         this.img = '';
         this.text = '';
       },
-      handleTouchmove() {},
+      handleTouchmove() {
+      },
       handleAreaTouchmove(e) {
         if (this.text.length < 240) {
           e.preventDefault()
@@ -108,25 +116,39 @@
       handleInput(e) {
         this.text = e.target.value;
       },
-      handelImg(e){
+      handelImg(e) {
         let reader = new FileReader();
+        this.file = e.target.files[0];
         reader.readAsDataURL(e.target.files[0]);
         reader.onload = (e) => {
           let imgCode = e.target.result;
-          this.img=imgCode
+          this.img = imgCode;
           const _this = this;
-          this.$nextTick(()=>{
-            _this.$refs.previewImage.src = _this.img;
+          let image = new Image();
+          image.src = imgCode;
+          image.onload = function () {
+            _this.imgInfo.width = this.width;
+            _this.imgInfo.height = this.height;
+            _this.imgInfo.scale = (this.width/this.height).toFixed(2);
+          }
+          this.$nextTick(() => {
+            _this.$refs.previewImage.src = imgCode;
           })
         }
       },
-      deleteImg(){
+      deleteImg() {
         this.img = '';
+        this.file = '';
       },
-      confirm(){
+      confirm() {
+        if (!this.text && !this.file) {
+          Toast({message: '发送内容不能为空'});
+          return;
+        }
         this.onConfirm({
-          text:this.text,
-          img:this.img,
+          text: this.text,
+          file: this.file,
+          imgInfo: this.imgInfo
         });
       }
     }
