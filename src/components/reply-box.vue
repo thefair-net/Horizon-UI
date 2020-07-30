@@ -168,7 +168,7 @@
     background-color: rgba(0, 0, 0, 0);
     display: flex;
     align-items: flex-end;
-    margin-bottom: -100vh;
+    margin-bottom: -200vh;
 
     .reply-box {
       width: 100%;

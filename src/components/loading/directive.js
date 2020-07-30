@@ -16,6 +16,13 @@ loadingDirective.install = Vue => {
     el.instance.visible = true
     parent.appendChild(el.mask) // appendChild 添加的元素若为同一个，则不会重复添加
   }
+  const deleteDom = (parent, el, binding) => {
+    if (el.instance) {
+      el.instance.visible = false
+      el.instance.$destroy()
+    }
+    parent.removeChild(el.mask) // appendChild 添加的元素若为同一个，则不会重复添加
+  }
 
   Vue.directive('loading', {
     bind: function (el, binding) {
@@ -31,7 +38,7 @@ loadingDirective.install = Vue => {
       }
     },
     unbind: function (el, binding) {
-      el.instance && el.instance.$destroy()
+      deleteDom(document.getElementById('app'), el, binding)
     }
   })
 }
