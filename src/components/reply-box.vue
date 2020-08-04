@@ -43,7 +43,7 @@
               id='img'
               accept="image/*"
               style="display:none;"
-              @input="handelImg"
+              @input="handleImg"
             />
           </label>
 
@@ -116,7 +116,7 @@
       handleInput(e) {
         this.text = e.target.value;
       },
-      handelImg(e) {
+      handleImg(e) {
         let reader = new FileReader();
         this.file = e.target.files[0];
         reader.readAsDataURL(e.target.files[0]);
@@ -173,12 +173,12 @@
     .reply-box {
       width: 100%;
       max-width: $iPadWidth;
-      height: calc(2.66rem + env(safe-area-inset-bottom));
+      height: 2.66rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 0 auto;
-      padding: 0 0.15rem env(safe-area-inset-bottom) 0.15rem;
+      padding: 0 0.15rem;
       -webkit-backdrop-filter: blur(0.20rem);
       backdrop-filter: blur(0.20rem);
       background-color: rgba(0, 0, 0, 0.5);

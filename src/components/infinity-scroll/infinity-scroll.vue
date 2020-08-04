@@ -45,8 +45,9 @@
           let scrollNode = event.target
           let docHeight = document.body.clientHeight
           let scrollHeight = scrollNode.scrollHeight
+          let scrollTop = scrollNode.scrollTop
 
-          if (scrollNode.scrollTop + docHeight >= scrollHeight - 10) {
+          if (scrollTop + docHeight >= scrollHeight - 10) {
             if (!this.touchEnd) {
               this.touchEnd = true
               this.$emit('load-more', {})
@@ -58,7 +59,25 @@
           }
         }
 
-        element.addEventListener('scroll', onScroll)
+        const onWindowScroll = event => {
+          let docHeight = document.documentElement.clientHeight || document.body.clientHeight;
+          let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          let scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+          // console.log(scrollTop, docHeight, scrollHeight);
+
+          if (scrollTop + docHeight >= scrollHeight - 10) {
+            if (!this.touchEnd) {
+              this.touchEnd = true
+              this.$emit('load-more', {})
+            }
+          } else {
+            if (this.touchEnd) {
+              this.touchEnd = false
+            }
+          }
+        }
+        // element.addEventListener('scroll', onScroll)
+        window.addEventListener('scroll', onWindowScroll)
       }
     },
     mounted() {
@@ -71,13 +90,9 @@
   @import "../../../static/config";
   .infinity-scroll {
     width: 100%;
-    height: 100vh;
-    overflow-y: auto;
-    background-color: white;
 
     .loading {
       width: 100%;
-      /*padding: 20rem 0 calc(20rem + #{$reply-height} + #{$safe-area}) 0;*/
       padding: .20rem 0;
       display: flex;
       justify-content: center;

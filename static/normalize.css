@@ -37,7 +37,7 @@ html {
   line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  background-color: white;
+  background-color: #f5f5f5;
   /* 滑动流畅度 */
   -webkit-overflow-scrolling: touch;
 }
@@ -54,7 +54,7 @@ body {
   font-family: 'FZLTXIHJW', PingFang SC, Avenir, Helvetica, Arial, sans-serif;
   font-size: 0.14rem;
   color: #444;
-  background-color: #f5f5f5;
+  background-color: transparent;
 }
 
 /**

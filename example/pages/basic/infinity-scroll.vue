@@ -1,5 +1,5 @@
 <template>
-  <vs-infinity-scroll class="scroll-page" :loading-status="loadingStatus" @load-more="loadMore">
+  <vs-infinity-scroll :loading-status="loadingStatus" @load-more="loadMore">
     <template v-slot:infinity-scroll>
       <div class="box" :key="key" v-for="(item, key) in array">{{key}}</div>
     </template>
@@ -52,8 +52,5 @@
     justify-content: center;
     align-items: center;
     margin: .10rem auto;
-  }
-  .scroll-page {
-    height: calc(100vh - #{$nav-height})
   }
 </style>

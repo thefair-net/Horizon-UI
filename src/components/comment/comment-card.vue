@@ -47,7 +47,6 @@
       </div>
       <div class="right-bottom">
         <div class="right-bottom-left">
-<!--          <div @click="viewConversation" class="view-conversation" v-if="parentReply">查看对话</div>-->
           <div class="reply" @click="reply">回复</div>
           <div class="create-time">{{moment(createTime).format('YYYY/MM/DD')}}</div>
         </div>
@@ -59,10 +58,10 @@
 </template>
 
 <script>
-  import moment from '../utils/moment'
-  import {ImageViewer} from '../../lib'
-  import Icon from '../../lib/icon'
-  import Avatar from '../../lib/avatar'
+  import moment from '../../utils/moment'
+  import {ImageViewer} from '../../../lib'
+  import Icon from '../../../lib/icon'
+  import Avatar from '../../../lib/avatar'
 
   export default {
     name: "vs-comment-card",
@@ -127,9 +126,6 @@
           imgSrc: e.target.src
         })
       }
-      const viewConversation = () => {
-        context.emit('view-conversation', {})
-      }
       const reply = () => {
         const {message, nickname} = props;
         context.emit('reply', {
@@ -153,14 +149,16 @@
         handleImgClick,
         moment,
         dark,
-        viewConversation,
         reply,
         thumbsUp,
         operation,
         avatarClick
       }
+    },
+    beforeDestroy() {
+      ImageViewer.close()
     }
   }
 </script>
-<style scoped lang="scss" src="../../static/comment-card-light.scss"></style>
-<style scoped lang="scss" src="../../static/comment-card-dark.scss"></style>
+<style scoped lang="scss" src="../../../static/comment-card-light.scss"></style>
+<style scoped lang="scss" src="../../../static/comment-card-dark.scss"></style>

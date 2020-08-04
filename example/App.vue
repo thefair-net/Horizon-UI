@@ -34,11 +34,7 @@
 
   #app {
     max-width: $iPadWidth;
-    min-height: 100vh;
-    margin: 0 auto;
-  }
-
-  .page {
     background-color: $white;
+    margin: 0 auto;
   }
 </style>

@@ -4,10 +4,22 @@
     "type": "business",
     "list": [
       {
+        "path": "/note",
+        "name": "Note",
+        "icon": "note",
+        "desc": "评论区 - 笔记模式"
+      },
+      {
+        "path": "/note-dark-mode",
+        "name": "Note Dark",
+        "icon": "note",
+        "desc": "评论区 - 笔记模式 - 暗黑"
+      },
+      {
         "path": "/comment",
         "name": "Comment",
         "icon": "comment",
-        "desc": "评论区"
+        "desc": "评论区 - 盖楼模式"
       },
       {
         "path": "/comment-dark-mode",

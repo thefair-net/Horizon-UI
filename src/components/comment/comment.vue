@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import Icon from '../../lib/icon'
+  import Icon from '../../../lib/icon'
   export default {
     name: "vs-comment",
     props: {
@@ -38,7 +38,7 @@
 </script>
 
 <style scoped lang="scss">
-  @import "../../static/config";
+  @import "../../../static/config";
 
   .comment-light {
     width: 100%;
