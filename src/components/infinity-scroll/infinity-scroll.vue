@@ -3,16 +3,17 @@
     <slot name="infinity-scroll"></slot>
     <div v-if="loadingStatus !== LOADING_STATUS_INITIAL">
       <span class="loading" v-if="loadingStatus === LOADING_STATUS_LOADING">
-        <vs-icon :key="'icon-spinner'" :type="'icon-spinner'"/>
+        <vs-icon :key="uniqueId()" :type="'icon-spinner'"/>
       </span>
       <span class="the-end" v-if="loadingStatus === LOADING_STATUS_DONE">
-        <vs-icon :key="'icon-the-end'" :type="'icon-the-end'"/>
+        <vs-icon :key="uniqueId()" :type="'icon-the-end'"/>
       </span>
     </div>
   </div>
 </template>
 
 <script>
+  import {uniqueId} from "../../utils/uniqueId";
   import Icon from '../../../lib/icon'
   import {
     LOADING_STATUS_INITIAL,
@@ -34,6 +35,7 @@
         LOADING_STATUS_INITIAL,
         LOADING_STATUS_DONE,
         LOADING_STATUS_LOADING,
+        uniqueId
       }
     },
     components: {

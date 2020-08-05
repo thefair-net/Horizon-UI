@@ -81,20 +81,6 @@
           margin-right: .03rem;
           font-size: .12rem;
         }
-
-        .icon-thumbs-unlike {
-          width: 0.22rem;
-          height: 0.22rem;
-          background: url("../static/img/thumb_unselect_dark_mode.svg") center center no-repeat;
-          background-size: contain;
-        }
-
-        .icon-thumbs-like {
-          width: .22rem;
-          height: .22rem;
-          background: url("../static/img/thumb_selected_dark_mode.svg") center center no-repeat;
-          background-size: contain;
-        }
       }
     }
 
@@ -198,13 +184,6 @@
           font-family: $FONT-FZLTXIHJW;
           opacity: 0.5;
         }
-      }
-
-      .icon-dot {
-        width: .28rem;
-        height: .28rem;
-        background: url("../static/img/icon-dot.svg") center center no-repeat;
-        background-size: contain;
       }
     }
   }

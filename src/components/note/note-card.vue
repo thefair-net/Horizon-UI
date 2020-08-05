@@ -1,7 +1,7 @@
 <template>
   <div :class="dark ? 'note-card-dark' : 'note-card-light'">
     <div class="left">
-      <vs-avatar class='avatar' :src="avatar" @click.native="avatarClick"></vs-avatar>
+      <vs-avatar :key="uniqueId()" class='avatar' :src="avatar" @click.native="avatarClick"/>
     </div>
     <div class="right">
       <div class="right-top">
@@ -11,11 +11,11 @@
         <div class="like">
           <span @click="thumbsUp">{{likeCount}}</span>
           <div v-show="!like" @click="thumbsUp">
-            <div class="icon-thumbs-unlike"></div>
+            <vs-icon :key="uniqueId()" :type="dark ? 'icon-thumb-dark-unselect' : 'icon-thumb-unselect'"/>
           </div>
           <transition name="thumbsUp">
             <div v-show="like" @click="thumbsUp">
-              <div class="icon-thumbs-like"></div>
+              <vs-icon :key="uniqueId()" :type="dark ? 'icon-thumb-dark-select' : 'icon-thumb-select'"/>
             </div>
           </transition>
         </div>
@@ -53,7 +53,7 @@
           <div class="reply" @click="reply">回复</div>
           <div class="create-time">{{createTime}}</div>
         </div>
-        <div class="icon-dot" @click="operation"></div>
+        <vs-icon :key="uniqueId()" type="icon-dot" @click="operation"/>
       </div>
     </div>
   </div>
@@ -65,6 +65,7 @@
   import {ImageViewer} from '../../../lib'
   import Icon from '../../../lib/icon'
   import Avatar from '../../../lib/avatar'
+  import {uniqueId} from '../../utils/uniqueId';
 
   export default {
     name: "vs-note-card",
@@ -167,7 +168,8 @@
         thumbsUp,
         operation,
         avatarClick,
-        viewAllReplies
+        viewAllReplies,
+        uniqueId
       }
     },
     beforeDestroy() {

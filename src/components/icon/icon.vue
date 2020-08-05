@@ -1,5 +1,5 @@
 <template>
-    <i class="Icon" :class="type"/>
+    <i class="Icon" :class="type" @click="handleClick"/>
 </template>
 
 <script>
@@ -10,6 +10,11 @@
         type: String,
         default: '',
         required: true
+      }
+    },
+    methods: {
+      handleClick(e) {
+        this.$emit('click', {e})
       }
     }
   }
