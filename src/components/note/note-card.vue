@@ -123,6 +123,10 @@
       index: {
         type: Number,
         default: 0
+      },
+      type:{
+        type: String,
+        default: 'note'
       }
     },
     setup(props, context) {
@@ -139,19 +143,21 @@
         })
       }
       const reply = () => {
-        const {message, nickname} = props;
+        const {message, nickname,detail,type} = props;
         context.emit('reply', {
           message,
-          nickname
+          nickname,
+          detail,
+          type
         })
       }
       const thumbsUp = () => {
         console.log('thumbsup')
-        context.emit('like', props.detail)
+        context.emit('like', props.detail,props.type)
       }
       const operation = () => {
         console.log('showPopup')
-        context.emit('operation', props.detail)
+        context.emit('operation',props.detail,props.type)
       }
       const avatarClick = () => {
         console.log('avatar')

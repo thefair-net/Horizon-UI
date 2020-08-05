@@ -1,6 +1,6 @@
 <template>
   <!-- prevent用来阻止背后页面内容滚动-->
-  <div @touchmove.prevent.stop="handleTouchmove"  ref="replyBoxContainer" class="reply-box-container">
+  <div @touchmove.prevent.stop="handleTouchmove" ref="replyBoxContainer" class="reply-box-container">
     <div class="reply-box" @touchmove.prevent="handleTouchmove">
       <div class="top">
         <div class="close" @click="hideReplyBox">
@@ -27,29 +27,30 @@
         >
         </textarea>
       </div>
-      <div class="bottom" >
-        <div class="img" v-if="img">
-          <img class="" src="" ref="previewImage" alt="" >
-            <vs-icon  class="icon" :type="'icon-close'" @click.native="deleteImg"/>
-        </div>
-        <div class="upload" v-else>
-          <label>
-            <vs-icon :type="'icon-upload-img'" />
-            <span class="text">图片</span>
-            <input
-              class="img-input"
-              ref="fileInput"
-              type="file"
-              id='img'
-              accept="image/*"
-              style="display:none;"
-              @input="handleImg"
-            />
-          </label>
-
-        </div>
+      <div class="bottom">
         <div class="left-count">
           {{wordLeft}}
+        </div>
+        <div class="upload-img" v-if="!uploadDisabled">
+          <div class="img" v-if="img">
+            <img class="" src="" ref="previewImage" alt="">
+            <vs-icon class="icon" :type="'icon-close'" @click.native="deleteImg"/>
+          </div>
+          <div class="upload" v-else>
+            <label>
+              <vs-icon :type="'icon-upload-img'"/>
+              <span class="text">图片</span>
+              <input
+                class="img-input"
+                ref="fileInput"
+                type="file"
+                id='img'
+                accept="image/*"
+                style="display:none;"
+                @input="handleImg"
+              />
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -65,6 +66,7 @@
     data() {
       return {
         subtitle: this.$options.subtitle,
+        uploadDisabled: this.$options.uploadDisabled || false,
         text: '',
         WORDS_LIMIT,
         img: '',
@@ -121,15 +123,15 @@
         this.file = e.target.files[0];
         reader.readAsDataURL(e.target.files[0]);
         reader.onload = (e) => {
-          let imgCode = e.target.result;
+          const imgCode = e.target.result;
           this.img = imgCode;
           const _this = this;
-          let image = new Image();
+          const image = new Image();
           image.src = imgCode;
           image.onload = function () {
             _this.imgInfo.width = this.width;
             _this.imgInfo.height = this.height;
-            _this.imgInfo.scale = (this.width/this.height).toFixed(2);
+            _this.imgInfo.scale = (this.width / this.height).toFixed(2);
           }
           this.$nextTick(() => {
             _this.$refs.previewImage.src = imgCode;
@@ -141,10 +143,6 @@
         this.file = '';
       },
       confirm() {
-        if (!this.text && !this.file) {
-          Toast({message: '发送内容不能为空'});
-          return;
-        }
         this.onConfirm({
           text: this.text,
           file: this.file,
@@ -200,7 +198,8 @@
         .title-box {
           text-align: center;
           font-size: 0.14rem;
-          .subtitle{
+
+          .subtitle {
             max-width: 2.75rem;
             height: .14rem;
             opacity: 0.8;
@@ -233,21 +232,25 @@
       .bottom {
         display: flex;
         justify-content: space-between;
+        flex-direction: row-reverse;
         align-items: center;
         width: 100%;
         height: .40rem;
         color: $white;
         border-top: .01rem rgba(255, 255, 255, 0.2) solid;
-        .img{
+
+        .img {
           position: relative;
-          img{
+
+          img {
             width: .30rem;
             height: .30rem;
-            object-fit:cover;
+            object-fit: cover;
             border-radius: .01rem;
             border: solid .01rem rgba(255, 255, 255, 0.9);
           }
-          .icon{
+
+          .icon {
             position: absolute;
             right: 0;
             top: 0;
@@ -255,12 +258,14 @@
             height: 0.12rem;
           }
         }
+
         .upload {
-          label{
+          label {
             display: flex;
             align-items: center;
             font-family: $FONT-FZLTZCHJW;
           }
+
           .text {
             margin-left: 0.03rem;
           }

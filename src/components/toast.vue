@@ -72,12 +72,12 @@
     top: 50%;
     transform: translate(-50%, -50%);
     max-width: 80%;
-    border-radius: .05rem;
+    /*border-radius: .05rem;*/
     background: rgba(0, 0, 0, 0.7);
     color: #fff;
     text-align: center;
     z-index: 10000;
-    padding:.10rem;
+    padding:.14rem .25rem;
     .toast-icon{
       margin:0 auto;
     }
