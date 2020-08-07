@@ -29,7 +29,7 @@ export const notes = [
           "count": 0
         }
       },
-      "be_favorite": false,
+      "be_favorite": true,
       "sign_in_summary": [],
       "cover_img": [
         {

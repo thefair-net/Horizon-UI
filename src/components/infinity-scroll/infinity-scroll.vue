@@ -42,6 +42,23 @@
       'vs-icon': Icon
     },
     methods: {
+      onWindowScroll(event) {
+        let docHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        let scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+        // console.log(scrollTop, docHeight, scrollHeight);
+
+        if (scrollTop + docHeight >= scrollHeight - 10) {
+          if (!this.touchEnd) {
+            this.touchEnd = true
+            this.$emit('load-more', {})
+          }
+        } else {
+          if (this.touchEnd) {
+            this.touchEnd = false
+          }
+        }
+      },
       handleScroll(element) {
         const onScroll = (event) => {
           let scrollNode = event.target
@@ -60,31 +77,22 @@
             }
           }
         }
-
-        const onWindowScroll = event => {
-          let docHeight = document.documentElement.clientHeight || document.body.clientHeight;
-          let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-          let scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-          // console.log(scrollTop, docHeight, scrollHeight);
-
-          if (scrollTop + docHeight >= scrollHeight - 10) {
-            if (!this.touchEnd) {
-              this.touchEnd = true
-              this.$emit('load-more', {})
-            }
-          } else {
-            if (this.touchEnd) {
-              this.touchEnd = false
-            }
-          }
-        }
         // element.addEventListener('scroll', onScroll)
-        window.addEventListener('scroll', onWindowScroll)
+        window.addEventListener('scroll', this.onWindowScroll)
       }
     },
     mounted() {
       this.handleScroll(this.$refs.infinityScroll)
     },
+    activated() {
+      this.handleScroll(this.$refs.infinityScroll)
+    },
+    deactivated() {
+      window.removeEventListener('scroll', this.onWindowScroll)
+    },
+    beforeDestroy() {
+      window.removeEventListener('scroll', this.onWindowScroll)
+    }
   }
 </script>
 

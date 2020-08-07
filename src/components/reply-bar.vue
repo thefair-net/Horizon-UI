@@ -1,9 +1,7 @@
 <template>
   <div class="reply-bar-container">
     <div class="reply-bar" @click="handleClick">
-      <div class="avatar">
-
-      </div>
+      <vs-avatar class="avatar" :src="avatar" v-if="avatar"></vs-avatar>
       <div class="reply-bar-input">
         点击发表你的评论...
       </div>
@@ -12,8 +10,18 @@
 </template>
 
 <script>
+  import {Avatar} from "../../lib";
   export default {
     name: "vs-reply-bar",
+    components:{
+      'vs-avatar':Avatar
+    },
+    props:{
+      avatar:{
+        type:String,
+        default:''
+      }
+    },
     setup(props, context) {
       const handleClick = () => {
         context.emit('click')
@@ -46,10 +54,9 @@
       background-color: rgba(0, 0, 0, 0.3);
 
       .avatar {
+        border: .01rem white solid;
         width: .40rem;
         height: .40rem;
-        border-radius: 50%;
-        border: .01rem white solid;
         margin-right: .07rem;
       }
 

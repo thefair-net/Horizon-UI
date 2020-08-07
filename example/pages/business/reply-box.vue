@@ -31,6 +31,7 @@
         const r = ReplyBox({
           title:nickname,
           subtitle: message,
+          uploadDisabled: true,
           methods:{
             onClose: function() {
               this.unmount(()=>{

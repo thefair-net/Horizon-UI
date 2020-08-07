@@ -14,7 +14,7 @@
           :image-url="item.feed_content.image_list[0] && item.feed_content.image_list[0].url"
           :image-url-thumb="item.feed_content.image_list[0] && item.feed_content.image_list[0].url_thumbnail"
           :create-time="item.feed_time.txt"
-          :like="item.feed_content.be_favorite"
+          :like="item.feed_content.be_favorite ? 'liked' : 'unliked'"
           :first-two-comments="item.feed_content.comment_info.item_list"
           :comments-count="item.feed_content.count_summary.comment.count"
           @reply="showReplyOthersBox"
