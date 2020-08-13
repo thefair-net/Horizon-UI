@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "FZLTZCHJW"; /* FZLTZCHJW-GB1-0 方正兰亭粗黑 */
+  src: url('https://static.kaiyanapp.com/fonts/%E6%96%B9%E6%AD%A3%E5%85%B0%E4%BA%AD%E7%B2%97%E9%BB%91.TTF');
+}
+
+@font-face {
+  font-family: "FZLTXIHJW";  /* FZLTXIHJW-GB1-0 方正兰亭细黑*/
+  src: url('https://static.kaiyanapp.com/fonts/%E6%96%B9%E6%AD%A3%E5%85%B0%E4%BA%AD%E7%BB%86%E9%BB%91.TTF');
+}
+
+@font-face {
+  font-family: "FZLTHJW";
+  src: url('https://static.kaiyanapp.com/fonts/%E6%96%B9%E6%AD%A3%E5%85%B0%E4%BA%AD%E9%BB%91.TTF');
+}

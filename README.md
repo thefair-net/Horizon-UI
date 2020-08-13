@@ -1,19 +1,34 @@
-# vision
+# Horizon UI
+This is a front-end component library based on Vue, design by Eyepetizer
 
-## Project setup
-```
-yarn install
-```
+## Introductions
+We have written a [Documentation](https://thefair-net.github.io/Horizon-docs) to introduce Horizon UI to developers and UI designers.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+Here are some [Examples](https://thefair-net.github.io/Horizon-UI) running on a mobile phone.
 
-### Compiles and minifies for production
-```
-yarn build
+Please have a try!
+
+## Install
+```shell
+yarn add horizon-ui
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Quick Start
+``` javascript
+import Vue from 'vue'
+import Horizion from 'horizon-ui'
+
+Vue.use(Horizion)
+
+// or
+import {
+  Note,
+  NoteCard,
+  Toast
+  // ...
+} from 'horizon-ui'
+
+Vue.component(Note.name, Note)
+Vue.component(NoteCard.name, NoteCard)
+Vue.prototype.$toast = Toast
+```

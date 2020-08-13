@@ -1,9 +1,9 @@
 const path = require('path')
 module.exports = {
-  publicPath: '/',
-  outputDir: 'dist',
+  publicPath: './',
+  outputDir: 'docs',
   assetsDir: 'static',
-  productionSourceMap: false,
+  productionSourceMap: true,
   configureWebpack: {
     performance: {
       hints: false
@@ -18,10 +18,11 @@ module.exports = {
   },
   pages: {
     index: {
-      entry: 'example/main.ts',
+      entry: 'example/main.js',
       template: 'example/index.html',
       filename: 'index.html',
-      title: 'vision'
+      title: 'Horizon UI - web前端组件库',
+      favicon: 'example/favicon.ico'
     }
   }
 }
