@@ -1,12 +1,17 @@
 # Horizon UI
 This is a front-end component library based on Vue, design by Eyepetizer
 
-## Introductions
+## Documentation
 We have written a [Documentation](https://thefair-net.github.io/Horizon-docs) to introduce Horizon UI to developers and UI designers.
 
-Here are some [Examples](https://thefair-net.github.io/Horizon-UI) running on a mobile phone.
+If you have any questions, please [create issues](https://github.com/thefair-net/Horizon-UI/issues) to contact us.
 
-Please have a try!
+Have fun!
+
+## Examples
+Here are some mobile phone [examples](https://thefair-net.github.io/Horizon-UI)
+
+![examples](http://static.thefair.net.cn/horizon_ui/image/20200814/e5703505fcd4b0589b6f15206ecb3d7b)
 
 ## Install
 ```shell
