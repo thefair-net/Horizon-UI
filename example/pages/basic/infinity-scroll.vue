@@ -28,7 +28,7 @@
         }
         loadingStatus.value = LOADING_STATUS_LOADING
         setTimeout(() => {
-          loadingStatus.value = LOADING_STATUS_INITIAL
+          // loadingStatus.value = LOADING_STATUS_INITIAL
           array.value += 10
         }, 1000)
       }

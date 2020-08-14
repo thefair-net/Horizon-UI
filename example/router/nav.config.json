@@ -1,5 +1,59 @@
 [
   {
+    "title": "基础组件",
+    "type": "basic",
+    "list": [
+      {
+        "path": "/icon",
+        "name": "Icon",
+        "icon": "icon",
+        "desc": "图标汇总"
+      },
+      {
+        "path": "/popup",
+        "name": "Popup",
+        "icon": "popup",
+        "desc": "底部弹层"
+      },
+      {
+        "path": "/toast",
+        "name": "Toast",
+        "icon": "toast",
+        "desc": "提示框"
+      },
+      {
+        "path": "/indicator",
+        "name": "Indicator",
+        "icon": "indicator",
+        "desc": "加载提示框"
+      },
+      {
+        "path": "/modal",
+        "name": "Modal",
+        "icon": "modal",
+        "desc": "弹窗"
+      },
+      {
+        "path": "/v-loading",
+        "name": "v-loading 指令",
+        "icon": "v-loading",
+        "desc": "页面加载"
+      },
+      {
+        "path": "/image-viewer",
+        "name": "Image Viewer",
+        "icon": "image-viewer",
+        "desc": "点击查看大图"
+      },
+      {
+        "path": "/infinity-scroll",
+        "name": "Infinity Scroll",
+        "icon": "infinity-scroll",
+        "desc": "无限滚动"
+      }
+    ]
+  },
+  {
     "title": "业务向组件",
     "type": "business",
     "list": [
@@ -14,6 +68,12 @@
         "name": "Note Dark",
         "icon": "note",
         "desc": "评论区 - 笔记模式 - 暗黑"
+      },
+      {
+        "path": "/note-card",
+        "name": "Note Card",
+        "icon": "note",
+        "desc": "单个评论卡片"
       },
       {
         "path": "/comment",
@@ -68,54 +128,6 @@
         "name": "Share Header",
         "icon": "share-header",
         "desc": "分享页头部"
-      }
-    ]
-  },
-  {
-    "title": "基础组件",
-    "type": "basic",
-    "list": [
-      {
-        "path": "/icon",
-        "name": "Icon",
-        "icon": "icon",
-        "desc": "图标汇总"
-      },
-      {
-        "path": "/popup",
-        "name": "Popup",
-        "icon": "popup",
-        "desc": "底部弹层"
-      },
-      {
-        "path": "/v-loading",
-        "name": "v-loading 指令",
-        "icon": "v-loading",
-        "desc": "页面加载"
-      },
-      {
-        "path": "/infinity-scroll",
-        "name": "Infinity Scroll",
-        "icon": "infinity-scroll",
-        "desc": "无限滚动"
-      },
-      {
-        "path": "/modal",
-        "name": "Modal",
-        "icon": "modal",
-        "desc": "弹窗"
-      },
-      {
-        "path": "/toast",
-        "name": "Toast",
-        "icon": "toast",
-        "desc": "提示框"
-      },
-      {
-        "path": "/image-viewer",
-        "name": "Image Viewer",
-        "icon": "image-viewer",
-        "desc": "点击查看大图"
       }
     ]
   }

@@ -2507,6 +2507,72 @@ export const comments = [
     "adIndex": -1
   }
 ]
+
+export const note = [{
+  "feed_content": {
+    "image_list": [
+      {
+        "url": "http://image.thefair.net.cn/material/note/20200723/4981ab37e74d58c385ee4897216cdf8e.jpg",
+        "url_thumbnail": "http://image.thefair.net.cn/material/note/20200723/4981ab37e74d58c385ee4897216cdf8e.jpg",
+        "order": 1,
+        "img_info": {
+          "scale": 1,
+          "width": 200,
+          "height": 200
+        }
+      }
+    ],
+    "content": "测试测试测试测试测试测试测试测试测试测试测试测试测试测试",
+    "count_summary": {
+      "favorite": {
+        "count": 100
+      },
+      "comment": {
+        "count": 10
+      }
+    },
+    "be_favorite": true,
+    "user": {
+      "avatar": "http://img.kaiyanapp.com/ad1840b149cc3aa4225887fbc8bb8823.jpeg?imageMogr2/quality/60/format/jpg",
+      "nick": "刘明志_917yaf",
+    },
+    "comment_info": {
+      "more": "show",
+      "item_list": [
+        {
+          "user": {
+            "nick": "刘明志_917yaf",
+          },
+          "can_delete": false,
+          "comment_content": "测试测试测试测试测试测试测试测试测试测试测试测试测试测试",
+          "comment_time": "1小时前",
+          "count_summary": {
+            "favorite": {
+              "count": 0
+            }
+          }
+        },
+        {
+          "user": {
+            "nick": "刘明志_917yaf",
+          },
+          "can_delete": false,
+          "comment_content": "测试测试测试测试测试测试测试测试测试测试测试测试测试测试",
+          "comment_time": "2小时前",
+          "count_summary": {
+            "favorite": {
+              "count": 0
+            }
+          }
+        }
+      ]
+    },
+  },
+  "feed_time": {
+    "txt": "35分钟前",
+    "timestamp": "2020-08-03 16:55:28"
+  },
+}]
 export const comment = [{
     "type": "reply",
     "data": {

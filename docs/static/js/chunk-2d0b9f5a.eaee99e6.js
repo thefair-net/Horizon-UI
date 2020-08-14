@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0b9f5a"],{"34be":function(e,a,n){"use strict";n.r(a);var r=function(){var e=this,a=e.$createElement,n=e._self._c||a;return n("div",{staticClass:"page"},[n("vs-reply-bar")],1)},s=[],t=n("9b0a"),c={name:"reply-bar",components:{"vs-reply-bar":t["m"]}},l=c,p=n("2877"),b=Object(p["a"])(l,r,s,!1,null,"e03af4fa",null);a["default"]=b.exports}}]);
-//# sourceMappingURL=chunk-2d0b9f5a.eaee99e6.js.map

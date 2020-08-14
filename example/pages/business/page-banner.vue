@@ -66,7 +66,7 @@
       display: flex;
       align-items: center;
       font-size: .12rem;
-      letter-spacing: 0.04rem;
+      letter-spacing: 0.004rem;
       color: #ffffff;
 
       .user-avatar {
@@ -87,7 +87,7 @@
 
     .join {
       font-size: .12rem;
-      letter-spacing: 0.034rem;
+      letter-spacing: 0.004rem;
       color: #ffffff;
       font-family: "FZLTXIHJW";
     }
