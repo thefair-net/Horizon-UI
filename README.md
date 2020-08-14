@@ -11,7 +11,7 @@ Have fun!
 ## Examples
 Here are some mobile phone [examples](https://thefair-net.github.io/Horizon-UI)
 
-![examples](http://static.thefair.net.cn/horizon_ui/image/20200814/e5703505fcd4b0589b6f15206ecb3d7b)
+![examples](https://static1.thefair.net.cn/horizon_ui/image/qrcode-examples.png)
 
 ## Install
 ```shell
