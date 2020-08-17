@@ -220,6 +220,7 @@
 
       .middle {
         width: 100%;
+        height: 1.65rem;
         flex: 1;
 
         .reply-area {
