@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="button" @click="clickBtn">toast</div>
-    <div class="button" @click="clean">clean</div>
   </div>
 </template>
 
@@ -19,13 +18,7 @@ export default {
         icon: 'icon-check'
       })
     },
-    clean() {
-      Toast.destroyOne();
-    }
   },
-  destroyed() {
-    Toast.destroyAll()
-  }
 }
 </script>
 
