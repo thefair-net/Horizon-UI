@@ -18,11 +18,10 @@
   display: none;
 }
 
-.note-card-dark {
+.feed-card-light {
   display: flex;
   align-items: flex-start;
-  padding: .15rem 0 0 .17rem;
-  background-color: $black-30;
+  padding: 0.15rem 0 0 0.17rem;
 
   .left {
     min-width: .40rem;
@@ -33,9 +32,6 @@
       border: .01rem white solid;
       width: .40rem;
       height: .40rem;
-      object-fit: cover;
-      object-position: center center;
-      border-radius: 50%;
     }
   }
 
@@ -43,7 +39,7 @@
     width: 100%;
     padding-right: .18rem;
     padding-bottom: .11rem;
-    border-bottom: 0.01rem $border-dark-gray solid;
+    border-bottom: .01rem $gray-ed solid;
     display: flex;
     flex-direction: column;
 
@@ -59,15 +55,14 @@
 
         .name {
           font-family: $FONT-FZLTZCHJW;
-          color: $white;
+          color: $black-44;
           line-height: 1;
         }
 
         .reply-to {
           font-family: $FONT-FZLTXIHJW;
           font-size: .10rem;
-          color: $white;
-          opacity: 0.8;
+          color: $gray-88;
           margin-top: .07rem;
         }
       }
@@ -76,7 +71,6 @@
         font-family: $FONT-FZLTZCHJW;
         display: flex;
         align-items: center;
-        color: $white;
 
         span {
           margin-right: .03rem;
@@ -91,11 +85,10 @@
       .comment-text {
         font-family: $FONT-FZLTXIHJW;
         line-height: 1.5;
-        color: $white
       }
 
       .comment-img {
-        margin-top: .08rem;
+        margin-top: 0.08rem;
 
         img {
           max-width: 1.70rem;
@@ -110,14 +103,14 @@
         padding: .10rem .14rem .14rem .14rem;
         margin-top: .10rem;
         border-radius: .04rem;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: $gray-f5;
         font-size: .12rem;
         .reply-cell {
           margin-top: 0.06rem;
-          font-family: $FONT-FZLTXIHJW;
+          font-family: $FONT-FZLTHJW;
           line-height: 1.5;
           letter-spacing: 0.003rem;
-          color: rgba(255,255,255,0.8);
+          color: $gray-a5;
           //两行
           overflow: hidden;
           text-overflow: ellipsis;
@@ -126,10 +119,10 @@
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           .nickname {
-            font-family: $FONT-FZLTZCHJW;
+            color: $black-44;
           }
           .reply-to {
-            font-family: $FONT-FZLTXIHJW;
+            color: $gray-a5;
           }
           &:first-child {
             margin-top: 0;
@@ -146,27 +139,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 0.05rem;
+      margin-top: .05rem;
       font-family: $FONT-FZLTZCHJW;
-      font-size: 0.12rem;
-      color: $white;
+      font-size: .12rem;
+      color: $gray-88;
 
       .right-bottom-left {
         display: flex;
 
         .view-conversation {
-          margin-right: 0.15rem;
-          opacity: 0.8;
+          margin-right: .15rem;
         }
 
         .reply {
-          margin-right: 0.15rem;
-          opacity: 0.8;
+          margin-right: .15rem;
         }
 
         .create-time {
           font-family: $FONT-FZLTXIHJW;
-          opacity: 0.5;
         }
       }
     }

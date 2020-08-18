@@ -48,7 +48,7 @@
       display: flex;
       align-items: center;
       margin: 0 auto;
-      padding: .14rem .15rem calc(.14rem + env(safe-area-inset-bottom)) .15rem;
+      padding: .14rem .15rem 0.14rem .15rem;
       -webkit-backdrop-filter: blur(.20rem);
       backdrop-filter: blur(.20rem);
       background-color: rgba(0, 0, 0, 0.3);
@@ -72,6 +72,12 @@
         color: #bebebc;
         padding: .12rem .08rem;
       }
+    }
+  }
+
+  @supports (bottom: env(safe-area-inset-bottom)) {
+    .reply-bar{
+      padding-bottom: calc(0.14rem + env(safe-area-inset-bottom)) !important;
     }
   }
 </style>

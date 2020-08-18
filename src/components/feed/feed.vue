@@ -1,10 +1,10 @@
 <template>
-  <div :class="darkMode ? 'note-dark' : 'note-light'">
+  <div :class="darkMode ? 'feed-dark' : 'feed-light'">
     <div v-if="title" class="title" @click="handleTitleClick">
       {{title}}
       <vs-icon class="icon-right" :key="uniqueId()" type="icon-right" v-if="iconShow"/>
     </div>
-    <slot name="note-card" :dark-mode="darkMode"></slot>
+    <slot name="feed-card" :dark-mode="darkMode"></slot>
   </div>
 </template>
 
@@ -46,7 +46,7 @@
 <style scoped lang="scss">
   @import "../../../static/config";
 
-  .note-light {
+  .feed-light {
     width: 100%;
 
     .title {
@@ -67,7 +67,7 @@
     }
   }
 
-  .note-dark {
+  .feed-dark {
     width: 100%;
     background-color: $black-30;
 

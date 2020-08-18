@@ -58,21 +58,21 @@
     "type": "business",
     "list": [
       {
-        "path": "/note",
-        "name": "Note",
-        "icon": "note",
-        "desc": "评论区 - 笔记模式"
+        "path": "/feed",
+        "name": "Feed",
+        "icon": "feed",
+        "desc": "评论区 - Feed模式"
       },
       {
-        "path": "/note-dark-mode",
-        "name": "Note Dark",
-        "icon": "note",
-        "desc": "评论区 - 笔记模式 - 暗黑"
+        "path": "/feed-dark-mode",
+        "name": "Feed Dark",
+        "icon": "feed",
+        "desc": "评论区 - Feed模式 - 暗黑"
       },
       {
-        "path": "/note-card",
-        "name": "Note Card",
-        "icon": "note",
+        "path": "/feed-card",
+        "name": "Feed Card",
+        "icon": "feed",
         "desc": "单个评论卡片"
       },
       {

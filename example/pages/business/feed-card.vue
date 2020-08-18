@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-  <vs-note-card
+  <vs-feed-card
     :key="key"
     v-for="(item, key) in note"
     :index="key"
@@ -25,14 +25,14 @@
 </template>
 
 <script>
-  import { NoteCard, ReplyBox} from "../../../lib";
+  import { FeedCard, ReplyBox} from "../../../lib";
   import {onBeforeUnmount, ref} from "@vue/composition-api";
   import {note} from "../../utils/mock";
 
   export default {
-    name: "note-card.vue",
+    name: "feed-card.vue",
     components: {
-      'vs-note-card': NoteCard,
+      'vs-feed-card': FeedCard,
     },
     setup(props, context) {
       const isShowBar = ref(true)

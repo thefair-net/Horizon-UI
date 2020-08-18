@@ -1,8 +1,8 @@
 <template>
   <div class="page">
-    <vs-note :title="'热门评论'" :icon-show="true" @handleTitleClick="handleTitleClick">
-      <template v-slot:note-card>
-        <vs-note-card
+    <vs-feed :title="'热门评论'" :icon-show="true" @handleTitleClick="handleTitleClick">
+      <template v-slot:feed-card>
+        <vs-feed-card
           :key="key"
           v-for="(item, key) in notes"
           :index="key"
@@ -24,7 +24,7 @@
           @view-all-replies="viewAllReplies"
         />
       </template>
-    </vs-note>
+    </vs-feed>
     <vs-reply-bar @click="handleBarClick" v-if="isShowBar" />
     <vs-popup  class="more-operation" v-model="moreOperation" position="bottom" :overlay="true" :showCancel="true" title="更多操作">
       <div class="pop-item" @click="showComplain">
@@ -39,20 +39,19 @@
   </div>
 </template>
 <script>
-  import {ref, onBeforeUnmount} from '@vue/composition-api'
+  import {onBeforeUnmount, ref} from '@vue/composition-api'
   import {notes} from "../../utils/mock";
-  import {Note, NoteCard, Popup, ReplyBar, ReplyBox} from '../../../lib'
+  import {Feed, FeedCard, Popup, ReplyBar, ReplyBox} from '../../../lib'
 
   const COMPLAIN_REASONS = ['反动、色情、政治敏感内容','不友善、不文明语言','广告、刷屏等垃圾信息','与主题无关的恶意言论']
   export default {
     components: {
-      'vs-note': Note,
-      'vs-note-card': NoteCard,
+      'vs-feed': Feed,
+      'vs-feed-card': FeedCard,
       'vs-reply-bar': ReplyBar,
       'vs-popup':Popup
     },
     setup(props, context) {
-      console.log(notes)
       const isShowBar = ref(true)
       const moreOperation = ref(false)
       const showReasons = ref(false)
