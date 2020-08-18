@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div class="vs-toast" v-show="show">
+    <div class="toast" v-show="show">
       <vs-icon :type="icon" class="toast-icon" v-if="icon"></vs-icon>
       <div class="toast-text" v-if="message" :style="{marginTop:icon ?'0.05rem':'0'}">{{ message }}</div>
     </div>
@@ -67,7 +67,7 @@ export default {
   opacity: 0;
 }
 
-.vs-toast {
+.toast {
   position: fixed;
   left: 50%;
   top: 50%;
