@@ -12,7 +12,7 @@
   import {uniqueId} from "../../utils/uniqueId";
   import Icon from '../../../lib/icon'
   export default {
-    name: "vs-note",
+    name: "vs-feed",
     props: {
       title: {
         type: String,

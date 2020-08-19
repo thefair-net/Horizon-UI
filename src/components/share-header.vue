@@ -4,7 +4,7 @@
     <vs-avatar :src="avatar" type="normal"></vs-avatar>
     <div class="center">
       <div class="kaiyan"><span class="nick">{{nickname}}</span> 正在使用开眼eyepetizer</div>
-      <div class="invite">邀请{{message}}</div>
+      <div class="invite">{{message}}</div>
     </div>
     <img class="button" src="../../static/img/share-header-button.svg"/>
   </div>

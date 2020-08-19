@@ -1,4 +1,4 @@
-export const notes = [
+export const feeds = [
   {
     "feed_content": {
       "image_list": [
@@ -2508,7 +2508,7 @@ export const comments = [
   }
 ]
 
-export const note = [{
+export const feed = [{
   "feed_content": {
     "image_list": [
       {

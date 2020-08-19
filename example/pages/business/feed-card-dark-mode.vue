@@ -1,6 +1,7 @@
 <template>
   <div class="page">
     <vs-feed-card
+      :dark-mode="true"
       :key="key"
       v-for="(item, key) in feed"
       :index="key"
