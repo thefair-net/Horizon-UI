@@ -8,7 +8,7 @@
         <img src="../assets/img/title.svg" alt="">
         {{group.title}}
       </div>
-      <div @click="handleItemClick(item)" v-for="item in group.list" class="cell">
+      <div @click="handleItemClick(item)" v-for="item in group.list" class="cell" v-if="!item.meta.hide">
         <span>{{item.name}} - {{item.desc}}</span>
         <img src="../assets/img/right.svg"/>
       </div>

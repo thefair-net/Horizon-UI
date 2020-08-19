@@ -1,7 +1,7 @@
 <template>
   <!-- prevent用来阻止背后页面内容滚动-->
-  <div @touchmove.prevent.stop="handleTouchmove" ref="replyBoxContainer" class="reply-box-container">
-    <div class="reply-box" @touchmove.prevent="handleTouchmove">
+  <div @click="clickOthers" @touchmove.prevent.stop="handleTouchmove" ref="replyBoxContainer" class="reply-box-container">
+    <div class="reply-box" @touchmove.prevent="handleTouchmove" @click.stop>
       <div class="top">
         <div class="close" @click="hideReplyBox">
           <vs-icon :type="'icon-close'"/>
@@ -67,6 +67,7 @@
       return {
         subtitle: this.$options.subtitle,
         uploadDisabled: this.$options.uploadDisabled || false,
+        clickOthersCloseDisabled: this.$options.clickOthersCloseDisabled || false,
         text: '',
         WORDS_LIMIT,
         img: '',
@@ -93,6 +94,12 @@
       destroyVM() {
         this.$destroy()
         document.getElementById('app').removeChild(this.$el)
+      },
+      clickOthers(){
+        if (this.clickOthersCloseDisabled){
+          return;
+        }
+        this.unmount();
       },
       focusReplyArea() {
         this.$refs.replyArea.focus()

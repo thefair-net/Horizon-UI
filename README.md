@@ -55,16 +55,18 @@ Vue.use(Horizion)
 Or import specified component. (Use [babel-plugin-component](https://www.npmjs.com/package/babel-plugin-component))
 
 ```javascript
+import Vue from 'vue'
+import 'horizon-ui/static/theme.scss'
 import {
-  Note,
-  NoteCard,
+  Feed,
+  FeedCard,
   Loading,
   Toast
   // ...
 } from 'horizon-ui'
 
-Vue.use(Note)
-Vue.use(NoteCard)
+Vue.use(Feed)
+Vue.use(FeedCard)
 Vue.use(Loading)
 Vue.prototype.$toast = Toast
 ```

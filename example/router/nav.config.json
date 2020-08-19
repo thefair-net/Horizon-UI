@@ -7,49 +7,57 @@
         "path": "/icon",
         "name": "Icon",
         "icon": "icon",
-        "desc": "图标汇总"
+        "desc": "图标汇总",
+        "meta": {}
       },
       {
         "path": "/popup",
         "name": "Popup",
         "icon": "popup",
-        "desc": "底部弹层"
+        "desc": "底部弹层",
+        "meta": {}
       },
       {
         "path": "/toast",
         "name": "Toast",
         "icon": "toast",
-        "desc": "提示框"
+        "desc": "提示框",
+        "meta": {}
       },
       {
         "path": "/indicator",
         "name": "Indicator",
         "icon": "indicator",
-        "desc": "加载提示框"
+        "desc": "加载提示框",
+        "meta": {}
       },
       {
         "path": "/modal",
         "name": "Modal",
         "icon": "modal",
-        "desc": "弹窗"
+        "desc": "弹窗",
+        "meta": {}
       },
       {
         "path": "/v-loading",
         "name": "v-loading 指令",
         "icon": "v-loading",
-        "desc": "页面加载"
+        "desc": "页面加载",
+        "meta": {}
       },
       {
         "path": "/image-viewer",
         "name": "Image Viewer",
         "icon": "image-viewer",
-        "desc": "点击查看大图"
+        "desc": "点击查看大图",
+        "meta": {}
       },
       {
         "path": "/infinity-scroll",
         "name": "Infinity Scroll",
         "icon": "infinity-scroll",
-        "desc": "无限滚动"
+        "desc": "无限滚动",
+        "meta": {}
       }
     ]
   },
@@ -58,76 +66,103 @@
     "type": "business",
     "list": [
       {
-        "path": "/note",
-        "name": "Note",
-        "icon": "note",
-        "desc": "评论区 - 笔记模式"
+        "path": "/feed",
+        "name": "Feed",
+        "icon": "feed",
+        "desc": "评论区 - Feed模式",
+        "meta": {}
       },
       {
-        "path": "/note-dark-mode",
-        "name": "Note Dark",
-        "icon": "note",
-        "desc": "评论区 - 笔记模式 - 暗黑"
+        "path": "/feed-dark-mode",
+        "name": "Feed Dark",
+        "icon": "feed",
+        "desc": "评论区 - Feed模式 - 暗黑",
+        "meta": {
+          "hide": true
+        }
       },
       {
-        "path": "/note-card",
-        "name": "Note Card",
-        "icon": "note",
-        "desc": "单个评论卡片"
+        "path": "/feed-card",
+        "name": "Feed Card",
+        "icon": "feed-card",
+        "desc": "单个Feed卡片",
+        "meta": {}
+      },
+      {
+        "path": "/feed-card-dark-mode",
+        "name": "Feed Card Dark",
+        "icon": "feed-card",
+        "desc": "单个Feed卡片暗黑",
+        "meta": {
+          "hide": true
+        }
       },
       {
         "path": "/comment",
         "name": "Comment",
         "icon": "comment",
-        "desc": "评论区 - 盖楼模式"
+        "desc": "评论区 - 盖楼模式",
+        "meta": {}
       },
       {
         "path": "/comment-dark-mode",
         "name": "Comment Dark",
         "icon": "comment",
-        "desc": "评论区暗黑"
+        "desc": "评论区暗黑",
+        "meta": {
+          "hide": true
+        }
       },
       {
         "path": "/comment-card",
         "name": "Comment Card",
         "icon": "comment-card",
-        "desc": "单个评论卡片"
+        "desc": "单个盖楼卡片",
+        "meta": {}
       },
       {
         "path": "/comment-card-dark-mode",
         "name": "Comment Card Dark",
         "icon": "comment-card",
-        "desc": "单个评论卡片暗黑"
+        "desc": "单个盖楼卡片暗黑",
+        "meta": {
+          "hide": true
+        }
       },
       {
         "path": "/reply-bar",
         "name": "Reply Bar",
         "icon": "reply-bar",
-        "desc": "底部评论输入栏"
+        "desc": "底部评论输入栏",
+        "meta": {}
       },
       {
         "path": "/reply-box",
         "name": "Reply Box",
         "icon": "reply-box",
-        "desc": "评论回复框"
+        "desc": "评论回复框",
+        "meta": {}
       },
       {
         "path": "/page-banner",
         "name": "Page Banner",
         "icon": "page-banner",
-        "desc": "页面头部"
+        "desc": "页面头部",
+        "meta": {}
       },
       {
         "path": "/page-description",
         "name": "Page Description",
         "icon": "page-description",
-        "desc": "页面描述"
+        "desc": "页面描述",
+        "meta": {}
       },
       {
         "path": "/share-header",
         "name": "Share Header",
         "icon": "share-header",
-        "desc": "分享页头部"
+        "desc": "分享页头部",
+        "meta": {}
       }
     ]
   }

@@ -1,5 +1,5 @@
 <template>
-  <div :class="dark ? 'note-card-dark' : 'note-card-light'">
+  <div :class="dark ? 'feed-card-dark' : 'feed-card-light'">
     <div class="left">
       <vs-avatar :key="uniqueId()" class='avatar' :src="avatar" @click.native="avatarClick"/>
     </div>
@@ -68,7 +68,7 @@ import Avatar from '../../../lib/avatar'
 import {uniqueId} from '../../utils/uniqueId';
 
 export default {
-  name: "vs-note-card",
+  name: "vs-feed-card",
   components: {
     'vs-icon': Icon,
     'vs-avatar': Avatar
@@ -178,5 +178,5 @@ export default {
   }
 }
 </script>
-<style scoped lang="scss" src="../../../static/note-card-light.scss"></style>
-<style scoped lang="scss" src="../../../static/note-card-dark.scss"></style>
+<style scoped lang="scss" src="../../../static/feed-card-light.scss"></style>
+<style scoped lang="scss" src="../../../static/feed-card-dark.scss"></style>
