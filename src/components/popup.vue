@@ -206,6 +206,7 @@
 
       .popup-cancel {
         padding: .22rem 0;
+        font-family: 'FZLTZCHJW';
       }
     }
   }
