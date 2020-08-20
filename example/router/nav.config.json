@@ -69,14 +69,14 @@
         "path": "/feed",
         "name": "Feed",
         "icon": "feed",
-        "desc": "评论区 - Feed模式",
+        "desc": "评论区",
         "meta": {}
       },
       {
         "path": "/feed-dark-mode",
         "name": "Feed Dark",
         "icon": "feed",
-        "desc": "评论区 - Feed模式 - 暗黑",
+        "desc": "评论区",
         "meta": {
           "hide": true
         }
@@ -85,14 +85,14 @@
         "path": "/feed-card",
         "name": "Feed Card",
         "icon": "feed-card",
-        "desc": "单个Feed卡片",
+        "desc": "评论卡片",
         "meta": {}
       },
       {
         "path": "/feed-card-dark-mode",
         "name": "Feed Card Dark",
         "icon": "feed-card",
-        "desc": "单个Feed卡片暗黑",
+        "desc": "评论卡片",
         "meta": {
           "hide": true
         }
@@ -101,14 +101,14 @@
         "path": "/comment",
         "name": "Comment",
         "icon": "comment",
-        "desc": "评论区 - 盖楼模式",
+        "desc": "评论区 - 传统模式",
         "meta": {}
       },
       {
         "path": "/comment-dark-mode",
         "name": "Comment Dark",
         "icon": "comment",
-        "desc": "评论区暗黑",
+        "desc": "评论区 - 传统模式",
         "meta": {
           "hide": true
         }
@@ -117,14 +117,14 @@
         "path": "/comment-card",
         "name": "Comment Card",
         "icon": "comment-card",
-        "desc": "单个盖楼卡片",
+        "desc": "评论卡片 - 传统模式",
         "meta": {}
       },
       {
         "path": "/comment-card-dark-mode",
         "name": "Comment Card Dark",
         "icon": "comment-card",
-        "desc": "单个盖楼卡片暗黑",
+        "desc": "评论卡片 - 传统模式",
         "meta": {
           "hide": true
         }

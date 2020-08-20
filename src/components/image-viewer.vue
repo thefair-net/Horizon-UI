@@ -131,13 +131,11 @@
     mounted() {
       this.$refs.imageViewer.addEventListener('scroll', (e) => {
         if (e.target.scrollTop === 0) {
-          console.log('到顶了')
           this.isHitTop = true
         } else {
           this.isHitTop = false
         }
         if (e.target.offsetHeight + e.target.scrollTop === e.target.scrollHeight) {
-          console.log('到底了')
           this.isHitBottom = true
         } else {
           this.isHitBottom = false

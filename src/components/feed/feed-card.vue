@@ -147,15 +147,12 @@ export default {
       })
     }
     const thumbsUp = () => {
-      console.log('thumbsup')
       context.emit('like', props.detail)
     }
     const operation = () => {
-      console.log('showPopup')
       context.emit('operation', props.detail)
     }
     const avatarClick = () => {
-      console.log('avatar')
       context.emit('avatar', props.detail)
     }
     const viewAllReplies = () => {

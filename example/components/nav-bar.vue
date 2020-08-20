@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bar">
     <img class="left" src="../assets/img/left.svg" alt="" @click="handleNavClick">
-    {{ title }}
+    {{ currentMode ? currentMode : title }}
     <div class="right" @click="switchMode" v-if="isShowSwitchButton">
       切换模式
     </div>
@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import {ref, watchEffect} from '@vue/composition-api'
+
 export default {
   name: "nav-bar",
   props: {
@@ -21,7 +23,17 @@ export default {
     const handleNavClick = () => {
       context.root.$router.push('/')
     }
-    const isShowSwitchButton = context.root.$route.path.includes('comment') ||  context.root.$route.path.includes('feed')
+    const isShowSwitchButton = context.root.$route.path.includes('comment') || context.root.$route.path.includes('feed')
+    let currentMode = ref('')
+    watchEffect(() => {
+      if (isShowSwitchButton) {
+        if (context.root.$route.path.includes('dark')) {
+          currentMode.value = '🌜深夜模式'
+        } else {
+          currentMode.value = '☀️日间模式'
+        }
+      }
+    })
     const switchMode = () => {
       const currentPath = context.root.$route.path
       let targetPath = ''
@@ -56,6 +68,7 @@ export default {
     return {
       handleNavClick,
       isShowSwitchButton,
+      currentMode,
       switchMode
     }
   }
@@ -81,6 +94,7 @@ export default {
 
   .right {
     position: absolute;
+    top: 0.09rem;
     right: 0.15rem;
     border: #45af7f 0.01rem solid;
     padding: 0.06rem 0.1rem;

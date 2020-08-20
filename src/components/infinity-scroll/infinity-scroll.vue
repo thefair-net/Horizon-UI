@@ -46,7 +46,6 @@ export default {
       let docHeight = document.documentElement.clientHeight || document.body.clientHeight;
       let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
       let scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-      // console.log(scrollTop, docHeight, scrollHeight);
 
       if (scrollTop + docHeight >= scrollHeight - 10) {
         if (!this.touchEnd) {

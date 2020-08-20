@@ -53,7 +53,6 @@ export default {
     'vs-popup': Popup
   },
   setup(props, context) {
-    console.log(feeds)
     const isShowBar = ref(true)
     const moreOperation = ref(false)
     const showReasons = ref(false)

@@ -46,10 +46,10 @@ Import all components.
 
 ```javascript
 import Vue from 'vue'
-import Horizion from 'horizon-ui'
+import Horizon from 'horizon-ui'
 import 'horizon-ui/static/theme.scss'
 
-Vue.use(Horizion)
+Vue.use(Horizon)
 ```
 
 Or import specified component. (Use [babel-plugin-component](https://www.npmjs.com/package/babel-plugin-component))
