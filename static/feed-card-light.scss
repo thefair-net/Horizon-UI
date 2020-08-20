@@ -60,7 +60,7 @@
         }
 
         .reply-to {
-          font-family: $FONT-FZLTXIHJW;
+          font-family: $FONT-FZLTXHJW;
           font-size: .10rem;
           color: $gray-88;
           margin-top: .07rem;
@@ -83,8 +83,11 @@
       margin-top: .10rem;
 
       .comment-text {
-        font-family: $FONT-FZLTXIHJW;
+        font-family: $FONT-FZLTXHJW;
         line-height: 1.5;
+        .nick {
+          font-family: $FONT-FZLTZCHJW;
+        }
       }
 
       .comment-img {
@@ -109,7 +112,6 @@
           margin-top: 0.06rem;
           font-family: $FONT-FZLTHJW;
           line-height: 1.5;
-          letter-spacing: 0.003rem;
           color: $gray-a5;
           //两行
           overflow: hidden;
@@ -131,7 +133,7 @@
         .view-all-replies {
           color: $blue-btn;
           margin-top: 0.1rem;
-          font-family: 'FZLTHJW';
+          font-family: $FONT-FZLTZHJW;
         }
       }
     }
@@ -157,7 +159,7 @@
         }
 
         .create-time {
-          font-family: $FONT-FZLTXIHJW;
+          font-family: $FONT-FZLTXHJW;
         }
       }
     }

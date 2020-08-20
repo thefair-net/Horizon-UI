@@ -78,73 +78,13 @@
 </script>
 
 <style lang="scss" scoped>
-  @keyframes fadeBottom_in {
-    0% {
-      -webkit-transform: translateY(100%);
-      transform: translateY(100%);
-    }
-    50% {
-      -webkit-transform: translateY(60%);
-      transform: translateY(60%);
-    }
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeBottom_out {
-    0% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-    50% {
-      -webkit-transform: translateY(40%);
-      transform: translateY(40%);
-    }
-    100% {
-      -webkit-transform: translateY(100%);
-      transform: translateY(100%);
-    }
-  }
-
-  @keyframes fadeTop_in {
-    0% {
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
-    }
-    50% {
-      -webkit-transform: translateY(-40%);
-      transform: translateY(-40%);
-    }
-    100% {
-      -webkit-transform: translateY(0%);
-      transform: translateY(0%);
-    }
-  }
-
-  @keyframes fadeTop_out {
-    0% {
-      -webkit-transform: translateY(0%);
-      transform: translateY(0%);
-    }
-    50% {
-      -webkit-transform: translateY(-60%);
-      transform: translateY(-60%);
-    }
-    100% {
-
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
-    }
-  }
+  @import "../../static/config";
 
   .vs-modal {
     touch-action: none;
     display: flex;
     justify-content: center;
     align-items: center;
-
     position: fixed;
     z-index: 999;
     left: 0;
@@ -156,7 +96,7 @@
     .modal-content {
       background-color: #fff;
       z-index: 1000;
-      font-family: 'FZLTXIHJW';
+      font-family: $FONT-FZLTXHJW;
       font-size: .14rem;
       text-align: center;
       color: #383838;
@@ -169,7 +109,7 @@
         justify-content: center;
       }
       .title-box {
-        font-family: 'FZLTXIHJW';
+        font-family: $FONT-FZLTXHJW;
         font-size: .12rem;
         text-align: center;
         color: #888888;

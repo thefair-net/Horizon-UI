@@ -10,11 +10,12 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import "../../static/config";
   .vs-page-description {
     padding: .15rem .17rem;
     opacity: 0.8;
-    font-family: "FZLTXIHJW";
+    font-family: $FONT-FZLTXHJW;
     font-size: .14rem;
     line-height: 1.5;
     text-align: justify;

@@ -65,7 +65,7 @@
         margin-left: 0.08rem;
 
         .kaiyan {
-          font-family: 'FZLTHJW';
+          font-family: $FONT-FZLTHJW;
           font-size: 0.12rem;
           color: #ffffff;
           margin-bottom: 0.06rem;
@@ -81,7 +81,7 @@
         }
 
         .invite {
-          font-family: 'FZLTZCHJW';
+          font-family: $FONT-FZLTZCHJW;
           font-size: 0.14rem;
           color: #ffffff;
         }

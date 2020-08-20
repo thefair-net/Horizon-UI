@@ -197,7 +197,7 @@
         align-items: center;
         color: $white;
         font-family: $FONT-FZLTZCHJW;
-        border-bottom: 0.01rem rgba(255, 255, 255, 0.2) solid;
+        border-bottom: 0.005rem rgba(255, 255, 255, 0.2) solid;
 
         .close {
         }
@@ -210,7 +210,7 @@
             max-width: 2.75rem;
             height: .14rem;
             opacity: 0.8;
-            font-family: 'FZLTXIHJW';
+            font-family: $FONT-FZLTXHJW;
             font-size: .12rem;
             text-align: center;
             color: #ffffff;
@@ -245,7 +245,7 @@
         width: 100%;
         height: .40rem;
         color: $white;
-        border-top: .01rem rgba(255, 255, 255, 0.2) solid;
+        border-top: .005rem rgba(255, 255, 255, 0.2) solid;
 
         .img {
           position: relative;

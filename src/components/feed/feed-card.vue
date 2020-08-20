@@ -15,13 +15,15 @@
           </div>
           <transition name="thumbsUp">
             <div v-show="like === 'liked'" @click="thumbsUp">
-              <vs-icon :key="uniqueId()" :type="dark ? 'icon-thumb-dark-selected' : 'icon-thumb-selected'"/>
+              <vs-icon :key="uniqueId()"
+                       :type="dark ? 'icon-thumb-dark-selected' : 'icon-thumb-selected'"/>
             </div>
           </transition>
         </div>
       </div>
       <div class="right-middle">
         <div class="comment-text">
+          <span v-if="replyTo.nick">回复&nbsp;<span class="nick">{{ replyTo.nick }}</span>：</span>
           {{ message }}
         </div>
         <div class="comment-img" v-if="imageUrl && imageUrlThumb">
@@ -29,20 +31,12 @@
         </div>
         <div class="replies" v-if="firstTwoComments.length !== 0">
           <div class="reply-cell" :key="key" v-for="(item, key) in firstTwoComments">
-            <span class="nickname">{{ item.user.nick }}：</span>
+            <span class="nickname">{{ item.user.nick }}</span>
+            <span v-if=" item.at_user.nick" class="reply-to">&nbsp;回复&nbsp;
+              <span class="nickname">{{ item.at_user.nick }}</span>
+            </span>:
             <span>{{ item.comment_content }}</span>
           </div>
-
-          <!--          todo lqq 缺少回复评论-->
-          <!--          <div class="reply-cell">-->
-          <!--            <span class="nickname">{{'哈哈怪'}}-->
-          <!--              <span class="reply-to">-->
-          <!--                回复-->
-          <!--                <span class="nickname">{{'哈哈怪11'}}：</span>-->
-          <!--              </span>-->
-          <!--            </span>-->
-          <!--            <span>{{'或哈哈哈哈哈男女主角很像么'}}</span>-->
-          <!--          </div>-->
           <div class="view-all-replies" @click="viewAllReplies">
             共{{ commentsCount }}条回复 >
           </div>
@@ -110,19 +104,20 @@ export default {
       default: 0
     },
     detail: {
-      type: Object
+      type: Object,
+      default: () => ({})
     },
     firstTwoComments: {
       type: Array,
-      default: []
+      default: () => []
     },
     commentsCount: {
       type: Number,
       default: 0
     },
-    index: {
-      type: Number,
-      default: 0
+    replyTo: {
+      type: Object,
+      default: () => ({})
     }
   },
   setup(props, context) {

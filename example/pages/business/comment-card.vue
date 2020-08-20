@@ -136,6 +136,6 @@
 <style lang="scss" scoped>
   .pop-item {
     padding: 0.22rem 0 0.21rem;
-    border-bottom: solid 0.01rem #eeeeee;
+    border-bottom: solid 0.005rem #eeeeee;
   }
 </style>

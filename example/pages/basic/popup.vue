@@ -45,7 +45,7 @@
 
   .pop-item {
     padding: .22rem 0 .21rem;
-    border-bottom: solid .01rem #eeeeee;
+    border-bottom: solid .005rem #eeeeee;
   }
 
   .button {

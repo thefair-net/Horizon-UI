@@ -26,6 +26,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "../../static/config";
   .vs-page-banner {
     .banner-box {
       width: 100%;
@@ -53,7 +54,7 @@
         position: relative;
         z-index: 2;
         color: #ffffff;
-        font-family: "FZLTZCHJW";
+        font-family: $FONT-FZLTZCHJW;
 
         .title-box {
           display: flex;
@@ -61,14 +62,14 @@
           justify-content: flex-end;
           height: 1.50rem;
           text-align: left;
-          font-family: "FZLTZCHJW";
+          font-family: $FONT-FZLTZCHJW;
           font-size: .20rem;
           line-height: 1.3;
         }
 
         .subtitle-box {
           margin-top: .20rem;
-          font-family: "FZLTZCHJW";
+          font-family: $FONT-FZLTZCHJW;
         }
       }
     }

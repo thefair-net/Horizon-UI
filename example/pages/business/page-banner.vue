@@ -47,10 +47,11 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "../../../static/config";
   .description{
     padding: .15rem .17rem;
     opacity: 0.8;
-    font-family: "FZLTXIHJW";
+    font-family: $FONT-FZLTXHJW;
     font-size: .14rem;
     line-height: 1.5;
     text-align: justify;
@@ -60,7 +61,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "FZLTZCHJW";
+    font-family: $FONT-FZLTZCHJW;
 
     .user-box {
       display: flex;
@@ -87,7 +88,7 @@
     .join {
       font-size: .12rem;
       color: #ffffff;
-      font-family: "FZLTXIHJW";
+      font-family: $FONT-FZLTXHJW ;
     }
   }
 </style>

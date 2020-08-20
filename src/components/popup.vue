@@ -73,6 +73,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "../../static/config";
   /*弹层动画 从下往上*/
   @keyframes fadeBottom_in {
     0% {
@@ -154,7 +155,7 @@
       width: 100%;
       background-color: #fff;
       z-index: 1000;
-      font-family: 'FZLTXIHJW';
+      font-family: $FONT-FZLTXHJW;
       font-size: .14rem;
       text-align: center;
       color: #383838;
@@ -190,7 +191,7 @@
 
 
       .title-box {
-        font-family: 'FZLTXIHJW';
+        font-family: $FONT-FZLTXHJW;
         font-size: .12rem;
         text-align: center;
         color: #888888;
@@ -201,12 +202,12 @@
         text-align: center;
         color: #888888;
         padding: .24rem 0 .22rem;
-        border-bottom: solid .01rem #eeeeee;
+        border-bottom: solid .005rem #eeeeee;
       }
 
       .popup-cancel {
         padding: .22rem 0;
-        font-family: 'FZLTZCHJW';
+        font-family: $FONT-FZLTZCHJW;
       }
     }
   }

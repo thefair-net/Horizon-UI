@@ -15,6 +15,7 @@
       :like="item.feed_content.be_favorite ? 'liked' : 'unliked'"
       :first-two-comments="item.feed_content.comment_info.item_list"
       :comments-count="item.feed_content.count_summary.comment.count"
+      :reply-to="{}"
       @reply="showReplyOthersBox"
       @like="likeEvent"
       @operation="showMoreOperation"
