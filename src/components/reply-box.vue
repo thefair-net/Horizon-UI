@@ -256,6 +256,7 @@
             object-fit: cover;
             border-radius: .01rem;
             border: solid .01rem rgba(255, 255, 255, 0.9);
+            vertical-align:bottom;
           }
 
           .icon {

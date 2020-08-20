@@ -43,7 +43,7 @@
     width: 100%;
     padding-right: .18rem;
     padding-bottom: .11rem;
-    border-bottom: 0.01rem $border-dark-gray solid;
+    border-bottom: 0.005rem $border-dark-gray solid;
     display: flex;
     flex-direction: column;
 
@@ -138,6 +138,7 @@
         .view-all-replies {
           color: $blue-btn;
           margin-top: 0.1rem;
+          font-family: 'FZLTHJW';
         }
       }
     }
