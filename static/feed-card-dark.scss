@@ -64,7 +64,7 @@
         }
 
         .reply-to {
-          font-family: $FONT-FZLTXHJW;
+          font-family: $FONT-FZLTHJW;
           font-size: .10rem;
           color: $white;
           opacity: 0.8;
@@ -89,7 +89,7 @@
       margin-top: .10rem;
 
       .comment-text {
-        font-family: $FONT-FZLTXHJW;
+        font-family: $FONT-FZLTHJW;
         line-height: 1.5;
         color: $white;
         .nick {
@@ -117,7 +117,7 @@
         font-size: .12rem;
         .reply-cell {
           margin-top: 0.06rem;
-          font-family: $FONT-FZLTXHJW;
+          font-family: $FONT-FZLTHJW;
           line-height: 1.5;
           letter-spacing: 0.003rem;
           color: rgba(255,255,255,0.8);
@@ -132,7 +132,7 @@
             color: $white;
           }
           .reply-to {
-            font-family: $FONT-FZLTXHJW;
+            font-family: $FONT-FZLTHJW;
           }
           &:first-child {
             margin-top: 0;
@@ -141,7 +141,8 @@
         .view-all-replies {
           color: $blue-btn;
           margin-top: 0.1rem;
-          font-family: $FONT-FZLTZHJW;
+          font-family: $FONT-FZLTZCHJW;
+          font-weight: lighter;
         }
       }
     }
@@ -169,7 +170,7 @@
         }
 
         .create-time {
-          font-family: $FONT-FZLTXHJW;
+          font-family: $FONT-FZLTHJW;
           opacity: 0.5;
         }
       }

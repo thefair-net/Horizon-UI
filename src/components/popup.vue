@@ -155,7 +155,7 @@
       width: 100%;
       background-color: #fff;
       z-index: 1000;
-      font-family: $FONT-FZLTXHJW;
+      font-family: $FONT-FZLTHJW;
       font-size: .14rem;
       text-align: center;
       color: #383838;
@@ -191,7 +191,7 @@
 
 
       .title-box {
-        font-family: $FONT-FZLTXHJW;
+        font-family: $FONT-FZLTHJW;
         font-size: .12rem;
         text-align: center;
         color: #888888;

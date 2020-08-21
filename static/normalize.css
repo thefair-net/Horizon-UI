@@ -51,7 +51,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'FZLTXHJW', PingFang SC, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'FZLTHJW', PingFang SC, Avenir, Helvetica, Arial, sans-serif;
   font-size: 0.14rem;
   color: #444;
   background-color: transparent;
@@ -119,8 +119,9 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: 'FZLTHJW', PingFang SC, Avenir, Helvetica, Arial, sans-serif;
+  /*font-family: monospace, monospace; !* 1 *!*/
+  /*font-size: 1em; !* 2 *!*/
 }
 
 /* Text-level semantics
@@ -173,8 +174,9 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: 'FZLTHJW', PingFang SC, Avenir, Helvetica, Arial, sans-serif;
+  /*font-family: monospace, monospace; !* 1 *!*/
+  /*font-size: 1em; !* 2 *!*/
 }
 
 /**
@@ -273,7 +275,8 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif; /* 1 */
+  font-family: 'FZLTHJW', PingFang SC, Avenir, Helvetica, Arial, sans-serif;
+  /*font-family: sans-serif; !* 1 *!*/
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
@@ -386,7 +389,7 @@ textarea {
 }
 
 textarea::placeholder {
-  font-family: 'FZLTXHJW', PingFang SC, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'FZLTHJW', PingFang SC, Avenir, Helvetica, Arial, sans-serif;
   opacity: 0.2;
   font-size: 0.14rem;
   color: white;

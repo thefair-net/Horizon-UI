@@ -210,7 +210,7 @@
             max-width: 2.75rem;
             height: .14rem;
             opacity: 0.8;
-            font-family: $FONT-FZLTXHJW;
+            font-family: $FONT-FZLTHJW;
             font-size: .12rem;
             text-align: center;
             color: #ffffff;

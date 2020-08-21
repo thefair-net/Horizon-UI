@@ -15,7 +15,7 @@
   .vs-page-description {
     padding: .15rem .17rem;
     opacity: 0.8;
-    font-family: $FONT-FZLTXHJW;
+    font-family: $FONT-FZLTHJW;
     font-size: .14rem;
     line-height: 1.5;
     text-align: justify;

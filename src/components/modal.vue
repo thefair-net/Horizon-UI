@@ -96,7 +96,7 @@
     .modal-content {
       background-color: #fff;
       z-index: 1000;
-      font-family: $FONT-FZLTXHJW;
+      font-family: $FONT-FZLTHJW;
       font-size: .14rem;
       text-align: center;
       color: #383838;
@@ -109,7 +109,7 @@
         justify-content: center;
       }
       .title-box {
-        font-family: $FONT-FZLTXHJW;
+        font-family: $FONT-FZLTHJW;
         font-size: .12rem;
         text-align: center;
         color: #888888;
