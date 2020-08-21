@@ -32,8 +32,8 @@
         <div class="replies" v-if="firstTwoComments.length !== 0">
           <div class="reply-cell" :key="key" v-for="(item, key) in firstTwoComments">
             <span class="nickname">{{ item.user.nick }}</span>
-            <span v-if=" item.at_user.nick" class="reply-to">&nbsp;回复&nbsp;
-              <span class="nickname">{{ item.at_user.nick }}</span>
+            <span v-if="item.at_user && item.at_user.nick" class="reply-to">&nbsp;回复&nbsp;
+              <span class="nickname">{{ item.at_user && item.at_user.nick }}</span>
             </span>:
             <span>{{ item.comment_content }}</span>
           </div>
