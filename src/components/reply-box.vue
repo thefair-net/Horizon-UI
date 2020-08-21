@@ -45,7 +45,7 @@
                 ref="fileInput"
                 type="file"
                 id='img'
-                accept="image/*"
+                accept="image/png, image/jpeg, image/gif, image/jpg"
                 style="display:none;"
                 @input="handleImg"
               />
@@ -128,6 +128,10 @@
       handleImg(e) {
         let reader = new FileReader();
         this.file = e.target.files[0];
+        if (!this.file.type.includes('image')){
+          Toast({message:'请上传图片文件'})
+          return;
+        }
         reader.readAsDataURL(e.target.files[0]);
         reader.onload = (e) => {
           const imgCode = e.target.result;
