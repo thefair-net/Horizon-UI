@@ -127,11 +127,11 @@
       },
       handleImg(e) {
         let reader = new FileReader();
-        this.file = e.target.files[0];
-        if (!this.file.type.includes('image')){
-          Toast({message:'请上传图片文件'})
+        if (!e.target.files[0].type.includes('image')) {
+          Toast({message: '请上传图片文件'})
           return;
         }
+        this.file = e.target.files[0];
         reader.readAsDataURL(e.target.files[0]);
         reader.onload = (e) => {
           const imgCode = e.target.result;

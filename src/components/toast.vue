@@ -20,6 +20,7 @@ export default {
       message: this.$options.message,
       icon: this.$options.icon,
       show: this.show,
+      duration:this.$options.duration,
     }
   },
   methods: {

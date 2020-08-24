@@ -6,7 +6,7 @@
       <div class="kaiyan"><span class="nick">{{nickname}}</span> 正在使用开眼eyepetizer</div>
       <div class="invite">{{message}}</div>
     </div>
-    <img class="button" src="../../static/img/share-header-button.svg"/>
+     <div class="button">立即打开</div>
   </div>
   </div>
 
@@ -90,7 +90,13 @@
       .button {
         width: .64rem;
         height: .24rem;
-        object-fit: contain;
+        background-color: #4A90E2;
+        border-radius: 0.05rem;
+        line-height: 0.24rem;
+        text-align: center;
+        font-family: $FONT-FZLTZCHJW;
+        color: $white;
+        font-size: 12px;
       }
     }
   }
