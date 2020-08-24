@@ -92,11 +92,13 @@
         height: .24rem;
         background-color: #4A90E2;
         border-radius: 0.05rem;
-        line-height: 0.24rem;
-        text-align: center;
         font-family: $FONT-FZLTZCHJW;
         color: $white;
-        font-size: 12px;
+        font-size: 0.12rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0.01rem;
       }
     }
   }
