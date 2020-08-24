@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import {ShareHeader} from "../../../lib";
+import {ShareHeader, Toast} from "../../../lib";
 
 export default {
   name: "share-header",
@@ -15,7 +15,7 @@ export default {
       message: '邀请你参与话题投票',
       methods: {
         onClick() {
-          console.log('onclick')
+          Toast({message: '立即打开'})
         },
       }
     })

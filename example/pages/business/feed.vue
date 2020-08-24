@@ -18,7 +18,7 @@
           :first-two-comments="item.feed_content.comment_info.item_list"
           :comments-count="item.feed_content.count_summary.comment.count"
           :reply-to="item.feed_content.at_user"
-          @reply="showReplyOthersBox"
+          @reply="showReplyBox"
           @like="likeEvent"
           @operation="showMoreOperation"
           @avatar="handleAvatarClick"
@@ -43,7 +43,7 @@
 <script>
 import {onBeforeUnmount, ref} from '@vue/composition-api'
 import {feeds} from "../../utils/mock";
-import {Feed, FeedCard, Popup, ReplyBar, ReplyBox} from '../../../lib'
+import {Feed, FeedCard, Popup, ReplyBar, ReplyBox, Toast} from '../../../lib'
 
 const COMPLAIN_REASONS = ['反动、色情、政治敏感内容', '不友善、不文明语言', '广告、刷屏等垃圾信息', '与主题无关的恶意言论']
 export default {
@@ -58,22 +58,8 @@ export default {
     const moreOperation = ref(false)
     const showReasons = ref(false)
     const operationId = ref('')
-    // 自己的回复框，一直保留
-    const myReply = ReplyBox({
-      methods: {
-        onClose: function () {
-          isShowBar.value = true;
-        },
-        onConfirm: function (data) {
-          isShowBar.value = true;
-          console.log('confirm', data)
-          this.close();
-        },
-      },
-    })
     // 回复别人的回复框，不保留
-    const showReplyOthersBox = ({message, nickname}) => {
-      console.log(message, nickname)
+    const showReplyBox = ({message = '', nickname = ''}) => {
       const r = ReplyBox({
         title: nickname,
         subtitle: message,
@@ -93,11 +79,7 @@ export default {
       isShowBar.value = false;
     }
     const handleBarClick = () => {
-      showMyReplyBox();
-    }
-    const showMyReplyBox = () => {
-      isShowBar.value = false;
-      myReply.open();
+      showReplyBox({message: '', nickname: ''})
     }
     onBeforeUnmount(() => {
       /**卸载所有回复窗口**/
@@ -118,7 +100,7 @@ export default {
       showReasons.value = true;
     }
     const handleTitleClick = () => {
-      alert('去热评区')
+      Toast({message: '去热评区'})
     }
     const handleAvatarClick = (item) => {
     }
@@ -128,8 +110,7 @@ export default {
     return {
       isShowBar,
       feeds,
-      showReplyOthersBox,
-      showMyReplyBox,
+      showReplyBox,
       likeEvent,
       showMoreOperation,
       moreOperation,
