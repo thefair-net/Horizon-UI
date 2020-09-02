@@ -21,25 +21,25 @@
 .feed-card-light {
   display: flex;
   align-items: flex-start;
-  padding: 0.15rem 0 0 0.17rem;
+  padding: 15px 0 0 17px;
 
   .left {
-    min-width: .40rem;
-    min-height: .40rem;
-    margin-right: .12rem;
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 12px;
 
     .avatar {
-      border: .01rem white solid;
-      width: .40rem;
-      height: .40rem;
+      border: 1px white solid;
+      width: 40px;
+      height: 40px;
     }
   }
 
   .right {
     width: 100%;
-    padding-right: .18rem;
-    padding-bottom: .11rem;
-    border-bottom: .005rem $gray-ed solid;
+    padding-right: 18px;
+    padding-bottom: 11px;
+    border-bottom: .5px $gray-ed solid;
     display: flex;
     flex-direction: column;
 
@@ -47,7 +47,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      min-height: 0.22rem;
+      min-height: 22px;
 
       .name-container {
         display: flex;
@@ -61,9 +61,9 @@
 
         .reply-to {
           font-family: $FONT-FZLTHJW;
-          font-size: .10rem;
+          font-size: 10px;
           color: $gray-88;
-          margin-top: .07rem;
+          margin-top: 7px;
         }
       }
 
@@ -73,14 +73,14 @@
         align-items: center;
 
         span {
-          margin-right: .03rem;
-          font-size: .12rem;
+          margin-right: 3px;
+          font-size: 12px;
         }
       }
     }
 
     .right-middle {
-      margin-top: .10rem;
+      margin-top: 10px;
 
       .comment-text {
         font-family: $FONT-FZLTHJW;
@@ -91,25 +91,25 @@
       }
 
       .comment-img {
-        margin-top: 0.08rem;
+        margin-top: 8px;
 
         img {
-          max-width: 1.70rem;
-          max-height: 1.92rem;
+          max-width: 170px;
+          max-height: 192px;
           object-fit: cover;
           object-position: center center;
-          border-radius: .04rem;
+          border-radius: 4px;
         }
       }
 
       .replies {
-        padding: .10rem .14rem .14rem .14rem;
-        margin-top: .10rem;
-        border-radius: .04rem;
+        padding: 10px 14px 14px 14px;
+        margin-top: 10px;
+        border-radius: 4px;
         background-color: $gray-f5;
-        font-size: .12rem;
+        font-size: 12px;
         .reply-cell {
-          margin-top: 0.06rem;
+          margin-top: 6px;
           font-family: $FONT-FZLTHJW;
           line-height: 1.5;
           color: $gray-a5;
@@ -132,7 +132,7 @@
         }
         .view-all-replies {
           color: $blue-btn;
-          margin-top: 0.1rem;
+          margin-top: 10px;
           font-family: $FONT-FZLTZCHJW;
           font-weight: lighter;
         }
@@ -143,20 +143,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: .05rem;
+      margin-top: 5px;
       font-family: $FONT-FZLTZCHJW;
-      font-size: .12rem;
+      font-size: 12px;
       color: $gray-88;
 
       .right-bottom-left {
         display: flex;
 
         .view-conversation {
-          margin-right: .15rem;
+          margin-right: 15px;
         }
 
         .reply {
-          margin-right: .15rem;
+          margin-right: 15px;
         }
 
         .create-time {

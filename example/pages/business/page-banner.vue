@@ -49,10 +49,10 @@
 <style lang="scss" scoped>
   @import "../../../static/config";
   .description{
-    padding: .15rem .17rem;
+    padding: 15px 17px;
     opacity: 0.8;
     font-family: $FONT-FZLTHJW;
-    font-size: .14rem;
+    font-size: 14px;
     line-height: 1.5;
     text-align: justify;
     color: #444444;
@@ -66,27 +66,27 @@
     .user-box {
       display: flex;
       align-items: center;
-      font-size: .12rem;
+      font-size: 12px;
       color: #ffffff;
 
       .user-avatar {
-        width: .20rem;
-        height: .20rem;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
-        border: solid 0.05rem #ffffff;
-        margin-right: .05rem;
+        border: solid 5px #ffffff;
+        margin-right: 5px;
       }
 
       .user-nick {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 1.63rem;
+        max-width: 163px;
       }
     }
 
     .join {
-      font-size: .12rem;
+      font-size: 12px;
       color: #ffffff;
       font-family: $FONT-FZLTHJW ;
     }

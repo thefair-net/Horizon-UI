@@ -50,19 +50,12 @@
     width: 100%;
 
     .title {
-      padding: 0.25rem 0 0.12rem 0.17rem;
+      padding: 25px 0 12px 17px;
       font-family: $FONT-FZLTZCHJW;
       display: flex;
       align-items: center;
       .icon-right {
-        width: 0.08rem;
-        height: 0.08rem;
-        transform: rotate(45deg);
-        border-top: solid 0.015rem $gray-97;
-        border-right: solid 0.015rem $gray-97;
-        margin-bottom: 0.02rem;
-        margin-right: 0.02rem;
-        margin-left: 0.05rem;
+        margin-left: 5px;
       }
     }
   }
@@ -72,13 +65,13 @@
     background-color: $black-30;
 
     .title {
-      padding: 0.25rem 0 0.12rem 0.17rem;
+      padding: 25px 0 12px 17px;
       font-family: $FONT-FZLTZCHJW;
       color: $white;
       display: flex;
       align-items: center;
       .icon-right {
-        margin-left: 0.05rem;
+        margin-left: 5px;
       }
     }
   }

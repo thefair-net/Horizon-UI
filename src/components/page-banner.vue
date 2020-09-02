@@ -30,8 +30,8 @@
   .vs-page-banner {
     .banner-box {
       width: 100%;
-      height: 2.23rem;
-      padding: 0.17rem;
+      height: 223px;
+      padding: 17px;
       background-color: #fff;
       background-size: cover;
       background-position: center center;
@@ -60,15 +60,15 @@
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          height: 1.50rem;
+          height: 150px;
           text-align: left;
           font-family: $FONT-FZLTZCHJW;
-          font-size: .20rem;
+          font-size: 20px;
           line-height: 1.3;
         }
 
         .subtitle-box {
-          margin-top: .20rem;
+          margin-top: 20px;
           font-family: $FONT-FZLTZCHJW;
         }
       }

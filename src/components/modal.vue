@@ -97,12 +97,12 @@
       background-color: #fff;
       z-index: 1000;
       font-family: $FONT-FZLTHJW;
-      font-size: .14rem;
+      font-size: 14px;
       text-align: center;
       color: #383838;
-      border-radius: .10rem;
-      padding: .30rem;
-      min-width: .200rem;
+      border-radius: 10px;
+      padding: 30px;
+      min-width: 20px;
       .content{
         display: flex;
         align-content: center;
@@ -110,7 +110,7 @@
       }
       .title-box {
         font-family: $FONT-FZLTHJW;
-        font-size: .12rem;
+        font-size: 12px;
         text-align: center;
         color: #888888;
       }

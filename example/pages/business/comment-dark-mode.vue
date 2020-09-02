@@ -138,7 +138,7 @@
 </script>
 <style  lang="scss" scoped>
   .pop-item {
-    padding: 0.22rem 0 0.21rem;
-    border-bottom: solid 0.005rem #eeeeee;
+    padding: 22px 0 21px;
+    border-bottom: solid 0.5px #eeeeee;
   }
 </style>

@@ -40,24 +40,24 @@
 
 <style lang="scss" scoped>
   .page {
-    min-height: 6rem;
+    min-height: 600px;
   }
 
   .pop-item {
-    padding: .22rem 0 .21rem;
-    border-bottom: solid .005rem #eeeeee;
+    padding: 22px 0 21px;
+    border-bottom: solid .5px #eeeeee;
   }
 
   .button {
     text-align: center;
-    margin: .30rem;
-    padding: .10rem;
+    margin: 30px;
+    padding: 10px;
     color: #fafafa;
     background-color: #30302f;
   }
 
   .item {
-    max-height: 3.00rem;
+    max-height: 300px;
     overflow: auto;
   }
 </style>

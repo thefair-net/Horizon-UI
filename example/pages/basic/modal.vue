@@ -34,22 +34,22 @@
 <style lang="scss" scoped>
 
   .pop-item {
-    padding: .22rem 0 .21rem;
-    border-bottom: solid .01rem #eeeeee;
+    padding: 22px 0 21px;
+    border-bottom: solid 1px #eeeeee;
     &.last{
       border-bottom: none;
     }
   }
   .button{
-    width: 1.00rem;
+    width: 100px;
     text-align: center;
-    margin:.30rem;
-    padding: .10rem;
+    margin:30px;
+    padding: 10px;
     color: #fafafa;
     background-color: #30302f;
   }
   .item{
-    max-height: 3.00rem;
+    max-height: 300px;
     overflow: auto;
   }
 </style>

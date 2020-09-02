@@ -6,7 +6,6 @@ import {ImageViewer, Loading} from '../lib'
 import './assets/fade-in.css'
 import '../static/font.css'
 import '../static/normalize.css'
-import '../src/utils/rem(768px)'
 import VConsole from 'vconsole'
 
 Vue.use(Loading)

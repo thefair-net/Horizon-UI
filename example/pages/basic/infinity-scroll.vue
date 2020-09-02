@@ -44,13 +44,13 @@
   @import '../../../static/config.scss';
 
   .box {
-    width: 1.00rem;
-    height: 1.00rem;
+    width: 100px;
+    height: 100px;
     background-color: #b3b1b1;
     color: #30302f;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: .10rem auto;
+    margin: 10px auto;
   }
 </style>

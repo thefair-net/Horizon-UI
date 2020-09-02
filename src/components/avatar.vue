@@ -30,8 +30,8 @@
     background: #ECEDEE center center no-repeat;
     background-size: contain;
   &.normal{
-      width: 0.40rem;
-      height: 0.40rem;
+      width: 40px;
+      height: 40px;
       object-fit: cover;
       object-position: center center;
       border-radius: 50%;

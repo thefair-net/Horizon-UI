@@ -152,11 +152,12 @@
 
     .vs-popup-content {
       position: fixed;
+      max-width: $iPadWidth;
       width: 100%;
       background-color: #fff;
       z-index: 1000;
       font-family: $FONT-FZLTHJW;
-      font-size: .14rem;
+      font-size: 14px;
       text-align: center;
       color: #383838;
 
@@ -192,21 +193,21 @@
 
       .title-box {
         font-family: $FONT-FZLTHJW;
-        font-size: .12rem;
+        font-size: 12px;
         text-align: center;
         color: #888888;
       }
 
       .popup-title {
-        font-size: .12rem;
+        font-size: 12px;
         text-align: center;
         color: #888888;
-        padding: .24rem 0 .22rem;
-        border-bottom: solid .005rem #eeeeee;
+        padding: 24px 0 22px;
+        border-bottom: solid .5px #eeeeee;
       }
 
       .popup-cancel {
-        padding: .22rem 0;
+        padding: 22px 0;
         font-family: $FONT-FZLTZCHJW;
       }
     }

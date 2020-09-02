@@ -52,7 +52,7 @@ html {
 body {
   margin: 0;
   font-family: 'FZLTHJW', PingFang SC, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 0.14rem;
+  font-size: 14px;
   color: #444;
   background-color: transparent;
 }
@@ -391,7 +391,7 @@ textarea {
 textarea::placeholder {
   font-family: 'FZLTHJW', PingFang SC, Avenir, Helvetica, Arial, sans-serif;
   opacity: 0.2;
-  font-size: 0.14rem;
+  font-size: 14px;
   color: white;
 }
 

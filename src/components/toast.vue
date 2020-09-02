@@ -2,7 +2,7 @@
   <transition name="fade">
     <div class="toast" v-show="show">
       <vs-icon :type="icon" class="toast-icon" v-if="icon"></vs-icon>
-      <div class="toast-text" v-if="message" :style="{marginTop:icon ?'0.05rem':'0'}">{{ message }}</div>
+      <div class="toast-text" v-if="message" :style="{marginTop:icon ?'5px':'0'}">{{ message }}</div>
     </div>
   </transition>
 </template>
@@ -74,12 +74,12 @@ export default {
   top: 50%;
   transform: translate(-50%, -50%);
   max-width: 80%;
-  /*border-radius: .05rem;*/
+  /*border-radius: 5px;*/
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   text-align: center;
   z-index: 10000;
-  padding: .14rem .25rem;
+  padding: 14px 25px;
 
   .toast-icon {
     margin: 0 auto;

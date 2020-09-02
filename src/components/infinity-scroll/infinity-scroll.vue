@@ -103,14 +103,14 @@ export default {
 
   .loading {
     width: 100%;
-    padding: .20rem 0 .86rem 0;
+    padding: 20px 0 86px 0;
     display: flex;
     justify-content: center;
   }
 
   .the-end {
     width: 100%;
-    padding: .45rem 0 2.30rem 0;
+    padding: 45px 0 230px 0;
     display: flex;
     justify-content: center;
   }
@@ -118,7 +118,7 @@ export default {
 
 @supports (bottom: env(safe-area-inset-bottom)) {
   .loading {
-    padding-bottom: calc(.86rem + env(safe-area-inset-bottom)) !important;
+    padding-bottom: calc(86px + env(safe-area-inset-bottom)) !important;
   }
 }
 </style>

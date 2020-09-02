@@ -90,8 +90,8 @@ export default {
         rate = 0.1
       }
       /**根据比例改变缩放、背景透明度，并且改变移动距离，达到跟手效果**/
-      this.imgStyle.transform = `scale(${rate}, ${rate}) translate(${clientXDiff / 100}rem, ${clientYDiff / 100}rem)`
-      this.imgStyle.transformOrigin = `${clientX / 100}rem ${clientY / 100}rem`
+      this.imgStyle.transform = `scale(${rate}, ${rate}) translate(${clientXDiff}px, ${clientYDiff}px)`
+      this.imgStyle.transformOrigin = `${clientX}px ${clientY}px`
       this.wrapperStyle.backgroundColor = `rgba(0, 0, 0, ${rate})`
     },
     /**销毁ImageViewer的方法**/
@@ -104,7 +104,7 @@ export default {
       this.wrapperStyle.transition = `all 150ms linear`
       this.imgStyle.transition = `transform 150ms linear`
       if (this.operationY === this.CONSTANT_SWIPE_UP) { // 判断为上滑
-        this.imgStyle.transform = `scale(1, 1) translate(0rem, 0rem)`
+        this.imgStyle.transform = `scale(1, 1) translate(0px, 0px)`
         this.imgStyle.transformOrigin = `center center`
         this.wrapperStyle.backgroundColor = `rgba(0, 0, 0, 1)`
       } else { // 判断为下滑
@@ -162,8 +162,8 @@ export default {
 <style scoped lang="scss">
 .close {
   position: fixed;
-  top: 0.1rem;
-  left: 0.1rem;
+  top: 10px;
+  left: 10px;
   z-index: 2001;
 }
 

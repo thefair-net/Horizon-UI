@@ -24,10 +24,10 @@ export default {
 
 <style scoped>
 .button {
-  width: 1.00rem;
+  width: 100px;
   text-align: center;
-  margin: .30rem;
-  padding: .10rem;
+  margin: 30px;
+  padding: 10px;
   color: #fafafa;
   background-color: #30302f;
 }

@@ -6,10 +6,10 @@
     <div class="group" v-for="group in navs">
       <div class="group-title">
         <img src="../assets/img/title.svg" alt="">
-        {{group.title}}
+        {{ group.title }}
       </div>
       <div @click="handleItemClick(item)" v-for="item in group.list" class="cell" v-if="!item.meta.hide">
-        <span>{{item.name}} - {{item.desc}}</span>
+        <span>{{ item.name }} - {{ item.desc }}</span>
         <img src="../assets/img/right.svg"/>
       </div>
     </div>
@@ -17,44 +17,53 @@
 </template>
 
 <script>
-  import {NavConfig} from '../router'
-  export default {
-    setup(props, context) {
-      const handleItemClick = (item) => {
-        context.root.$router.push(item.path)
-      }
-      return {
-        handleItemClick,
-        navs: NavConfig
-      }
+import {NavConfig} from '../router'
+
+export default {
+  setup(props, context) {
+    const handleItemClick = (item) => {
+      context.root.$router.push(item.path)
+    }
+    return {
+      handleItemClick,
+      navs: NavConfig
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
-  .home-title {
-    font-size: .20rem;
-    padding: .20rem 0;
-    margin: 0 auto;
-    text-align: center;
-    display: block;
-    line-height: 1;
-    border: 0.01rem #eee solid;
-    background-color: #fafafa;
-  }
-  .group-title {
-    font-size: .15rem;
-    padding: .15rem 0 .15rem .15rem;
-    border-bottom: .01rem #eee solid;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-  }
-  .cell {
-    padding: .15rem;
-    border-bottom: .01rem #eee solid;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+@import '../../static/config.scss';
+
+.page {
+  padding-bottom: $nav-height;
+}
+
+.home-title {
+  font-size: 20px;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  line-height: 1;
+  border: 1px #eee solid;
+  background-color: #fafafa;
+}
+
+.group-title {
+  font-size: 15px;
+  padding: 15px 0 15px 15px;
+  border-bottom: 1px #eee solid;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.cell {
+  padding: 15px;
+  border-bottom: 1px #eee solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 </style>

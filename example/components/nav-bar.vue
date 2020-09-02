@@ -81,24 +81,25 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.15rem;
-  padding: 0.15rem;
+  font-size: 15px;
+  padding: 15px;
   line-height: 1;
-  border: 0.01rem #eee solid;
+  border: 1px #eee solid;
   background-color: #fafafa;
+  position: relative;
 
   .left {
     position: absolute;
-    left: 0.15rem;
+    left: 15px;
   }
 
   .right {
     position: absolute;
-    top: 0.09rem;
-    right: 0.15rem;
-    border: #45af7f 0.01rem solid;
-    padding: 0.06rem 0.1rem;
-    border-radius: 0.05rem;
+    top: 9px;
+    right: 15px;
+    border: #45af7f 1px solid;
+    padding: 6px 10px;
+    border-radius: 5px;
     color: #fafafa;
     background-color: #45af7f;
     cursor: pointer;

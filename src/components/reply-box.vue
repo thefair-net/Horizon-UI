@@ -8,7 +8,7 @@
         </div>
         <div class="title-box">
           <div class="title">{{title}}</div>
-          <div class="subtitle" v-if="subtitle" :style="{marginTop:'0.05rem'}">{{subtitle}}</div>
+          <div class="subtitle" v-if="subtitle" :style="{marginTop:'5px'}">{{subtitle}}</div>
         </div>
         <div class="confirm" @click="confirm">
           <vs-icon :type="'icon-check'"/>
@@ -182,40 +182,40 @@
     .reply-box {
       width: 100%;
       max-width: $iPadWidth;
-      height: 2.66rem;
+      height: 266px;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 0 auto;
-      padding: 0 0.15rem;
-      -webkit-backdrop-filter: blur(0.20rem);
-      backdrop-filter: blur(0.20rem);
+      padding: 0 15px;
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
       background-color: rgba(0, 0, 0, 0.5);
-      font-size: 0.14rem;
+      font-size: 14px;
 
       .top {
         width: 100%;
-        height: 0.61rem;
+        height: 61px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         color: $white;
         font-family: $FONT-FZLTZCHJW;
-        border-bottom: 0.005rem rgba(255, 255, 255, 0.2) solid;
+        border-bottom: 0.5px rgba(255, 255, 255, 0.2) solid;
 
         .close {
         }
 
         .title-box {
           text-align: center;
-          font-size: 0.14rem;
+          font-size: 14px;
 
           .subtitle {
-            max-width: 2.75rem;
-            height: .14rem;
+            max-width: 275px;
+            height: 14px;
             opacity: 0.8;
             font-family: $FONT-FZLTHJW;
-            font-size: .12rem;
+            font-size: 12px;
             text-align: center;
             color: #ffffff;
             white-space: nowrap;
@@ -231,13 +231,13 @@
 
       .middle {
         width: 100%;
-        height: 1.65rem;
+        height: 165px;
         flex: 1;
 
         .reply-area {
           width: 100%;
           height: 100%;
-          padding: .10rem 0;
+          padding: 10px 0;
         }
       }
 
@@ -247,19 +247,19 @@
         flex-direction: row-reverse;
         align-items: center;
         width: 100%;
-        height: .40rem;
+        height: 40px;
         color: $white;
-        border-top: .005rem rgba(255, 255, 255, 0.2) solid;
+        border-top: .5px rgba(255, 255, 255, 0.2) solid;
 
         .img {
           position: relative;
 
           img {
-            width: .30rem;
-            height: .30rem;
+            width: 30px;
+            height: 30px;
             object-fit: cover;
-            border-radius: .01rem;
-            border: solid .01rem rgba(255, 255, 255, 0.9);
+            border-radius: 1px;
+            border: solid 1px rgba(255, 255, 255, 0.9);
             vertical-align:bottom;
           }
 
@@ -267,8 +267,8 @@
             position: absolute;
             right: 0;
             top: 0;
-            width: 0.12rem;
-            height: 0.12rem;
+            width: 12px;
+            height: 12px;
           }
         }
 
@@ -280,7 +280,7 @@
           }
 
           .text {
-            margin-left: 0.03rem;
+            margin-left: 3px;
           }
         }
 

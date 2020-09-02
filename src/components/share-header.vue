@@ -52,28 +52,28 @@
     .vs-share-header {
       max-width: $iPadWidth;
       margin: 0 auto;
-      -webkit-backdrop-filter: blur(0.20rem);
-      backdrop-filter: blur(0.20rem);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
       background-color: rgba(16, 17, 18, 0.5);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.08rem 0.15rem;
+      padding: 8px 15px;
 
       .center {
         flex: 1;
-        margin-left: 0.08rem;
+        margin-left: 8px;
 
         .kaiyan {
           font-family: $FONT-FZLTHJW;
-          font-size: 0.12rem;
+          font-size: 12px;
           color: #ffffff;
-          margin-bottom: 0.06rem;
+          margin-bottom: 6px;
 
           .nick {
             display: inline-block;
             vertical-align: bottom;
-            max-width: 0.90rem;
+            max-width: 90px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -82,23 +82,23 @@
 
         .invite {
           font-family: $FONT-FZLTZCHJW;
-          font-size: 0.14rem;
+          font-size: 14px;
           color: #ffffff;
         }
       }
 
       .button {
-        width: .64rem;
-        height: .24rem;
+        width: 64px;
+        height: 24px;
         background-color: #4A90E2;
-        border-radius: 0.05rem;
+        border-radius: 5px;
         font-family: $FONT-FZLTZCHJW;
         color: $white;
-        font-size: 0.12rem;
+        font-size: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 0.01rem;
+        padding-top: 1px;
       }
     }
   }

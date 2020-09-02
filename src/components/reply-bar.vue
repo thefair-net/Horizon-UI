@@ -53,36 +53,36 @@ export default {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    padding: .14rem .15rem 0.14rem .15rem;
-    -webkit-backdrop-filter: blur(.20rem);
-    backdrop-filter: blur(.20rem);
+    padding: 14px 15px 14px 15px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     background-color: rgba(0, 0, 0, 0.3);
 
     .avatar {
-      border: .01rem white solid;
-      width: .40rem;
-      height: .40rem;
-      margin-right: .07rem;
+      border: 1px white solid;
+      width: 40px;
+      height: 40px;
+      margin-right: 7px;
     }
 
     .reply-bar-input {
       flex: 1;
-      height: .38rem;
-      border-radius: .03rem;
-      border: solid .01rem rgba(255, 255, 255, 0.1);
+      height: 38px;
+      border-radius: 3px;
+      border: solid 1px rgba(255, 255, 255, 0.1);
       background-color: rgba(0, 0, 0, 0.11);
       font-family: $FONT-FZLTZCHJW;
-      font-size: .12rem;
-      letter-spacing: .01rem;
+      font-size: 12px;
+      letter-spacing: 1px;
       color: #bebebc;
-      padding: .12rem .08rem;
+      padding: 12px 8px;
     }
   }
 }
 
 @supports (bottom: env(safe-area-inset-bottom)) {
   .reply-bar {
-    padding-bottom: calc(0.14rem + env(safe-area-inset-bottom)) !important;
+    padding-bottom: calc(14px + env(safe-area-inset-bottom)) !important;
   }
 }
 </style>
