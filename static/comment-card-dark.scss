@@ -90,7 +90,8 @@
       .comment-text {
         font-family: $FONT-FZLTHJW;
         line-height: 1.5;
-        color: $white
+        color: $white;
+        white-space: pre-line;
       }
 
       .comment-img {
@@ -141,6 +142,7 @@
             font-family: $FONT-FZLTHJW;
             color: $white;
             opacity: 0.8;
+            white-space: pre-line;
           }
 
           .parent-reply-img {

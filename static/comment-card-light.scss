@@ -84,6 +84,7 @@
       .comment-text {
         font-family: $FONT-FZLTHJW;
         line-height: 1.5;
+        white-space: pre-line;
       }
 
       .comment-img {
@@ -131,6 +132,7 @@
             margin-top: 4px;
             font-family: $FONT-FZLTHJW;
             color: $gray-a5;
+            white-space: pre-line;
           }
 
           .parent-reply-img {

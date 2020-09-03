@@ -20,7 +20,7 @@ export const feeds = [
         }
       ],
       "title": "",
-      "content": "长期招聘Web前端开发工程师，简历投递：liqiuqi@thefair.net.cn，一起我们的开源之旅吧~",
+      "content": "能看到这里，我们注定有缘~\n新世相长期招聘Web前端开发工程师，简历投递：liqiuqi@thefair.net.cn，一起我们的开源之旅吧~",
       "count_summary": {
         "favorite": {
           "count": 99
