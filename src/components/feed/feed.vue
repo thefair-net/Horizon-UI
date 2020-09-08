@@ -1,6 +1,6 @@
 <template>
   <div :class="darkMode ? 'feed-dark' : 'feed-light'">
-    <div v-if="title" class="title" @click="handleTitleClick">
+    <div :id="title" v-if="title" class="title" @click="handleTitleClick">
       {{title}}
       <vs-icon class="icon-right" :key="uniqueId()" type="icon-right" v-if="iconShow"/>
     </div>
