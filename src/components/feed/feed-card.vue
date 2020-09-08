@@ -1,5 +1,5 @@
 <template>
-  <div :class="dark ? 'feed-card-dark' : 'feed-card-light'">
+  <div :id="id" :class="dark ? 'feed-card-dark' : 'feed-card-light'">
     <div class="left">
       <vs-avatar :key="uniqueId()" class='avatar' :src="avatar" @click.native="avatarClick"/>
     </div>
@@ -71,6 +71,10 @@ export default {
     darkMode: {
       type: Boolean,
       default: false
+    },
+    id: {
+      type: String,
+      default: uniqueId()
     },
     avatar: {
       type: String,
