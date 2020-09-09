@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <div class="button" @click="clickBtn">Indicator.open</div>
     <div class="button" @click="clean">Indicator.close</div>
   </div>

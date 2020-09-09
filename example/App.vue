@@ -7,34 +7,39 @@
   </div>
 </template>
 <script>
-  import NavBar from './components/nav-bar'
-  import {computed, onMounted, onUpdated, ref} from '@vue/composition-api'
+import NavBar from './components/nav-bar'
+import {computed, onMounted, onUpdated, ref} from '@vue/composition-api'
 
-  export default {
-    components: {
-      NavBar
-    },
-    setup(props, context) {
-      const visible = ref(false)
-      const title = ref('')
-      onUpdated(() => {
-        // console.log(context.root.$router.currentRoute)
-        visible.value = context.root.$router.currentRoute.path !== '/'
-        title.value = context.root.$router.currentRoute.name
-      })
-      return {
-        visible,
-        title
-      }
+export default {
+  components: {
+    NavBar
+  },
+  setup(props, context) {
+    const visible = ref(false)
+    const title = ref('')
+    onUpdated(() => {
+      // console.log(context.root.$router.currentRoute)
+      visible.value = context.root.$router.currentRoute.path !== '/'
+      title.value = context.root.$router.currentRoute.name
+    })
+    return {
+      visible,
+      title
     }
   }
+}
 </script>
 <style scoped lang="scss">
-  @import '../static/config.scss';
+@import '../static/config.scss';
 
-  #app {
-    max-width: $iPadWidth;
-    background-color: $white;
-    margin: 0 auto;
-  }
+.page {
+  min-height: calc(100vh - 47px);
+  padding-bottom: $nav-height;
+}
+
+#app {
+  max-width: $iPadWidth;
+  background-color: $white;
+  margin: 0 auto;
+}
 </style>

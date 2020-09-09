@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page">
     <div class="button" @click="clickBtn">toast</div>
   </div>
 </template>

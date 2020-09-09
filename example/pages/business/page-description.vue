@@ -8,14 +8,14 @@
 </template>
 
 <script>
-  import {PageDescription} from "../../../lib";
+import {PageDescription} from "../../../lib";
 
-  export default {
-    name: "page-description",
-    components: {
-      'vs-page-description': PageDescription
-    },
-  }
+export default {
+  name: "page-description",
+  components: {
+    'vs-page-description': PageDescription
+  },
+}
 </script>
 
 <style scoped>

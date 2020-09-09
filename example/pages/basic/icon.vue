@@ -59,6 +59,7 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  align-content: flex-start;
   max-width: $iPhoneWidth;
   margin: 0 auto;
 

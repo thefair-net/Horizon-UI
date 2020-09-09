@@ -35,10 +35,6 @@ export default {
 <style lang="scss" scoped>
 @import '../../static/config.scss';
 
-.page {
-  padding-bottom: $nav-height;
-}
-
 .home-title {
   font-size: 20px;
   padding: 20px 0;
