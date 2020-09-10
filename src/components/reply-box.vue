@@ -123,7 +123,7 @@
         }
       },
       handleInput(e) {
-        this.text = e.target.value;
+        this.text = e.target.value.replace(/\s+/g, ""); // 去空格
       },
       handleImg(e) {
         let reader = new FileReader();
