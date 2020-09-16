@@ -2,22 +2,22 @@
 
 <p align="left">
   <a href="https://www.npmjs.org/package/horizon-ui">
-    <img src="https://img.shields.io/npm/v/horizon-ui.svg" alt="npm version">
+    <img src="https://img.shields.io/npm/v/horizon-ui.svg?style=for-the-badge&logo=npm" alt="npm version">
   </a>
   <a href="https://npmcharts.com/compare/horizon-ui?minimal=true">
-    <img src="http://img.shields.io/npm/dm/horizon-ui.svg" alt="npm downloads">
+    <img src="https://img.shields.io/npm/dt/horizon-ui.svg?style=for-the-badge&logo=npm" alt="npm downloads">
   </a>
   <a href="https://github.com/thefair-net/Horizon-UI">
-    <img src="https://badgen.net/badge/github/Horizon UI?icon" alt="Github">
+    <img src="https://img.shields.io/github/stars/thefair-net/horizon-ui?logo=github&style=for-the-badge" alt="Github Stars">
   </a>
-  <a href="https://github.com/thefair-net/Horizon-UI">
-    <img src="https://badgen.net/github/stars/thefair-net/Horizon-UI" alt="Github Stars">
+  <a href="https://github.com/thefair-net/Horizon-UI/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/thefair-net/horizon-ui?color=blue&logo=github&style=for-the-badge" alt="Github Contributors">
   </a>
-  <a href="#documentation">
-    <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg" alt="PRs Welcome">
+  <a href="https://github.com/thefair-net/Horizon-UI/pulls">
+    <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=for-the-badge" alt="PRs Welcome">
   </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License">
+  <a href="https://github.com/thefair-net/Horizon-UI/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="MIT License">
   </a>
 </p>
 
