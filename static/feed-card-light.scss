@@ -38,8 +38,8 @@
   .right {
     width: 100%;
     padding-right: 18px;
-    padding-bottom: 11px;
-    border-bottom: .5px $gray-ed solid;
+    padding-bottom: 12px;
+    border-bottom: 1px $gray-ed solid;
     display: flex;
     flex-direction: column;
 
@@ -57,13 +57,6 @@
           font-family: $FONT-FZLTZCHJW;
           color: $black-44;
           line-height: 1;
-        }
-
-        .reply-to {
-          font-family: $FONT-FZLTHJW;
-          font-size: 10px;
-          color: $gray-88;
-          margin-top: 7px;
         }
       }
 
@@ -113,6 +106,7 @@
           margin-top: 6px;
           font-family: $FONT-FZLTHJW;
           line-height: 1.5;
+          letter-spacing: 0.3px;
           color: $gray-a5;
           //两行
           overflow: hidden;
@@ -151,10 +145,6 @@
 
       .right-bottom-left {
         display: flex;
-
-        .view-conversation {
-          margin-right: 15px;
-        }
 
         .reply {
           margin-right: 15px;

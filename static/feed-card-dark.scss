@@ -42,8 +42,8 @@
   .right {
     width: 100%;
     padding-right: 18px;
-    padding-bottom: 11px;
-    border-bottom: 0.5px $border-dark-gray solid;
+    padding-bottom: 12px;
+    border-bottom: 1px $gray-66 solid;
     display: flex;
     flex-direction: column;
 
@@ -61,14 +61,6 @@
           font-family: $FONT-FZLTZCHJW;
           color: $white;
           line-height: 1;
-        }
-
-        .reply-to {
-          font-family: $FONT-FZLTHJW;
-          font-size: 10px;
-          color: $white;
-          opacity: 0.8;
-          margin-top: 7px;
         }
       }
 
@@ -159,11 +151,6 @@
 
       .right-bottom-left {
         display: flex;
-
-        .view-conversation {
-          margin-right: 15px;
-          opacity: 0.8;
-        }
 
         .reply {
           margin-right: 15px;
