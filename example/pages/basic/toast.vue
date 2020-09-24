@@ -1,12 +1,13 @@
 <template>
   <div class="page">
     <div class="button" @click="clickBtn">toast</div>
+    <div class="button" @click="OpenInBrowserClick">openInBrowser</div>
   </div>
 </template>
 
 <script>
-
 import Toast from "../../../lib/toast";
+import OpenInBrowser from "../../../lib/open-in-browser";
 
 export default {
   name: "toast",
@@ -18,13 +19,16 @@ export default {
         icon: 'icon-check'
       })
     },
+    OpenInBrowserClick() {
+      OpenInBrowser.open()
+    }
   },
 }
 </script>
 
 <style scoped>
 .button {
-  width: 100px;
+  width: 200px;
   text-align: center;
   margin: 30px;
   padding: 10px;

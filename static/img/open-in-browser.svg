@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="198" height="84" viewBox="0 0 198 84">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <text fill="#FFF" font-family="PingFangSC-Medium, PingFang SC" font-size="18" font-weight="400" transform="translate(-150 -89) translate(150 89)">
+                    <tspan x="0" y="47">点击右上角</tspan> <tspan x="0" y="75">选择「在浏览器中打开」</tspan>
+                </text>
+                <g>
+                    <path d="M0 0H28V28H0z" transform="translate(-150 -89) translate(150 89) translate(164)"/>
+                    <g>
+                        <path stroke="#FFF" stroke-width="4" d="M3.071 15L3.071 3 15.071 3" transform="translate(-150 -89) translate(150 89) translate(164) translate(5 4) rotate(45 9.071 9)"/>
+                        <path fill="#FFF" d="M7 0H11V22H7z" transform="translate(-150 -89) translate(150 89) translate(164) translate(5 4)"/>
+                    </g>
+                </g>
+                <g transform="translate(-150 -89) translate(150 89) translate(99 31)">
+                    <rect width="32" height="22" fill="#ECECEC" rx="4"/>
+                    <circle cx="16" cy="11" r="2" fill="#3B3B3B"/>
+                    <circle cx="9" cy="11" r="2" fill="#3B3B3B"/>
+                    <circle cx="23" cy="11" r="2" fill="#3B3B3B"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
