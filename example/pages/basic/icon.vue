@@ -37,6 +37,7 @@ export default {
         'icon-check',
         'icon-upload-img',
         'icon-the-end',
+        'icon-the-end-dark',
         'icon-spinner',
         'icon-thumb-unselect',
         'icon-thumb-dark-unselect',

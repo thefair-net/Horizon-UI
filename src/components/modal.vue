@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div class="vs-modal" v-show="value" @click="closeModal" @touchmove.self.prevent>
+    <div class="vs-modal" v-if="value" @click="closeModal" @touchmove.self.prevent>
       <div class="modal-content" :class="[position ? ''+ position : '',fadeout ?'fade_out':'fade_in']">
         <div class="title">
           <slot name="title"></slot>

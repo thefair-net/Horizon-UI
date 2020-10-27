@@ -1,6 +1,6 @@
 <template>
   <transition name="fade" mode="out-in">
-    <div class="loading-container" v-show="visible">
+    <div class="loading-container" v-if="visible">
       <div class="loading">
         <vs-icon class='icon' :type="darkMode ? 'icon-loading-dark' : 'icon-loading-light'"></vs-icon>
       </div>

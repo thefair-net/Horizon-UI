@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div class="toast" v-show="show">
+    <div class="toast" v-if="show">
       <vs-icon :type="icon" class="toast-icon" v-if="icon"></vs-icon>
       <div class="toast-text" v-if="message" :style="{marginTop:icon ?'5px':'0'}">{{ message }}</div>
     </div>

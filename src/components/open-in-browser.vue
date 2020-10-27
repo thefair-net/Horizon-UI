@@ -1,19 +1,14 @@
 <template>
   <transition name="fade" mode="out-in">
-    <div class="open-in-browser" v-show="show" @click="close">
+    <div class="open-in-browser" v-if="show" @click="close">
       <img class="img" src="../../static/img/open-in-browser.svg" alt="">
     </div>
   </transition>
 </template>
 
 <script>
-import Icon from '../../lib/icon'
-
 export default {
-  name: "vs-indicator",
-  components: {
-    'vs-icon': Icon
-  },
+  name: "open-in-browser",
   data() {
     return {
       show: this.show,
@@ -41,7 +36,7 @@ export default {
   align-items: flex-start;
   justify-content: flex-end;
   padding-top: 10px;
-  padding-right: 10px;
+  padding-right: 5.5px;
 }
 
 </style>

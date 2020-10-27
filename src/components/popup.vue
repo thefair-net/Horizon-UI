@@ -1,5 +1,5 @@
 <template>
-  <div class="vs-popup" v-show="value" @touchmove.self.prevent>
+  <div class="vs-popup" v-if="value" @touchmove.self.prevent>
     <div v-if="overlay" @click="closePopup" :class="fadeout ?'vs-popup-mask hide':'vs-popup-mask'"></div>
     <div class="vs-popup-content" :class="[position ? ''+ position : '',fadeout ?'fade_out':'fade_in']">
       <div class="popup-title" v-if="title">{{ title }}</div>

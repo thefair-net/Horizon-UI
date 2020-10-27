@@ -91,7 +91,7 @@
         font-family: $FONT-FZLTHJW;
         line-height: 1.5;
         color: $white;
-        white-space: pre-line;
+        white-space: pre-line; // 保留换行，不保留空格
       }
 
       .comment-img {
@@ -142,7 +142,7 @@
             font-family: $FONT-FZLTHJW;
             color: $white;
             opacity: 0.8;
-            white-space: pre-line;
+            white-space: pre-line; // 保留换行，不保留空格
           }
 
           .parent-reply-img {
