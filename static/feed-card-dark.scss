@@ -58,9 +58,18 @@
         flex-direction: column;
 
         .name {
+          max-width: 230px;
           font-family: $FONT-FZLTZCHJW;
           color: $white;
           line-height: 1;
+
+          //单行
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          line-clamp: 1;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
         }
       }
 

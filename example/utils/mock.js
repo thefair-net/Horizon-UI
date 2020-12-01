@@ -2462,7 +2462,7 @@ export const feed = [{
     "tag_list": [],
     "user": {
       "is_mine": false,
-      "nick": "靓MINI",
+      "nick": "JO:arrow_upper_right:JO:arrow_lower_right:",
       "avatar": "http://thirdwx.qlogo.cn/mmopen/vi_32/iaTd0AQ9wjUTLTMibibvYr6tZYUVSthztZLxPpjEnjsTcicjBHLp01oy14X2GicgV6yItIUyIO9J51VJm99RYkcSrRw/132",
       "link": "eyepetizer://pgc/detail/303881981/?title=靓MINI&userType=NORMAL&tabIndex=0"
     },
