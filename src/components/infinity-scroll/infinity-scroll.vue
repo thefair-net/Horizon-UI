@@ -2,12 +2,20 @@
   <div class="infinity-scroll" ref="infinityScroll">
     <slot name="infinity-scroll"></slot>
     <div v-if="loadingStatus !== LOADING_STATUS_INITIAL">
-      <span class="loading" v-if="loadingStatus === LOADING_STATUS_LOADING">
-        <vs-icon :key="uniqueId()" :type="'icon-loading-light'"/>
-      </span>
-      <span class="the-end" v-if="loadingStatus === LOADING_STATUS_DONE">
-        <vs-icon :key="uniqueId()" :type="'icon-the-end'"/>
-      </span>
+      <template v-if="loadingStatus === LOADING_STATUS_LOADING">
+        <slot name="loading">
+          <div class="loading" >
+            <vs-icon :key="uniqueId()" :type="'icon-loading-light'"/>
+          </div>
+        </slot>
+      </template>
+      <template v-if="loadingStatus === LOADING_STATUS_DONE">
+        <slot name="end">
+          <div class="the-end">
+            <vs-icon :key="uniqueId()" :type="'icon-the-end'"/>
+          </div>
+        </slot>
+      </template>
     </div>
   </div>
 </template>
