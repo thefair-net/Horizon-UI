@@ -94,6 +94,7 @@
         line-height: 1.5;
         color: $white;
         white-space: pre-line; // 保留换行，不保留空格
+        word-break: break-all;
         .nick {
           font-family: $FONT-FZLTZCHJW;
         }

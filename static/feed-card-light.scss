@@ -88,6 +88,7 @@
         font-family: $FONT-FZLTHJW;
         line-height: 1.5;
         white-space: pre-line; // 保留换行，不保留空格
+        word-break: break-all;
         .nick {
           font-family: $FONT-FZLTZCHJW;
         }
