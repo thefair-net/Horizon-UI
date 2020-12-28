@@ -23,12 +23,22 @@ export default {
   data() {
     return {
       show: this.show,
+      callback: this.callback,
       src: this.$options.src,
       poster: this.$options.poster,
     }
   },
   components: {
     'vs-icon': Icon
+  },
+  watch: {
+    show(newV) {
+      if (newV) {
+        this.callback({status: 'open'})
+      } else {
+        this.callback({status: 'close'})
+      }
+    }
   },
   methods: {
     close() {
@@ -37,7 +47,32 @@ export default {
   },
   mounted() {
     setTimeout(() => {
-      document.getElementById('video-box').play()
+      const videoBox = document.getElementById('video-box')
+      videoBox.play()
+      videoBox.addEventListener('play', () => {
+        this.callback({status: 'play'})
+      })
+      videoBox.addEventListener('pause', () => {
+        this.callback({status: 'pause'})
+      })
+      videoBox.addEventListener('seeking', () => { // 拖动滚动条
+        this.callback({status: 'seeking'})
+      })
+      videoBox.addEventListener('volumechange', () => { // 音量变更
+        this.callback({status: 'volumechange'})
+      })
+      videoBox.addEventListener('ended', () => {
+        this.callback({status: 'ended'})
+      })
+      videoBox.addEventListener('waiting', () => { // 加载中
+        this.callback({status: 'waiting'})
+      })
+      videoBox.addEventListener('playing', () => { // 加载完、暂停、拖动后继续播放
+        this.callback({status: 'playing'})
+      })
+      videoBox.addEventListener('error', () => { // 出错
+        this.callback({status: 'error'})
+      })
     })
   }
 }
