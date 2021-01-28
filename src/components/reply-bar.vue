@@ -3,7 +3,7 @@
     <div class="reply-bar">
       <vs-avatar class="avatar" @click.native="handleAvatarClick" :src="avatar" v-if="avatar"></vs-avatar>
       <div class="reply-bar-input" @click="handleClick">
-        点击发表你的评论...
+        {{ placeholder }}
       </div>
     </div>
   </div>
@@ -21,6 +21,10 @@ export default {
     avatar: {
       type: String,
       default: ''
+    },
+    placeholder: {
+      type: String,
+      default: '点击发表你的评论...'
     }
   },
   setup(props, context) {

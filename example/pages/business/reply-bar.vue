@@ -3,7 +3,9 @@
     <vs-reply-bar
       @avatar="handleAvatarClick"
       @click="handleClick"
-      :avatar="'http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKV5rK9hs2yA4q30dvdcicPlCiaHyZdbsCj9IeQFQRNfCakK0cHIiastqDKXzlKUvPU8fjJkKAs0JuYw/132'"/>
+      :avatar="'http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKV5rK9hs2yA4q30dvdcicPlCiaHyZdbsCj9IeQFQRNfCakK0cHIiastqDKXzlKUvPU8fjJkKAs0JuYw/132'"
+      :placeholder="'我是placeholder，可以自定义...'"
+    />
   </div>
 </template>
 

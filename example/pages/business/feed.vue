@@ -26,7 +26,11 @@
         />
       </template>
     </vs-feed>
-    <vs-reply-bar @click="handleBarClick" v-if="isShowBar"/>
+    <vs-reply-bar
+      @click="handleBarClick"
+      v-if="isShowBar"
+      :avatar="'http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKLPKPdI5oAJmriceu1ZSWJvxfsgd0kial2LGajYsibVP2upCmAnWlhj44Dg8qutzrOIEg9zlaZib3Duw/132'"
+    />
     <vs-popup class="more-operation" v-model="moreOperation" position="bottom" :overlay="true" :showCancel="true"
               title="更多操作">
       <div class="pop-item" @click="showComplain">
