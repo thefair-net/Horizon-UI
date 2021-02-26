@@ -31,10 +31,6 @@ export default {
     maskClosable: {
       type: Boolean,
       default: false
-    },
-    title: {
-      type: String,
-      default: ''
     }
   },
   components: {
