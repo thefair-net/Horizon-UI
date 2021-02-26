@@ -2,8 +2,23 @@
   <div class="page">
     <div class="button" @click="showPop">弹出Modal</div>
 
-    <vs-modal v-model="show" :overlay="true" :showCancel="true">
-      我是Modal
+    <vs-modal
+      v-model="show"
+      mask-closable
+      @confirm="handleModalConfirm"
+      @cancel="handleModalCancel"
+    >
+      确认后无法回退，是否确认选择？
+    </vs-modal>
+
+    <div class="button" @click="showPop1">弹出Modal1</div>
+
+    <vs-modal
+      v-model="show1"
+      @confirm="handleModal1Confirm"
+      @cancel="handleModal1Cancel"
+    >
+      选择新用户登录，将无法同步老账号数据，是否确认选择新用户登录。
     </vs-modal>
   </div>
 </template>
@@ -19,12 +34,27 @@ export default {
   data() {
     return {
       show: false,
-      num: 100
+      show1: false,
     }
   },
   methods: {
     showPop() {
       this.show = true;
+    },
+    showPop1() {
+      this.show1 = true;
+    },
+    handleModalConfirm() {
+      this.show = false;
+    },
+    handleModalCancel() {
+      this.show = false;
+    },
+    handleModal1Confirm() {
+      this.show1 = false;
+    },
+    handleModal1Cancel() {
+      this.show1 = false;
     }
   }
 }

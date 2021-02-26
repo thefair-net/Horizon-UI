@@ -32,6 +32,7 @@ export default {
       types: [
         'icon-right',
         'icon-close',
+        'icon-close-gray',
         'icon-close-round',
         'icon-close-round-white',
         'icon-check',

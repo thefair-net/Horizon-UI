@@ -1,15 +1,17 @@
 <template>
   <transition name="fade">
-    <div class="vs-modal" v-if="value" @click="closeModal" @touchmove.self.prevent>
-      <div class="modal-content" :class="[position ? ''+ position : '',fadeout ?'fade_out':'fade_in']">
-        <div class="title">
-          <slot name="title"></slot>
-        </div>
+    <div class="vs-modal" v-if="value" @click="maskClosable && handleCancelClick()" @touchmove.self.prevent>
+      <div class="modal-content" @click.stop>
+        <vs-icon
+          class="close"
+          :type="'icon-close-gray'"
+          @click="handleCancelClick"
+        />
         <div class="content">
           <slot></slot>
         </div>
-        <div class="footer">
-          <slot name="footer"></slot>
+        <div class="confirm" @click="handleConfirmClick">
+          确定
         </div>
       </div>
     </div>
@@ -17,106 +19,96 @@
 </template>
 
 <script>
-  export default {
-    name: "vs-popup",
-    props: {
-      value: {
-        type: Boolean,
-        default: false
-      },
-      position: {
-        type: String,
-        default: 'bottom'
-      },
-      overlay: {
-        type: Boolean,
-        default: true
-      },
-      showCancel: {
-        type: Boolean,
-        default: false
-      },
-      title:{
-        type: String,
-        default: ''
-      }
+import Icon from "../../lib/icon";
+
+export default {
+  name: "vs-modal",
+  props: {
+    value: {
+      type: Boolean,
+      default: false
     },
-    data() {
-      return {
-        fadeout: false,
-        docOverflow:'visible'
-      }
+    maskClosable: {
+      type: Boolean,
+      default: false
     },
-    model: {
-      prop: "value",
-      event: 'change'
-    },
-    watch:{
-      value(val){
-        if(val){
-          this.docOverflow = document.body.style.overflow;
-          document.body.style.overflow = 'hidden'
-        }else {
-          document.body.style.overflow = this.docOverflow;
-        }
-      }
-    },
-    methods: {
-      closeModal() {
-        // this.fadeout = true;
-        // setTimeout(() => {
-        //
-        //   this.fadeout = false;
-        // }, 300)
-        this.$emit("change", false)
-      }
-    },
-    beforeDestroy() {
-      document.body.style.overflow = this.docOverflow;
+    title: {
+      type: String,
+      default: ''
     }
-  }
+  },
+  components: {
+    'vs-icon': Icon
+  },
+  methods: {
+    handleConfirmClick() {
+      this.$emit("confirm")
+    },
+    handleCancelClick() {
+      this.$emit("cancel")
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-  @import "../../static/config";
+@import "../../static/config";
 
-  .vs-modal {
-    touch-action: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .4);
+.vs-modal {
+  touch-action: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .7);
 
-    .modal-content {
-      background-color: #fff;
-      z-index: 1000;
-      font-family: $FONT-FZLTHJW;
-      font-size: 14px;
-      text-align: center;
-      color: #383838;
-      border-radius: 10px;
-      padding: 30px;
-      min-width: 20px;
-      .content{
-        display: flex;
-        align-content: center;
-        justify-content: center;
-      }
-      .title-box {
-        font-family: $FONT-FZLTHJW;
-        font-size: 12px;
-        text-align: center;
-        color: #888888;
-      }
+  .modal-content {
+    width: 289px;
+    background-color: #fff;
+    z-index: 1000;
+    position: relative;
 
-
+    .close {
+      position: absolute;
+      right: 5px;
+      top: 5px;
     }
 
+    .content {
+      padding: 70px 24px 120px 24px;
+
+      font-family: $FONT-SourceHanSansCN-Normal;
+      font-size: 16px;
+      line-height: 26px;
+      color: #000000;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .confirm {
+      width: 245px;
+      height: 46px;
+      position: absolute;
+      bottom: 22px;
+      left: 22px;
+      background-color: black;
+      color: white;
+
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
+}
 </style>

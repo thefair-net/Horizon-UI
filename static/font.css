@@ -1,11 +1,53 @@
 @font-face {
   font-family: "FZLTZCHJW"; /* FZLTZCHJW-GB1-0 方正兰亭中粗黑 */
-  src: url('https://static1.thefair.net.cn/h5/font/ZCH_%E6%96%B9%E6%AD%A3%E5%85%B0%E4%BA%AD%E4%B8%AD%E7%B2%97%E9%BB%91.otf');
+  src: url('https://static1.thefair.net.cn/h5/font/FZLT-ZCHeiti.otf');
   font-display: swap;
 }
 
 @font-face {
   font-family: "FZLTHJW"; /* FZLTHJW-GB1-0 方正兰亭黑体*/
-  src: url('https://static1.thefair.net.cn/h5/font/H_%E6%96%B9%E6%AD%A3%E5%85%B0%E4%BA%AD%E9%BB%91%E4%BD%93.otf');
+  src: url('https://static1.thefair.net.cn/h5/font/FZLT-Heiti.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceHanSansCN-Light";
+  src: url('https://static1.thefair.net.cn/eyepetizer/font/SourceHanSansCN/SourceHanSansCN-Light.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceHanSansCN-Normal";
+  src: url('https://static1.thefair.net.cn/eyepetizer/font/SourceHanSansCN/SourceHanSansCN-Normal.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AkzidenzGrotesk-Light";
+  src: url('https://static1.thefair.net.cn/h5/font/Akzidenz%20Grotesk%20Series/AkzidenzGrotesk-Light.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GlowSansSC-Wide-Bold";
+  src: url('https://static1.thefair.net.cn/eyepetizer/font/GlowSansSC-Wide/GlowSansSC-Wide-Bold.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GlowSansSC-Wide-Book";
+  src: url('https://static1.thefair.net.cn/eyepetizer/font/GlowSansSC-Wide/GlowSansSC-Wide-Book.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GlowSansSC-Wide-Light";
+  src: url('https://static1.thefair.net.cn/eyepetizer/font/GlowSansSC-Wide/GlowSansSC-Wide-Light.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GlowSansSC-Wide-Regular";
+  src: url('https://static1.thefair.net.cn/eyepetizer/font/GlowSansSC-Wide/GlowSansSC-Wide-Regular.otf');
   font-display: swap;
 }
