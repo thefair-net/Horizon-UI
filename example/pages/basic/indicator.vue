@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="button" @click="clickBtn">Indicator.open</div>
-    <div class="button" @click="clean">Indicator.close</div>
+    <div class="button" @click="clean" style="position: absolute;z-index: 1001;top: 40px">Indicator.close</div>
   </div>
 </template>
 
@@ -27,6 +27,9 @@ export default {
 </script>
 
 <style scoped>
+.page {
+  position: relative;
+}
 .button {
   width: 150px;
   text-align: center;
