@@ -25,6 +25,27 @@
         "meta": {}
       },
       {
+        "path": "/open-in-browser",
+        "name": "Open In Browser",
+        "icon": "open-in-browser",
+        "desc": "提示在浏览器打开",
+        "meta": {}
+      },
+      {
+        "path": "/video-box",
+        "name": "Video Box",
+        "icon": "video-box",
+        "desc": "弹出式视频播放器",
+        "meta": {}
+      },
+      {
+        "path": "/cover",
+        "name": "Cover",
+        "icon": "cover",
+        "desc": "全屏遮罩式提示框",
+        "meta": {}
+      },
+      {
         "path": "/indicator",
         "name": "Indicator",
         "icon": "indicator",

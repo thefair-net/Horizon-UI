@@ -1,29 +1,31 @@
 <template>
   <transition name="fade" mode="out-in">
-    <div class="open-in-browser" v-if="show" @click="close">
-      <img class="img" src="../../static/img/open-in-browser.svg" alt="">
+    <div class="cover" v-if="show" @click="close">
+      {{ message }}
     </div>
   </transition>
 </template>
 
 <script>
 export default {
-  name: "open-in-browser",
+  name: "cover",
   data() {
     return {
       show: this.show,
+      message: this.$options.message,
+      maskClosable: this.$options.maskClosable
     }
   },
   methods: {
     close() {
-      this.show = false
+      if (this.maskClosable) this.show = false
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.open-in-browser {
+.cover {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
@@ -33,10 +35,13 @@ export default {
   z-index: 10000;
 
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding-top: 10px;
-  padding-right: 5.5px;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.56px;
 }
 
 </style>

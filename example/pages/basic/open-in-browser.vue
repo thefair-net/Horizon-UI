@@ -1,21 +1,17 @@
 <template>
   <div class="page">
-    <div class="button" @click="clickBtn">Toast</div>
+    <div class="button" @click="OpenInBrowserClick">OpenInBrowser</div>
   </div>
 </template>
 
 <script>
-import Toast from "../../../lib/toast";
+import OpenInBrowser from "../../../lib/open-in-browser";
 
 export default {
-  name: "toast",
+  name: "open-in-browser",
   methods: {
-    clickBtn() {
-      Toast({
-        message: '我是toast',
-        duration: 2000,
-        icon: 'icon-check'
-      })
+    OpenInBrowserClick() {
+      OpenInBrowser.open()
     },
   },
 }
