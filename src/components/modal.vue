@@ -7,10 +7,10 @@
           :type="'icon-close-gray'"
           @click="handleCancelClick"
         />
-        <div class="content">
+        <div :class="defaultContentStyle && 'content'">
           <slot></slot>
         </div>
-        <div class="confirm" @click="handleConfirmClick">
+        <div v-if="confirmButtonVisible" class="confirm" @click="handleConfirmClick">
           确定
         </div>
       </div>
@@ -31,6 +31,14 @@ export default {
     maskClosable: {
       type: Boolean,
       default: false
+    },
+    confirmButtonVisible: {
+      type: Boolean,
+      default: true
+    },
+    defaultContentStyle: {
+      type: Boolean,
+      default: true
     }
   },
   components: {
@@ -64,7 +72,9 @@ export default {
   background-color: rgba(0, 0, 0, .7);
 
   .modal-content {
-    width: 289px;
+    min-width: 289px;
+    max-width: 334px;
+    max-height: 497px;
     background-color: #fff;
     z-index: 1000;
     position: relative;
