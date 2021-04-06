@@ -23,7 +23,7 @@
       </div>
     </vs-modal>
 
-    <div class="button" @click="showPop2">弹出长Modal(用户协议)</div>
+    <div class="button" @click="showPop2">弹出圆角长Modal(用户协议)</div>
 
     <vs-modal
       v-model="show2"
@@ -32,6 +32,7 @@
       mask-closable
       :confirm-button-visible="false"
       :default-content-style="false"
+      rounded
     >
       <div class="modal">
         <div class="title">

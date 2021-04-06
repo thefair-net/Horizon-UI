@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div class="vs-modal" v-if="value" @click="maskClosable && handleCancelClick()" @touchmove.self.prevent>
-      <div class="modal-content" @click.stop>
+      <div class="modal-content" @click.stop :class="rounded && 'rounded'">
         <vs-icon
           class="close"
           :type="'icon-close-gray'"
@@ -39,7 +39,11 @@ export default {
     defaultContentStyle: {
       type: Boolean,
       default: true
-    }
+    },
+    rounded: {
+      type: Boolean,
+      default: false
+    },
   },
   components: {
     'vs-icon': Icon
@@ -71,6 +75,10 @@ export default {
   bottom: 0;
   background-color: rgba(0, 0, 0, .7);
 
+  .rounded {
+    border-radius: 22px;
+  }
+
   .modal-content {
     min-width: 289px;
     max-width: 334px;
@@ -83,6 +91,7 @@ export default {
       position: absolute;
       right: 5px;
       top: 5px;
+      z-index: 1001;
     }
 
     .content {
