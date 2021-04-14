@@ -1,4 +1,4 @@
-# <img src="https://static1.thefair.net.cn/horizon_ui/image/icon_loading_light.svg" width="35" height="35" alt="Horizon UI"> Horizon UI
+# <img src="https://static.thefair.net.cn/horizon_ui/image/icon_loading_light.svg" width="35" height="35" alt="Horizon UI"> Horizon UI
 
 <p align="left">
   <a href="https://www.npmjs.org/package/horizon-ui">
@@ -33,7 +33,7 @@ Have fun!
 ## Examples
 Here are some mobile phone [examples](https://thefair-net.github.io/Horizon-UI)
 
-![examples](https://static1.thefair.net.cn/horizon_ui/image/qrcode-examples.png)
+![examples](https://static.thefair.net.cn/horizon_ui/image/qrcode-examples.png)
 
 ## Install
 ```shell

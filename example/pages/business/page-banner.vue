@@ -32,10 +32,10 @@
       const title = "这周末pick什么小零食度过？";
       const sponsor_info = {
         avatar:
-          "https://static1.thefair.net.cn/qustionaires/image/20200706/eabe8d62e4da467437f8754ed390e777.jpg",
+          "https://static.thefair.net.cn/qustionaires/image/20200706/eabe8d62e4da467437f8754ed390e777.jpg",
         nick: "123"
       };
-      const cover = "https://static1.thefair.net.cn/qustionaires/image/20200706/eabe8d62e4da467437f8754ed390e777.jpg";
+      const cover = "https://static.thefair.net.cn/qustionaires/image/20200706/eabe8d62e4da467437f8754ed390e777.jpg";
       return {
         vote_times,
         sponsor_info,
