@@ -3,6 +3,7 @@
     <div class="_vs-modal" v-if="value" @click="maskClosable && handleCancelClick()" @touchmove.self.prevent>
       <div class="_modal-content" @click.stop :style="{borderRadius}">
         <vs-icon
+          v-if="closeButtonVisible"
           class="_close"
           :type="'icon-close-gray'"
           @click="handleCancelClick"
@@ -27,6 +28,10 @@ export default {
     value: {
       type: Boolean,
       default: false
+    },
+    closeButtonVisible: {
+      type: Boolean,
+      default: true
     },
     maskClosable: {
       type: Boolean,
