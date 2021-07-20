@@ -32,7 +32,7 @@
       mask-closable
       :confirm-button-visible="false"
       :default-content-style="false"
-      rounded
+      :border-radius="'22px'"
     >
       <div class="modal">
         <div class="title">

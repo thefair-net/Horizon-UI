@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div class="vs-modal" v-if="value" @click="maskClosable && handleCancelClick()" @touchmove.self.prevent>
-      <div class="modal-content" @click.stop :class="rounded && 'rounded'">
+      <div class="modal-content" @click.stop :style="{borderRadius}">
         <vs-icon
           class="close"
           :type="'icon-close-gray'"
@@ -40,10 +40,10 @@ export default {
       type: Boolean,
       default: true
     },
-    rounded: {
-      type: Boolean,
-      default: false
-    },
+    borderRadius: {
+      type: String,
+      default: '0px'
+    }
   },
   components: {
     'vs-icon': Icon
@@ -74,10 +74,6 @@ export default {
   top: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, .7);
-
-  .rounded {
-    border-radius: 22px;
-  }
 
   .modal-content {
     min-width: 289px;
