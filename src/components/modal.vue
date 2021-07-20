@@ -1,16 +1,16 @@
 <template>
   <transition name="fade">
-    <div class="vs-modal" v-if="value" @click="maskClosable && handleCancelClick()" @touchmove.self.prevent>
-      <div class="modal-content" @click.stop :style="{borderRadius}">
+    <div class="_vs-modal" v-if="value" @click="maskClosable && handleCancelClick()" @touchmove.self.prevent>
+      <div class="_modal-content" @click.stop :style="{borderRadius}">
         <vs-icon
-          class="close"
+          class="_close"
           :type="'icon-close-gray'"
           @click="handleCancelClick"
         />
-        <div :class="defaultContentStyle && 'content'">
+        <div :class="defaultContentStyle && '_content'">
           <slot></slot>
         </div>
-        <div v-if="confirmButtonVisible" class="confirm" @click="handleConfirmClick">
+        <div v-if="confirmButtonVisible" class="_confirm" @click="handleConfirmClick">
           确定
         </div>
       </div>
@@ -62,7 +62,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../static/config";
 
-.vs-modal {
+._vs-modal {
   touch-action: none;
   display: flex;
   justify-content: center;
@@ -75,7 +75,7 @@ export default {
   bottom: 0;
   background-color: rgba(0, 0, 0, .7);
 
-  .modal-content {
+  ._modal-content {
     min-width: 289px;
     max-width: 334px;
     max-height: 497px;
@@ -83,14 +83,14 @@ export default {
     z-index: 1000;
     position: relative;
 
-    .close {
+    ._close {
       position: absolute;
       right: 5px;
       top: 5px;
       z-index: 1001;
     }
 
-    .content {
+    ._content {
       padding: 70px 24px 120px 24px;
 
       font-family: $FONT-SourceHanSansCN-Normal;
@@ -103,7 +103,7 @@ export default {
       align-items: center;
     }
 
-    .confirm {
+    ._confirm {
       width: 245px;
       height: 46px;
       position: absolute;
