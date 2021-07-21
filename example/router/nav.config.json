@@ -79,6 +79,13 @@
         "icon": "infinity-scroll",
         "desc": "无限滚动",
         "meta": {}
+      },
+      {
+        "path": "/picker",
+        "name": "Picker",
+        "icon": "picker",
+        "desc": "选择器",
+        "meta": {}
       }
     ]
   },
