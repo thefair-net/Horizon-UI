@@ -9,7 +9,7 @@
         "icon": "all",
         "desc": "全部卡片素材展示",
         "meta": {
-          "link": "https://m.eyepetizer.net/u2/universal-card?page_label=all_cards_mock&page_type=card"
+          "scheme": "eyepetizer://cardlist/common?title=%E5%8D%A1%E7%89%87%E5%B1%95%E7%A4%BA%E9%A1%B5&fit_window=0&api_request=%7B%22url%22%3A%22https%3A%5C%2F%5C%2Fapi.eyepetizer.net%5C%2Fv1%5C%2Fcard%5C%2Fpage%5C%2Fget_page%22%2C%22params%22%3A%7B%22page_label%22%3A%22all_cards_mock%22%2C%22page_type%22%3A%22card%22%7D%7D"
         }
       }
     ]

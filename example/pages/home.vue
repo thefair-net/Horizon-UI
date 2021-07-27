@@ -22,8 +22,8 @@ import {NavConfig} from '../router'
 export default {
   setup(props, context) {
     const handleItemClick = (item) => {
-      if (item.meta.link) {
-        window.open(item.meta.link)
+      if (item.meta.scheme) {
+        window.location.href = `https://www.eyepetizer.net/?url=${encodeURIComponent(item.meta.scheme)}`
         return
       }
       context.root.$router.push(item.path)
