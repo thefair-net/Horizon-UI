@@ -1,5 +1,20 @@
 [
   {
+    "title": "卡片系统",
+    "type": "universal-card",
+    "list": [
+      {
+        "path": "/all",
+        "name": "All",
+        "icon": "all",
+        "desc": "全部卡片素材展示",
+        "meta": {
+          "link": "https://m.eyepetizer.net/u2/universal-card?page_label=all_cards_mock&page_type=card"
+        }
+      }
+    ]
+  },
+  {
     "title": "基础组件",
     "type": "basic",
     "list": [

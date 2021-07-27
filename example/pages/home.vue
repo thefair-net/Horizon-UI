@@ -22,6 +22,10 @@ import {NavConfig} from '../router'
 export default {
   setup(props, context) {
     const handleItemClick = (item) => {
+      if (item.meta.link) {
+        window.open(item.meta.link)
+        return
+      }
       context.root.$router.push(item.path)
     }
     return {
