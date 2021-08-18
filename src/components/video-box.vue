@@ -19,7 +19,7 @@
 import Icon from '../../lib/icon'
 
 export default {
-  name: "video-box",
+  name: "vs-video-box",
   data() {
     return {
       show: this.show,

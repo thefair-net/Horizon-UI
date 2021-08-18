@@ -12,7 +12,7 @@
 import Icon from '../../../lib/icon'
 
 export default {
-  name: "loading",
+  name: "vs-loading",
   data() {
     return {
       visible: true

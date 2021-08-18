@@ -38,7 +38,7 @@ const VISIBLE_ITEMS_ANGLE_MAP = {
 };
 
 export default {
-  name: 'picker-slot',
+  name: 'vs-picker-slot',
 
   props: {
     values: {

@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "open-in-browser",
+  name: "vs-open-in-browser",
   data() {
     return {
       show: this.show,

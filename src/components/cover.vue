@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "cover",
+  name: "vs-cover",
   data() {
     return {
       show: this.show,
