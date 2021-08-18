@@ -101,6 +101,13 @@
         "icon": "picker",
         "desc": "选择器",
         "meta": {}
+      },
+      {
+        "path": "/switch",
+        "name": "Switch",
+        "icon": "switch",
+        "desc": "开关",
+        "meta": {}
       }
     ]
   },
