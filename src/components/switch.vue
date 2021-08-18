@@ -30,7 +30,10 @@ export default {
   name: 'vs-switch',
 
   props: {
-    value: Boolean,
+    value: {
+      type: Boolean,
+      default: true
+    },
     disabled: {
       type: Boolean,
       default: false
