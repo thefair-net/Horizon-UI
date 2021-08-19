@@ -11,8 +11,13 @@
         <div :class="defaultContentStyle && '_content'">
           <slot></slot>
         </div>
-        <div v-if="confirmButtonVisible" class="_confirm" @click="handleConfirmClick">
-          确定
+        <div v-if="confirmButtonVisible || cancelButtonVisible" class="_buttons">
+          <div v-if="confirmButtonVisible" class="_confirm" @click="handleConfirmClick">
+            {{ confirmButtonText }}
+          </div>
+          <div v-if="cancelButtonVisible" class="_cancel" @click="handleCancelClick">
+            {{ cancelButtonText }}
+          </div>
         </div>
       </div>
     </div>
@@ -40,6 +45,18 @@ export default {
     confirmButtonVisible: {
       type: Boolean,
       default: true
+    },
+    cancelButtonVisible: {
+      type: Boolean,
+      default: false
+    },
+    confirmButtonText: {
+      type: String,
+      default: "确定"
+    },
+    cancelButtonText: {
+      type: String,
+      default: "取消"
     },
     defaultContentStyle: {
       type: Boolean,
@@ -108,14 +125,12 @@ export default {
       align-items: center;
     }
 
-    ._confirm {
+    ._buttons {
       width: 245px;
       height: 46px;
       position: absolute;
       bottom: 22px;
       left: 22px;
-      background-color: black;
-      color: white;
 
       font-size: 16px;
       line-height: 24px;
@@ -124,6 +139,30 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      ._confirm {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: black;
+        color: white;
+      }
+
+      ._cancel {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px black solid;
+        margin-left: 10px;
+      }
     }
   }
 }

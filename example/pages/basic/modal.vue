@@ -17,6 +17,10 @@
       v-model="show1"
       @confirm="handleModal1Confirm"
       @cancel="handleModal1Cancel"
+      cancel-button-visible
+      confirm-button-visible
+      confirm-button-text="想好了"
+      cancel-button-text="再想想"
     >
       <div style="width: 219px;">
         选择新用户登录，将无法同步老账号数据，是否确认选择新用户登录。
