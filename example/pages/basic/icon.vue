@@ -47,6 +47,7 @@ export default {
         'icon-dot',
         'icon-loading-light',
         'icon-loading-dark',
+        'icon-down',
       ]
     }
   }

@@ -123,6 +123,13 @@
   background: url("../../../static/img/icon_loading_light.svg") center center no-repeat;
   background-size: contain;
 }
+
+.icon-down {
+  width: 30px;
+  height: 30px;
+  background: url("../../../static/img/icon-down.svg") center center no-repeat;
+  background-size: contain;
+}
 @keyframes rotate {
   from {
     transform: rotate(0deg);
