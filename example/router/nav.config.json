@@ -108,6 +108,13 @@
         "icon": "switch",
         "desc": "开关",
         "meta": {}
+      },
+      {
+        "path": "/checkbox",
+        "name": "Checkbox",
+        "icon": "checkbox",
+        "desc": "勾选",
+        "meta": {}
       }
     ]
   },
