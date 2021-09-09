@@ -8,7 +8,7 @@
           :type="'icon-close-gray'"
           @click="handleCancelClick"
         />
-        <div :class="defaultContentStyle && '_content'">
+        <div :class="defaultContentStyle && '_default_content_style'">
           <slot></slot>
         </div>
         <div v-if="confirmButtonVisible || cancelButtonVisible" class="_buttons">
@@ -98,9 +98,6 @@ export default {
   background-color: rgba(0, 0, 0, .7);
 
   ._modal-content {
-    min-width: 289px;
-    max-width: 334px;
-    max-height: 497px;
     background-color: #fff;
     z-index: 1000;
     position: relative;
@@ -112,7 +109,11 @@ export default {
       z-index: 1001;
     }
 
-    ._content {
+    ._default_content_style {
+      min-width: 289px;
+      max-width: 334px;
+      max-height: 497px;
+
       padding: 70px 24px 120px 24px;
 
       font-family: $FONT-SourceHanSansCN-Normal;
@@ -130,7 +131,8 @@ export default {
       height: 46px;
       position: absolute;
       bottom: 22px;
-      left: 22px;
+      left: 50%;
+      transform: translate(-50%, 0);
 
       font-size: 16px;
       line-height: 24px;
